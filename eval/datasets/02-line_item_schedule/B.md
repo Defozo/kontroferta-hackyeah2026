@@ -1,0 +1,11 @@
+KARTA KOSZTÓW B
+Wyłącznie syntetyczne dane testowe.
+Wydarzenie: 10.10.2026. Strefa Europe/Warsaw, UTC+02:00.
+Potwierdzamy: zestaw nagłośnienia jest odpowiedni dla konferencji 120 osób.
+W cenie są 4 mikrofony bezprzewodowe.
+Gotowość sprzętu: 10.10.2026, godzina 08:30.
+Technik jest obecny 10.10.2026 od 09:00 do 17:00, cały ten czas w cenie.
+Pozycja | Kwota brutto PLN
+Zestaw z obsługą | 4800
+Transport | 600
+Suma końcowa | 5400

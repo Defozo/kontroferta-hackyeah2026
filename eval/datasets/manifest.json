@@ -1,0 +1,288 @@
+{
+  "dataset_version": "synthetic-av-v1.1",
+  "frozen_at": "2026-10-03T12:11:14.246744+00:00",
+  "synthetic": true,
+  "case_count": 24,
+  "development_count": 12,
+  "frozen_count": 12,
+  "family_split": "No document family appears in both splits. No random split of template variants.",
+  "independent_review": "pending; not a validated industry dataset",
+  "cases": [
+    {
+      "id": "01-pl_service_letter",
+      "family": "pl_service_letter",
+      "split": "development",
+      "annotation": "01-pl_service_letter/annotations.json",
+      "hashes": {
+        "01-pl_service_letter/A.txt": "929b793114587931e8dd7becb6b6c6b4a2693c5def2eefe17efdfc9c4e3df6bf",
+        "01-pl_service_letter/annotations.json": "a8982713aeef1f5d935623ea8aec78f212d49c5219c78213e5cd08473871b071",
+        "01-pl_service_letter/B.txt": "a5c3ae29fbd60a9f11d3632d26c5292bee824bb539b35de7f66e8e63d7d1cd84"
+      }
+    },
+    {
+      "id": "02-line_item_schedule",
+      "family": "line_item_schedule",
+      "split": "development",
+      "annotation": "02-line_item_schedule/annotations.json",
+      "hashes": {
+        "02-line_item_schedule/A.md": "84c073e67b9a2cb06f14b51ee9754783d086018807145290225dcec4c2111b0d",
+        "02-line_item_schedule/annotations.json": "5151c1f972b70348179d127bb6089d0d5303754826aebe4215aa315da926389a",
+        "02-line_item_schedule/B.md": "5237d43e3270a1b78188642afc4acd7affbe318d50ab511f2408cf72a073f267"
+      }
+    },
+    {
+      "id": "03-transport_negation",
+      "family": "transport_negation",
+      "split": "development",
+      "annotation": "03-transport_negation/annotations.json",
+      "hashes": {
+        "03-transport_negation/A.txt": "ef9ab6fcb1c56466676dd7acd71b733cd96a8b93c3799c6c059917ab7a5a615f",
+        "03-transport_negation/annotations.json": "5a9d8c328e7196c7004e1cb9dc89a2289c33ac98913566725d1885dc8e84fcc2",
+        "03-transport_negation/B.txt": "1af3f559eb4f1c5754714c0379a557d7ff7afcd92ad5fb54d97c3e6e3ca42dfd"
+      }
+    },
+    {
+      "id": "04-tax_basis_absent",
+      "family": "tax_basis_absent",
+      "split": "development",
+      "annotation": "04-tax_basis_absent/annotations.json",
+      "hashes": {
+        "04-tax_basis_absent/A.txt": "2311826dfd619dc78b12496e9569af83cfb843cd832eaa3ec654e09ca5e6d184",
+        "04-tax_basis_absent/annotations.json": "1c4812993d768ef2d5f70e4258b50255c84fefc862d7efe8e1ac4078e6bb86f9",
+        "04-tax_basis_absent/B.txt": "10c375ada92af39c9507cf1275343c1d0c2b7b1b516c387fa8dd8b8dee9dc8f6"
+      }
+    },
+    {
+      "id": "05-currency_absent",
+      "family": "currency_absent",
+      "split": "development",
+      "annotation": "05-currency_absent/annotations.json",
+      "hashes": {
+        "05-currency_absent/A.txt": "677a3f78fdcf83529c42b085ca5e3312d320641c8a186783500dcafbbc8cb8e0",
+        "05-currency_absent/annotations.json": "5434ce9da32f10a6ece23c07fe4d415978a3825531f73c02a7140b6b126b09f1",
+        "05-currency_absent/B.txt": "9a81a0fe599117eeeaee9d3f7c3948bd71a44b4419615d0d40a65f28d49fe76c"
+      }
+    },
+    {
+      "id": "06-security_deposit_receipt",
+      "family": "security_deposit_receipt",
+      "split": "development",
+      "annotation": "06-security_deposit_receipt/annotations.json",
+      "hashes": {
+        "06-security_deposit_receipt/A.txt": "93c7f4c50d34e7bad0e5c06d88505ee94f7dad6c3cc35a43ce623a7fe4b12912",
+        "06-security_deposit_receipt/annotations.json": "cb09aeeae8209fd2293801c90e3070b55c33ae9766e6e841d307763700d4a77a",
+        "06-security_deposit_receipt/B.txt": "3d4f529b887739b9b9871a46ca524c863272b731a001653e86a60b00a05faf12"
+      }
+    },
+    {
+      "id": "07-overnight_event_rider",
+      "family": "overnight_event_rider",
+      "split": "development",
+      "annotation": "07-overnight_event_rider/annotations.json",
+      "hashes": {
+        "07-overnight_event_rider/A.txt": "99cdc66a3b8b9a3834669f3c6d7d3e5a6596f6d107b0c1b9539f57bd50b84c82",
+        "07-overnight_event_rider/annotations.json": "62f7bb4b7bef8d896f85ab0ee5decdae3d43e7f71aff3706fb87be0fa2230f62",
+        "07-overnight_event_rider/B.txt": "92f576ec34d79f7338091d8c09d493ede7b769037701e7bad64ba7db37d9e31c"
+      }
+    },
+    {
+      "id": "08-technician_shift_roster",
+      "family": "technician_shift_roster",
+      "split": "development",
+      "annotation": "08-technician_shift_roster/annotations.json",
+      "hashes": {
+        "08-technician_shift_roster/A.txt": "6cf42582ab02d24b09edd7447c311e51a9165b1c39cad19230e14d36eb776b8e",
+        "08-technician_shift_roster/annotations.json": "3aa5a8b9ab93395921686bed9e13ab60f1edb1ae19f1741424d2249729493dec",
+        "08-technician_shift_roster/B.txt": "a5c3ae29fbd60a9f11d3632d26c5292bee824bb539b35de7f66e8e63d7d1cd84"
+      }
+    },
+    {
+      "id": "09-cancellation_terms",
+      "family": "cancellation_terms",
+      "split": "development",
+      "annotation": "09-cancellation_terms/annotations.json",
+      "hashes": {
+        "09-cancellation_terms/A.txt": "f0918b0182d78ac51554398660815b9e4dec3f462a3b214385726289ee7c0342",
+        "09-cancellation_terms/annotations.json": "ed18237332487162ecae62526cccb8d03c947df7aa53c4f2c94e10d20814636d",
+        "09-cancellation_terms/B.txt": "eef927bd2fd4aac5320cd16a134dcf309281e4e7f44c944f6f310ce62705155f"
+      }
+    },
+    {
+      "id": "10-payment_milestones",
+      "family": "payment_milestones",
+      "split": "development",
+      "annotation": "10-payment_milestones/annotations.json",
+      "hashes": {
+        "10-payment_milestones/A.txt": "b93f0868ad0e6a94f4e3a27f913667d49385162e817ff3b9cf4fa3828a6d9c34",
+        "10-payment_milestones/annotations.json": "0fb70d3ba43e82981eb65cf592967d2f25e4b82704eb0fa61702766d16630aa6",
+        "10-payment_milestones/B.txt": "91940805606a515778673c8d670e7e8f35ca1dcd1bb770e750129485e8107261"
+      }
+    },
+    {
+      "id": "11-inclusive_bundle_spec",
+      "family": "inclusive_bundle_spec",
+      "split": "development",
+      "annotation": "11-inclusive_bundle_spec/annotations.json",
+      "hashes": {
+        "11-inclusive_bundle_spec/A.txt": "c6ab9d747a04ab3a573522fbec97d9c417e4e56f9ed816bdcfe2f7aba4cc6801",
+        "11-inclusive_bundle_spec/annotations.json": "5a8471424123df0ce46eb2ac348309631c610dd3a94976333f12baf0f0a5d863",
+        "11-inclusive_bundle_spec/B.txt": "b09f04897b210f90b90f5b47175e508d19e3e72f524ba2ba5d5109f21c50edf2"
+      }
+    },
+    {
+      "id": "12-ambiguity_addendum",
+      "family": "ambiguity_addendum",
+      "split": "development",
+      "annotation": "12-ambiguity_addendum/annotations.json",
+      "hashes": {
+        "12-ambiguity_addendum/A-annex.txt": "49af4add966424436a19f60741631987fe8dede4a8484936744973b6c0b12159",
+        "12-ambiguity_addendum/A-offer.txt": "943a8d4bed11ed997518189e58899b3bf507b614d12b84f6cadbb864ebffddda",
+        "12-ambiguity_addendum/annotations.json": "e4c5e844ad453ee210a8ffc2872cdd5960b5896be6875f8ea3a76bd9ed98ac29",
+        "12-ambiguity_addendum/B-offer.txt": "fdff3a3809765096eb0a38adbf2e86e70567015b69d2f372f8ae45b818742f7d"
+      }
+    },
+    {
+      "id": "13-english_procurement_response",
+      "family": "english_procurement_response",
+      "split": "frozen",
+      "annotation": "13-english_procurement_response/annotations.json",
+      "hashes": {
+        "13-english_procurement_response/A.txt": "15d11ba3ebd739608752de724aa19873b862174963f90d5e671c729bac0f9947",
+        "13-english_procurement_response/annotations.json": "d94743bd7656514961b0efc406868ced8790963b61a9579b6f6b6bd82adf4ac3",
+        "13-english_procurement_response/B.txt": "284c948292735c3c814bcd9d777f17ac3ab69fd78a4bda3e44376313d3d215a6"
+      }
+    },
+    {
+      "id": "14-raster_confirmation_form",
+      "family": "raster_confirmation_form",
+      "split": "frozen",
+      "annotation": "14-raster_confirmation_form/annotations.json",
+      "hashes": {
+        "14-raster_confirmation_form/A.png": "c21ba8bf92cc8b409fb53379243622c465f9549eb9b04815a89a71d633303b57",
+        "14-raster_confirmation_form/annotations.json": "4a9bfc60029fcdd82d6eae2ce7250c0479fc694e9849e019c3d2e19e825e77d5",
+        "14-raster_confirmation_form/B.png": "aea5984d18bcd96eb4e832bbe27a319b9836e2e8959b7d6155042ab030feb486"
+      }
+    },
+    {
+      "id": "15-capacity_footnote_notice",
+      "family": "capacity_footnote_notice",
+      "split": "frozen",
+      "annotation": "15-capacity_footnote_notice/annotations.json",
+      "hashes": {
+        "15-capacity_footnote_notice/A.md": "4d065a2085a17c4e583965027206904a507c07173f989b706dc1a923e47f086b",
+        "15-capacity_footnote_notice/annotations.json": "d51005af19c13dd473d8e3ef7773cb25a7fef1e682ade7aa16f4e94f6b8d9873",
+        "15-capacity_footnote_notice/B.md": "a5c3ae29fbd60a9f11d3632d26c5292bee824bb539b35de7f66e8e63d7d1cd84"
+      }
+    },
+    {
+      "id": "16-price_to_follow_letter",
+      "family": "price_to_follow_letter",
+      "split": "frozen",
+      "annotation": "16-price_to_follow_letter/annotations.json",
+      "hashes": {
+        "16-price_to_follow_letter/A.txt": "88e6ef9eb52cbfff333e36344288d1a573c6af92c55a28a101c5f1b07fc22a0c",
+        "16-price_to_follow_letter/annotations.json": "92573efee8d7e6caa73c0531ad23d468022e0b197762f38819fdf6240b829099",
+        "16-price_to_follow_letter/B.txt": "081d9a19524649275776e3edea4d383472e04ad3ba9b6051f8136facbc7b9b5f"
+      }
+    },
+    {
+      "id": "17-explicit_vat_estimate",
+      "family": "explicit_vat_estimate",
+      "split": "frozen",
+      "annotation": "17-explicit_vat_estimate/annotations.json",
+      "hashes": {
+        "17-explicit_vat_estimate/A.txt": "4a05077a8232f4addbadd8384b0daf1794dd8ef3963188e30fd67877d9c839a7",
+        "17-explicit_vat_estimate/annotations.json": "092583cf0d7cf31197454a11a93ec3fcc176dc7920108a5293049696f927ff7b",
+        "17-explicit_vat_estimate/B.txt": "56db90cb296f886f1e46f1d901e9b7a73d2b291936b7c3202ff1f50fe111afd8"
+      }
+    },
+    {
+      "id": "18-conflicting_supplement",
+      "family": "conflicting_supplement",
+      "split": "frozen",
+      "annotation": "18-conflicting_supplement/annotations.json",
+      "hashes": {
+        "18-conflicting_supplement/A-supplement.txt": "f39b3c5f0baaa02db1878839a2d97aa6342967a08013c99648fd32da160d787e",
+        "18-conflicting_supplement/A.txt": "929b793114587931e8dd7becb6b6c6b4a2693c5def2eefe17efdfc9c4e3df6bf",
+        "18-conflicting_supplement/annotations.json": "eae0835f4a532b4e7c2df5121243181541e465b1e465d8afa77513e4d6e9428d",
+        "18-conflicting_supplement/B.txt": "a5c3ae29fbd60a9f11d3632d26c5292bee824bb539b35de7f66e8e63d7d1cd84"
+      }
+    },
+    {
+      "id": "19-undated_relative_schedule",
+      "family": "undated_relative_schedule",
+      "split": "frozen",
+      "annotation": "19-undated_relative_schedule/annotations.json",
+      "hashes": {
+        "19-undated_relative_schedule/A.txt": "c7d5581f0846111d79fbb7c4379cbbebfb2b0d0d7ecb43b16057deadc889cf56",
+        "19-undated_relative_schedule/annotations.json": "cf54d54c2352af652c0903192b04a61a03ee8f1dce0f93ade1970a9c452a37fc",
+        "19-undated_relative_schedule/B.txt": "50b2a74e7362c86a647f78cf944ed6328d14c4e1031052847c628e972bb9ef5c"
+      }
+    },
+    {
+      "id": "20-foreign_currency_tender",
+      "family": "foreign_currency_tender",
+      "split": "frozen",
+      "annotation": "20-foreign_currency_tender/annotations.json",
+      "hashes": {
+        "20-foreign_currency_tender/A.txt": "64564c8f9547923d616a06da0d127c0ce6d99a8d924578d98156f3805434d031",
+        "20-foreign_currency_tender/annotations.json": "6320251a9b3d874cdf5e06e6779aa70a7a7ddc613e664cc318263c4f7733c1b4",
+        "20-foreign_currency_tender/B.txt": "dc9bbb170711fa651d2f2fe56d664cc707303f746cabdc669a28ed36effd6cee"
+      }
+    },
+    {
+      "id": "21-optional_addon_menu",
+      "family": "optional_addon_menu",
+      "split": "frozen",
+      "annotation": "21-optional_addon_menu/annotations.json",
+      "hashes": {
+        "21-optional_addon_menu/A.txt": "ca949f795597b8d4f45f4ce87a1b504520265acaeaff2f2f6fc914200e63a6c8",
+        "21-optional_addon_menu/annotations.json": "d125f33039d6955142e920f19dc66925cbe6fad717fcab4e64f7941cc778ad52",
+        "21-optional_addon_menu/B.txt": "8e9f35a1d00357aefdc22829ef95bb934c329897eab2a2346b85b24bf81511d6"
+      }
+    },
+    {
+      "id": "22-equal_total_bid",
+      "family": "equal_total_bid",
+      "split": "frozen",
+      "annotation": "22-equal_total_bid/annotations.json",
+      "hashes": {
+        "22-equal_total_bid/A.txt": "929b793114587931e8dd7becb6b6c6b4a2693c5def2eefe17efdfc9c4e3df6bf",
+        "22-equal_total_bid/annotations.json": "dc96928dcdf91776ac105ec5e1a7eb9e79c690d40fdd63651f447b68f8d69f7a",
+        "22-equal_total_bid/B.txt": "1abbf6a8a32320d0f5696177caf643ae8dd30c2e91947c3569b01e45440cb321"
+      }
+    },
+    {
+      "id": "23-late_setup_confirmation",
+      "family": "late_setup_confirmation",
+      "split": "frozen",
+      "annotation": "23-late_setup_confirmation/annotations.json",
+      "hashes": {
+        "23-late_setup_confirmation/A.txt": "d225e5016fab4470f8a1271a231fdaab0398d8bb21578330970ceb7f901e793c",
+        "23-late_setup_confirmation/annotations.json": "10eb476af2cc727baaea429bd3a5e6d2f7425f51291d3d06e9426e72b2986fe6",
+        "23-late_setup_confirmation/B.txt": "a5c3ae29fbd60a9f11d3632d26c5292bee824bb539b35de7f66e8e63d7d1cd84"
+      }
+    },
+    {
+      "id": "24-adversarial_vendor_memo",
+      "family": "adversarial_vendor_memo",
+      "split": "frozen",
+      "annotation": "24-adversarial_vendor_memo/annotations.json",
+      "hashes": {
+        "24-adversarial_vendor_memo/A.txt": "332135bf8f42b3ac948eb3d70e7ed1200e9a8f78e2415e18366a5df7cc90229d",
+        "24-adversarial_vendor_memo/annotations.json": "cfe92d14742c4999bb84ba0294dbab4802639eed725eae554f62074109b9e9bd",
+        "24-adversarial_vendor_memo/B.txt": "20870979130390aeab8b0e514f74014243071c75e7370a9087268af8746188ad"
+      }
+    }
+  ],
+  "development_annotation_correction": {
+    "at": "2026-10-03T12:20:14.842770+00:00",
+    "cases": [
+      "04-tax_basis_absent",
+      "05-currency_absent",
+      "12-ambiguity_addendum"
+    ],
+    "frozen_split_changed": false,
+    "reason": "Correct annotation mistakes discovered during development, not model outputs."
+  }
+}

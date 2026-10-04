@@ -1,0 +1,1 @@
+{"name":"kontroferta-verification","private":true,"type":"module","scripts":{"live":"node verify_live.mjs","review":"node verify_review.mjs"},"dependencies":{"playwright":"1.63.0"}}

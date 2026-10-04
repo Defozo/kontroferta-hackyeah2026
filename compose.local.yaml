@@ -1,0 +1,36 @@
+# Reproducible synthetic OIDC for local testing only. Both published ports are loopback.
+services:
+  caddy:
+    ports: !override
+      - "127.0.0.1:${APP_PORT:-8280}:80"
+  api:
+    environment:
+      APP_BASE_URL: http://localhost:${APP_PORT:-8280}
+      OIDC_ISSUER: http://localhost:${LOCAL_OIDC_PORT:-8281}
+      OIDC_CLIENT_ID: kontroferta-local
+      OIDC_CLIENT_SECRET: ""
+    ports:
+      - "127.0.0.1:${LOCAL_OIDC_PORT:-8281}:${LOCAL_OIDC_PORT:-8281}"
+  auth:
+    build: ./apps/auth
+    image: kontroferta-local-identity:2026-10-03
+    init: true
+    restart: unless-stopped
+    network_mode: service:api
+    environment:
+      LOCAL_OIDC_ISSUER: http://localhost:${LOCAL_OIDC_PORT:-8281}
+      LOCAL_APP_BASE_URL: http://localhost:${APP_PORT:-8280}
+      LOCAL_OIDC_CONTAINER: "true"
+    depends_on:
+      api:
+        condition: service_started
+  worker:
+    environment:
+      OIDC_ISSUER: ""
+      OIDC_CLIENT_SECRET: ""
+      KONTROFERTA_SESSION_SECRET: ""
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: ${LOCAL_DOCKER_SUBNET:-10.253.86.0/24}

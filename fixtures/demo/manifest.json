@@ -1,0 +1,84 @@
+{
+  "version": "1.0",
+  "generated_from": "build_fixtures.py",
+  "event_date": "2026-10-10",
+  "timezone": "Europe/Warsaw",
+  "files": [
+    {
+      "file": "A-annex.pdf",
+      "sha256": "2675ceeb6442ce45396b4ff1027a1e8dc606573fdbc4dca14e3b0d1207cfb880",
+      "synthetic": true
+    },
+    {
+      "file": "A-annex.txt",
+      "sha256": "49af4add966424436a19f60741631987fe8dede4a8484936744973b6c0b12159",
+      "synthetic": true
+    },
+    {
+      "file": "A-answer-included.pdf",
+      "sha256": "347edb83d8be44b4b8d7c4e575238513aaa9f960f4f987c3f74bf141ff5f47dc",
+      "synthetic": true
+    },
+    {
+      "file": "A-answer-included.txt",
+      "sha256": "e0ec9cb793f2c82127a1f7fb2739029ee37d033a159b3bbda76cd7cdc4856dea",
+      "synthetic": true
+    },
+    {
+      "file": "A-answer-surcharge.pdf",
+      "sha256": "093fb02d7c080f575e3b55b5c44567f15be60219b828562b0c43535740aff39b",
+      "synthetic": true
+    },
+    {
+      "file": "A-answer-surcharge.txt",
+      "sha256": "f196232842a7e368a2d35577ba3293240f12fa90e8a09e33eb023ba16f5d02a1",
+      "synthetic": true
+    },
+    {
+      "file": "A-offer.pdf",
+      "sha256": "aad4c7e269d57d284a221d2bddd3b3c77c2febe086ac92d0b5142fda01599760",
+      "synthetic": true
+    },
+    {
+      "file": "A-offer.txt",
+      "sha256": "943a8d4bed11ed997518189e58899b3bf507b614d12b84f6cadbb864ebffddda",
+      "synthetic": true
+    },
+    {
+      "file": "B-offer.pdf",
+      "sha256": "b4e988ed7ac9a1b74894d15eccbcd5cfea93b939fda410467229294fdcb442ee",
+      "synthetic": true
+    },
+    {
+      "file": "B-offer.txt",
+      "sha256": "fdff3a3809765096eb0a38adbf2e86e70567015b69d2f372f8ae45b818742f7d",
+      "synthetic": true
+    },
+    {
+      "file": "B-scanned.jpg",
+      "sha256": "a4a09778968fd48722b58fcd706ff4a77d56be6af10b08fb6ff0af1f9c533994",
+      "synthetic": true
+    },
+    {
+      "file": "B-scanned.pdf",
+      "sha256": "8d9fe7ed51d202ea663174b5b2bf409c8df34dbf0d8aa2e98e000b46882ac35b",
+      "synthetic": true
+    },
+    {
+      "file": "B-scanned.png",
+      "sha256": "24769afac904595c7ae3fbf1b0d587d54bb6d1256d529bbe58c4d0c2c0f26467",
+      "synthetic": true
+    },
+    {
+      "file": "C-offer.pdf",
+      "sha256": "084cbdb3f1b54d3eef4794a2f790af576b3520621ab394a72587e178b7ed91db",
+      "synthetic": true
+    },
+    {
+      "file": "C-offer.txt",
+      "sha256": "f503c629c26c5f237e09d77698fd61e6e5fc12ad831e441d0809b0d907c28a17",
+      "synthetic": true
+    }
+  ],
+  "warning": "Synthetic demonstration. No real supplier or offer. Annex relationship and critical fields require explicit user review."
+}

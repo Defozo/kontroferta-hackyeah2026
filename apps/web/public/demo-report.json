@@ -1,0 +1,6527 @@
+{
+  "title": "Forum organizatorów · porównanie AV",
+  "model": {
+    "schema_version": "1.0",
+    "currency": "PLN",
+    "minor_unit": 2,
+    "budget_minor": 560000,
+    "timezone": "Europe/Warsaw",
+    "requirements": {
+      "participants": 120,
+      "microphones": 4,
+      "ready_by": "2026-10-10T09:00:00+02:00",
+      "service_start": "2026-10-10T09:00:00+02:00",
+      "service_end": "2026-10-10T17:00:00+02:00",
+      "scope_required": true,
+      "description": "Fikcyjne wydarzenie AV dla 120 osób",
+      "confirmed": true
+    },
+    "variables": [
+      {
+        "id": "technician_surcharge",
+        "label": "Dopłata za technika w A",
+        "kind": "enum",
+        "values": [
+          0,
+          120000
+        ],
+        "complete": true,
+        "unit": "minor",
+        "source": "Fikcyjna oferta A i aneks A1: dwa dopuszczalne odczytania ceny.",
+        "question": "Czy łączna cena 4800 PLN brutto obejmuje obecność technika od 09:00 do 17:00? Jeśli nie, proszę podać ostateczną cenę całej usługi z technikiem.",
+        "difficulty": 0,
+        "evidence_ids": [
+          "demo-a-technician",
+          "demo-a-annex"
+        ]
+      }
+    ],
+    "offers": [
+      {
+        "currency": "PLN",
+        "tax_basis": "gross",
+        "participants": 120,
+        "microphones": 4,
+        "service_start": "2026-10-10T09:00:00+02:00",
+        "service_end": "2026-10-10T17:00:00+02:00",
+        "scope_confirmed": true,
+        "id": "A",
+        "name": "Oferta A · Fala Audio",
+        "ready_at": "2026-10-10T08:30:00+02:00",
+        "evidence_ids": [
+          "demo-a-currency",
+          "demo-a-tax_basis",
+          "demo-a-participants",
+          "demo-a-microphones",
+          "demo-a-ready_at",
+          "demo-a-service_start",
+          "demo-a-service_end",
+          "demo-a-scope_confirmed",
+          "demo-a-price",
+          "demo-a-price-a-transport",
+          "demo-a-annex"
+        ],
+        "cost_items": [
+          {
+            "id": "a-set",
+            "label": "Zestaw nagłośnienia",
+            "amount": {
+              "op": "literal",
+              "value": 420000
+            },
+            "category": "service",
+            "evidence_ids": [
+              "demo-a-price"
+            ]
+          },
+          {
+            "id": "a-transport",
+            "label": "Transport",
+            "amount": {
+              "op": "literal",
+              "value": 60000
+            },
+            "category": "service",
+            "evidence_ids": [
+              "demo-a-price-a-transport"
+            ]
+          },
+          {
+            "id": "a-technician",
+            "label": "Technik 09:00–17:00",
+            "amount": {
+              "op": "var",
+              "name": "technician_surcharge"
+            },
+            "category": "service",
+            "evidence_ids": [
+              "demo-a-annex"
+            ]
+          }
+        ]
+      },
+      {
+        "currency": "PLN",
+        "tax_basis": "gross",
+        "participants": 120,
+        "microphones": 4,
+        "service_start": "2026-10-10T09:00:00+02:00",
+        "service_end": "2026-10-10T17:00:00+02:00",
+        "scope_confirmed": true,
+        "id": "B",
+        "name": "Pracownia Dźwięku",
+        "ready_at": "2026-10-10T08:30:00+02:00",
+        "evidence_ids": [
+          "demo-b-currency",
+          "demo-b-tax_basis",
+          "demo-b-participants",
+          "demo-b-microphones",
+          "demo-b-ready_at",
+          "demo-b-service_start",
+          "demo-b-service_end",
+          "demo-b-scope_confirmed",
+          "demo-b-price"
+        ],
+        "cost_items": [
+          {
+            "id": "b-package",
+            "label": "Pełny zakres z transportem i technikiem",
+            "amount": {
+              "op": "literal",
+              "value": 550000
+            },
+            "category": "service",
+            "evidence_ids": [
+              "demo-b-price"
+            ]
+          }
+        ]
+      },
+      {
+        "currency": "PLN",
+        "tax_basis": "gross",
+        "participants": 120,
+        "microphones": 4,
+        "service_start": "2026-10-10T09:00:00+02:00",
+        "service_end": "2026-10-10T17:00:00+02:00",
+        "scope_confirmed": true,
+        "id": "C",
+        "name": "Sygnał Studio",
+        "ready_at": "2026-10-10T09:30:00+02:00",
+        "evidence_ids": [
+          "demo-c-currency",
+          "demo-c-tax_basis",
+          "demo-c-participants",
+          "demo-c-microphones",
+          "demo-c-ready_at",
+          "demo-c-service_start",
+          "demo-c-service_end",
+          "demo-c-scope_confirmed",
+          "demo-c-price"
+        ],
+        "cost_items": [
+          {
+            "id": "c-package",
+            "label": "Pełny zakres",
+            "amount": {
+              "op": "literal",
+              "value": 510000
+            },
+            "category": "service",
+            "evidence_ids": [
+              "demo-c-price"
+            ]
+          }
+        ]
+      }
+    ],
+    "constraints": [],
+    "issues": [],
+    "max_scenarios": 100000
+  },
+  "requirements": {
+    "participants": 120,
+    "microphones": 4,
+    "ready_by": "2026-10-10T09:00:00+02:00",
+    "service_start": "2026-10-10T09:00:00+02:00",
+    "service_end": "2026-10-10T17:00:00+02:00",
+    "scope_required": true,
+    "description": "Fikcyjne wydarzenie AV dla 120 osób",
+    "confirmed": true,
+    "currency": "PLN",
+    "timezone": "Europe/Warsaw",
+    "budget_minor": 560000
+  },
+  "documents": [
+    {
+      "id": "A-offer",
+      "offerId": "A",
+      "name": "A-offer.pdf",
+      "mime": "application/pdf",
+      "sha256": "aad4c7e269d57d284a221d2bddd3b3c77c2febe086ac92d0b5142fda01599760",
+      "bytes": 43013,
+      "author": "Fikcyjny wykonawca",
+      "addedBy": "demo",
+      "documentDate": "2026-10-03",
+      "addedAt": "2026-10-03T12:00:00Z",
+      "version": 1,
+      "relation": "offer",
+      "relationConfirmed": true,
+      "active": true,
+      "status": "analyzed",
+      "pages": [
+        {
+          "number": 1,
+          "source_id": "A-offer",
+          "text": "OFERTA A | Fala Audio\nDokument fikcyjny do demonstracji. Autor: Fala Audio, dział ofert. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nZestaw nagłośnienia i obsługa wydarzenia: 4200 PLN brutto.\nTransport: 600 PLN brutto. Łącznie: 4800 PLN brutto.\nOkreślenie obsługa wydarzenia wymaga wyjaśnienia w świetle aneksu A-1.\nDostępność technika przez 09:00-17:00 jest gwarantowana w obu odczytaniach ceny.\nOferta nie zawiera innych opłat za wskazany zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "width": 595.2756,
+          "height": 841.8898,
+          "method": "pdf_text",
+          "status": "read",
+          "blocks": [
+            {
+              "text": "OFERTA",
+              "bbox": [
+                50.0,
+                55.41943319999996,
+                135.168944,
+                76.41943319999996
+              ],
+              "start": 0,
+              "end": 6
+            },
+            {
+              "text": "A",
+              "bbox": [
+                141.00341600000002,
+                55.41943319999996,
+                155.01025220000002,
+                76.41943319999996
+              ],
+              "start": 7,
+              "end": 8
+            },
+            {
+              "text": "|",
+              "bbox": [
+                160.8447242,
+                55.41943319999996,
+                166.2998018,
+                76.41943319999996
+              ],
+              "start": 9,
+              "end": 10
+            },
+            {
+              "text": "Fala",
+              "bbox": [
+                172.13427380000002,
+                55.41943319999996,
+                212.9858342,
+                76.41943319999996
+              ],
+              "start": 11,
+              "end": 15
+            },
+            {
+              "text": "Audio",
+              "bbox": [
+                218.8203062,
+                55.41943319999996,
+                272.5302653,
+                76.41943319999996
+              ],
+              "start": 16,
+              "end": 21
+            },
+            {
+              "text": "Dokument",
+              "bbox": [
+                50.0,
+                106.31494120000002,
+                100.133787,
+                117.31494120000002
+              ],
+              "start": 22,
+              "end": 30
+            },
+            {
+              "text": "fikcyjny",
+              "bbox": [
+                103.189939,
+                106.31494120000002,
+                139.25146230000001,
+                117.31494120000002
+              ],
+              "start": 31,
+              "end": 39
+            },
+            {
+              "text": "do",
+              "bbox": [
+                142.3076143,
+                106.31494120000002,
+                154.5429649,
+                117.31494120000002
+              ],
+              "start": 40,
+              "end": 42
+            },
+            {
+              "text": "demonstracji.",
+              "bbox": [
+                157.5991169,
+                106.31494120000002,
+                223.013665,
+                117.31494120000002
+              ],
+              "start": 43,
+              "end": 56
+            },
+            {
+              "text": "Autor:",
+              "bbox": [
+                226.069817,
+                106.31494120000002,
+                255.4174716,
+                117.31494120000002
+              ],
+              "start": 57,
+              "end": 63
+            },
+            {
+              "text": "Fala",
+              "bbox": [
+                258.4736236,
+                106.31494120000002,
+                279.87206,
+                117.31494120000002
+              ],
+              "start": 64,
+              "end": 68
+            },
+            {
+              "text": "Audio,",
+              "bbox": [
+                282.92821200000003,
+                106.31494120000002,
+                314.1181521,
+                117.31494120000002
+              ],
+              "start": 69,
+              "end": 75
+            },
+            {
+              "text": "dział",
+              "bbox": [
+                317.1743041,
+                106.31494120000002,
+                339.7973506999999,
+                117.31494120000002
+              ],
+              "start": 76,
+              "end": 81
+            },
+            {
+              "text": "ofert.",
+              "bbox": [
+                342.8535026999999,
+                106.31494120000002,
+                367.92039509999984,
+                117.31494120000002
+              ],
+              "start": 82,
+              "end": 88
+            },
+            {
+              "text": "Data:",
+              "bbox": [
+                370.97654709999983,
+                106.31494120000002,
+                397.2680496999998,
+                117.31494120000002
+              ],
+              "start": 89,
+              "end": 94
+            },
+            {
+              "text": "03.10.2026.",
+              "bbox": [
+                400.3242016999998,
+                106.31494120000002,
+                458.43406009999956,
+                117.31494120000002
+              ],
+              "start": 95,
+              "end": 106
+            },
+            {
+              "text": "Termin",
+              "bbox": [
+                50.0,
+                134.31494120000002,
+                84.224608,
+                145.31494120000002
+              ],
+              "start": 107,
+              "end": 113
+            },
+            {
+              "text": "wydarzenia:",
+              "bbox": [
+                87.28075999999999,
+                134.31494120000002,
+                145.9760703,
+                145.31494120000002
+              ],
+              "start": 114,
+              "end": 125
+            },
+            {
+              "text": "10.10.2026.",
+              "bbox": [
+                149.0322223,
+                134.31494120000002,
+                207.1420807,
+                145.31494120000002
+              ],
+              "start": 126,
+              "end": 137
+            },
+            {
+              "text": "Strefa:",
+              "bbox": [
+                210.1982327,
+                134.31494120000002,
+                242.6020393,
+                145.31494120000002
+              ],
+              "start": 138,
+              "end": 145
+            },
+            {
+              "text": "Europe/Warsaw",
+              "bbox": [
+                245.6581913,
+                134.31494120000002,
+                323.90965359999996,
+                145.31494120000002
+              ],
+              "start": 146,
+              "end": 159
+            },
+            {
+              "text": "(UTC+02:00).",
+              "bbox": [
+                326.96580559999995,
+                134.31494120000002,
+                393.90574459999976,
+                145.31494120000002
+              ],
+              "start": 160,
+              "end": 172
+            },
+            {
+              "text": "Potwierdzamy",
+              "bbox": [
+                50.0,
+                162.31494120000002,
+                119.077635,
+                173.31494120000002
+              ],
+              "start": 173,
+              "end": 185
+            },
+            {
+              "text": "odpowiedniość",
+              "bbox": [
+                122.133787,
+                162.31494120000002,
+                194.9067334,
+                173.31494120000002
+              ],
+              "start": 186,
+              "end": 199
+            },
+            {
+              "text": "oferowanego",
+              "bbox": [
+                197.9628854,
+                162.31494120000002,
+                261.5673736,
+                173.31494120000002
+              ],
+              "start": 200,
+              "end": 211
+            },
+            {
+              "text": "nagłośnienia",
+              "bbox": [
+                264.6235256,
+                162.31494120000002,
+                326.39647199999996,
+                173.31494120000002
+              ],
+              "start": 212,
+              "end": 224
+            },
+            {
+              "text": "dla",
+              "bbox": [
+                329.45262399999996,
+                162.31494120000002,
+                344.1318225999999,
+                173.31494120000002
+              ],
+              "start": 225,
+              "end": 228
+            },
+            {
+              "text": "konferencji",
+              "bbox": [
+                347.1879745999999,
+                162.31494120000002,
+                400.38328489999975,
+                173.31494120000002
+              ],
+              "start": 229,
+              "end": 240
+            },
+            {
+              "text": "120",
+              "bbox": [
+                403.43943689999975,
+                162.31494120000002,
+                421.79246279999967,
+                173.31494120000002
+              ],
+              "start": 241,
+              "end": 244
+            },
+            {
+              "text": "osób.",
+              "bbox": [
+                424.84861479999967,
+                162.31494120000002,
+                451.7577926999996,
+                173.31494120000002
+              ],
+              "start": 245,
+              "end": 250
+            },
+            {
+              "text": "W",
+              "bbox": [
+                50.0,
+                190.31494120000002,
+                60.3823247,
+                201.31494120000002
+              ],
+              "start": 251,
+              "end": 252
+            },
+            {
+              "text": "zestawie",
+              "bbox": [
+                63.4384767,
+                190.31494120000002,
+                106.2353506,
+                201.31494120000002
+              ],
+              "start": 253,
+              "end": 261
+            },
+            {
+              "text": "są",
+              "bbox": [
+                109.2915026,
+                190.31494120000002,
+                120.9091779,
+                201.31494120000002
+              ],
+              "start": 262,
+              "end": 264
+            },
+            {
+              "text": "4",
+              "bbox": [
+                123.9653299,
+                190.31494120000002,
+                130.0830052,
+                201.31494120000002
+              ],
+              "start": 265,
+              "end": 266
+            },
+            {
+              "text": "mikrofony",
+              "bbox": [
+                133.1391572,
+                190.31494120000002,
+                180.81835470000001,
+                201.31494120000002
+              ],
+              "start": 267,
+              "end": 276
+            },
+            {
+              "text": "bezprzewodowe.",
+              "bbox": [
+                183.8745067,
+                190.31494120000002,
+                266.42284290000003,
+                201.31494120000002
+              ],
+              "start": 277,
+              "end": 291
+            },
+            {
+              "text": "Technik",
+              "bbox": [
+                50.0,
+                218.31494120000002,
+                88.5161117,
+                229.31494120000002
+              ],
+              "start": 292,
+              "end": 299
+            },
+            {
+              "text": "jest",
+              "bbox": [
+                91.5722637,
+                218.31494120000002,
+                108.689939,
+                229.31494120000002
+              ],
+              "start": 300,
+              "end": 304
+            },
+            {
+              "text": "dostępny",
+              "bbox": [
+                111.74609099999999,
+                218.31494120000002,
+                156.3906195,
+                229.31494120000002
+              ],
+              "start": 305,
+              "end": 313
+            },
+            {
+              "text": "i",
+              "bbox": [
+                159.4467715,
+                218.31494120000002,
+                161.8906195,
+                229.31494120000002
+              ],
+              "start": 314,
+              "end": 315
+            },
+            {
+              "text": "obecny",
+              "bbox": [
+                164.9467715,
+                218.31494120000002,
+                200.4174727,
+                229.31494120000002
+              ],
+              "start": 316,
+              "end": 322
+            },
+            {
+              "text": "przez",
+              "bbox": [
+                203.4736247,
+                218.31494120000002,
+                230.3720611,
+                229.31494120000002
+              ],
+              "start": 323,
+              "end": 328
+            },
+            {
+              "text": "cały",
+              "bbox": [
+                233.4282131,
+                218.31494120000002,
+                252.9897364,
+                229.31494120000002
+              ],
+              "start": 329,
+              "end": 333
+            },
+            {
+              "text": "okres",
+              "bbox": [
+                256.04588839999997,
+                218.31494120000002,
+                282.9443248,
+                229.31494120000002
+              ],
+              "start": 334,
+              "end": 339
+            },
+            {
+              "text": "09:00-17:00.",
+              "bbox": [
+                286.0004768,
+                218.31494120000002,
+                347.7734209999998,
+                229.31494120000002
+              ],
+              "start": 340,
+              "end": 352
+            },
+            {
+              "text": "Gotowość",
+              "bbox": [
+                50.0,
+                246.31494120000002,
+                98.9091779,
+                257.3149412
+              ],
+              "start": 353,
+              "end": 361
+            },
+            {
+              "text": "sprzętu:",
+              "bbox": [
+                101.9653299,
+                246.31494120000002,
+                141.09374559999998,
+                257.3149412
+              ],
+              "start": 362,
+              "end": 370
+            },
+            {
+              "text": "10.10.2026",
+              "bbox": [
+                144.14989759999997,
+                246.31494120000002,
+                199.20360399999998,
+                257.3149412
+              ],
+              "start": 371,
+              "end": 381
+            },
+            {
+              "text": "o",
+              "bbox": [
+                202.25975599999998,
+                246.31494120000002,
+                208.37743129999998,
+                257.3149412
+              ],
+              "start": 382,
+              "end": 383
+            },
+            {
+              "text": "08:30.",
+              "bbox": [
+                211.43358329999998,
+                246.31494120000002,
+                242.01658849999998,
+                257.3149412
+              ],
+              "start": 384,
+              "end": 390
+            },
+            {
+              "text": "Zestaw",
+              "bbox": [
+                50.0,
+                274.3149412,
+                85.4545884,
+                285.3149412
+              ],
+              "start": 391,
+              "end": 397
+            },
+            {
+              "text": "nagłośnienia",
+              "bbox": [
+                88.5107404,
+                274.3149412,
+                150.28368680000003,
+                285.3149412
+              ],
+              "start": 398,
+              "end": 410
+            },
+            {
+              "text": "i",
+              "bbox": [
+                153.3398388,
+                274.3149412,
+                155.7836868,
+                285.3149412
+              ],
+              "start": 411,
+              "end": 412
+            },
+            {
+              "text": "obsługa",
+              "bbox": [
+                158.8398388,
+                274.3149412,
+                197.3720633,
+                285.3149412
+              ],
+              "start": 413,
+              "end": 420
+            },
+            {
+              "text": "wydarzenia:",
+              "bbox": [
+                200.4282153,
+                274.3149412,
+                259.1235256,
+                285.3149412
+              ],
+              "start": 421,
+              "end": 432
+            },
+            {
+              "text": "4200",
+              "bbox": [
+                262.1796776,
+                274.3149412,
+                286.6503788,
+                285.3149412
+              ],
+              "start": 433,
+              "end": 437
+            },
+            {
+              "text": "PLN",
+              "bbox": [
+                289.7065308,
+                274.3149412,
+                311.1049683,
+                285.3149412
+              ],
+              "start": 438,
+              "end": 441
+            },
+            {
+              "text": "brutto.",
+              "bbox": [
+                314.1611203,
+                274.3149412,
+                345.3456879999999,
+                285.3149412
+              ],
+              "start": 442,
+              "end": 449
+            },
+            {
+              "text": "Transport:",
+              "bbox": [
+                50.0,
+                302.3149412,
+                100.12841459999999,
+                313.3149412
+              ],
+              "start": 450,
+              "end": 460
+            },
+            {
+              "text": "600",
+              "bbox": [
+                103.18456659999998,
+                302.3149412,
+                121.53759249999999,
+                313.3149412
+              ],
+              "start": 461,
+              "end": 464
+            },
+            {
+              "text": "PLN",
+              "bbox": [
+                124.59374449999999,
+                302.3149412,
+                145.99218199999999,
+                313.3149412
+              ],
+              "start": 465,
+              "end": 468
+            },
+            {
+              "text": "brutto.",
+              "bbox": [
+                149.04833399999998,
+                302.3149412,
+                180.23290169999999,
+                313.3149412
+              ],
+              "start": 469,
+              "end": 476
+            },
+            {
+              "text": "Łącznie:",
+              "bbox": [
+                183.28905369999998,
+                302.3149412,
+                224.2597549,
+                313.3149412
+              ],
+              "start": 477,
+              "end": 485
+            },
+            {
+              "text": "4800",
+              "bbox": [
+                227.3159069,
+                302.3149412,
+                251.7866081,
+                313.3149412
+              ],
+              "start": 486,
+              "end": 490
+            },
+            {
+              "text": "PLN",
+              "bbox": [
+                254.8427601,
+                302.3149412,
+                276.24119759999996,
+                313.3149412
+              ],
+              "start": 491,
+              "end": 494
+            },
+            {
+              "text": "brutto.",
+              "bbox": [
+                279.29734959999996,
+                302.3149412,
+                310.48191729999996,
+                313.3149412
+              ],
+              "start": 495,
+              "end": 502
+            },
+            {
+              "text": "Określenie",
+              "bbox": [
+                50.0,
+                330.3149412000001,
+                102.577635,
+                341.3149412000001
+              ],
+              "start": 503,
+              "end": 513
+            },
+            {
+              "text": "obsługa",
+              "bbox": [
+                105.633787,
+                330.3149412000001,
+                144.1660115,
+                341.3149412000001
+              ],
+              "start": 514,
+              "end": 521
+            },
+            {
+              "text": "wydarzenia",
+              "bbox": [
+                147.22216350000002,
+                330.3149412000001,
+                202.8613218,
+                341.3149412000001
+              ],
+              "start": 522,
+              "end": 532
+            },
+            {
+              "text": "wymaga",
+              "bbox": [
+                205.9174738,
+                330.3149412000001,
+                246.87743350000002,
+                341.3149412000001
+              ],
+              "start": 533,
+              "end": 539
+            },
+            {
+              "text": "wyjaśnienia",
+              "bbox": [
+                249.93358550000002,
+                330.3149412000001,
+                306.79735400000004,
+                341.3149412000001
+              ],
+              "start": 540,
+              "end": 551
+            },
+            {
+              "text": "w",
+              "bbox": [
+                309.85350600000004,
+                330.3149412000001,
+                317.79735400000004,
+                341.3149412000001
+              ],
+              "start": 552,
+              "end": 553
+            },
+            {
+              "text": "świetle",
+              "bbox": [
+                320.85350600000004,
+                330.3149412000001,
+                354.4765526,
+                341.3149412000001
+              ],
+              "start": 554,
+              "end": 561
+            },
+            {
+              "text": "aneksu",
+              "bbox": [
+                357.5327046,
+                330.3149412000001,
+                393.0034057999999,
+                341.3149412000001
+              ],
+              "start": 562,
+              "end": 568
+            },
+            {
+              "text": "A-1.",
+              "bbox": [
+                396.0595577999999,
+                330.3149412000001,
+                416.23338509999985,
+                341.3149412000001
+              ],
+              "start": 569,
+              "end": 573
+            },
+            {
+              "text": "Dostępność",
+              "bbox": [
+                50.0,
+                358.3149412000001,
+                108.08837650000001,
+                369.3149412000001
+              ],
+              "start": 574,
+              "end": 584
+            },
+            {
+              "text": "technika",
+              "bbox": [
+                111.1445285,
+                358.3149412000001,
+                152.11522970000001,
+                369.3149412000001
+              ],
+              "start": 585,
+              "end": 593
+            },
+            {
+              "text": "przez",
+              "bbox": [
+                155.1713817,
+                358.3149412000001,
+                182.06981810000002,
+                369.3149412000001
+              ],
+              "start": 594,
+              "end": 599
+            },
+            {
+              "text": "09:00-17:00",
+              "bbox": [
+                185.12597010000002,
+                358.3149412000001,
+                243.84276230000003,
+                369.3149412000001
+              ],
+              "start": 600,
+              "end": 611
+            },
+            {
+              "text": "jest",
+              "bbox": [
+                246.89891430000003,
+                358.3149412000001,
+                264.01658960000003,
+                369.3149412000001
+              ],
+              "start": 612,
+              "end": 616
+            },
+            {
+              "text": "gwarantowana",
+              "bbox": [
+                267.07274160000003,
+                358.3149412000001,
+                338.62107779999997,
+                369.3149412000001
+              ],
+              "start": 617,
+              "end": 629
+            },
+            {
+              "text": "w",
+              "bbox": [
+                341.67722979999996,
+                358.3149412000001,
+                349.62107779999997,
+                369.3149412000001
+              ],
+              "start": 630,
+              "end": 631
+            },
+            {
+              "text": "obu",
+              "bbox": [
+                352.67722979999996,
+                358.3149412000001,
+                371.0302556999999,
+                369.3149412000001
+              ],
+              "start": 632,
+              "end": 635
+            },
+            {
+              "text": "odczytaniach",
+              "bbox": [
+                374.0864076999999,
+                358.3149412000001,
+                438.2924594999997,
+                369.3149412000001
+              ],
+              "start": 636,
+              "end": 648
+            },
+            {
+              "text": "ceny.",
+              "bbox": [
+                441.3486114999997,
+                358.3149412000001,
+                467.64011409999966,
+                369.3149412000001
+              ],
+              "start": 649,
+              "end": 654
+            },
+            {
+              "text": "Oferta",
+              "bbox": [
+                50.0,
+                386.3149412000001,
+                80.5668924,
+                397.3149412000001
+              ],
+              "start": 655,
+              "end": 661
+            },
+            {
+              "text": "nie",
+              "bbox": [
+                83.6230444,
+                386.3149412000001,
+                98.302243,
+                397.3149412000001
+              ],
+              "start": 662,
+              "end": 665
+            },
+            {
+              "text": "zawiera",
+              "bbox": [
+                101.358395,
+                386.3149412000001,
+                139.26220270000002,
+                397.3149412000001
+              ],
+              "start": 666,
+              "end": 673
+            },
+            {
+              "text": "innych",
+              "bbox": [
+                142.31835470000001,
+                386.3149412000001,
+                174.11522860000002,
+                397.3149412000001
+              ],
+              "start": 674,
+              "end": 680
+            },
+            {
+              "text": "opłat",
+              "bbox": [
+                177.17138060000002,
+                386.3149412000001,
+                201.02440650000003,
+                397.3149412000001
+              ],
+              "start": 681,
+              "end": 686
+            },
+            {
+              "text": "za",
+              "bbox": [
+                204.08055850000002,
+                386.3149412000001,
+                215.69823380000003,
+                397.3149412000001
+              ],
+              "start": 687,
+              "end": 689
+            },
+            {
+              "text": "wskazany",
+              "bbox": [
+                218.75438580000002,
+                386.3149412000001,
+                267.05125970000006,
+                397.3149412000001
+              ],
+              "start": 690,
+              "end": 698
+            },
+            {
+              "text": "zakres.",
+              "bbox": [
+                270.10741170000006,
+                386.3149412000001,
+                305.56200010000003,
+                397.3149412000001
+              ],
+              "start": 699,
+              "end": 706
+            },
+            {
+              "text": "KontrOferta",
+              "bbox": [
+                44.0,
+                807.5733936,
+                85.35156,
+                815.5733936
+              ],
+              "start": 707,
+              "end": 718
+            },
+            {
+              "text": "|",
+              "bbox": [
+                87.574216,
+                807.5733936,
+                89.6523408,
+                815.5733936
+              ],
+              "start": 719,
+              "end": 720
+            },
+            {
+              "text": "wyłącznie",
+              "bbox": [
+                91.87499679999999,
+                807.5733936,
+                126.55468400000001,
+                815.5733936
+              ],
+              "start": 721,
+              "end": 730
+            },
+            {
+              "text": "dane",
+              "bbox": [
+                128.77734,
+                807.5733936,
+                146.57421360000004,
+                815.5733936
+              ],
+              "start": 731,
+              "end": 735
+            },
+            {
+              "text": "syntetyczne",
+              "bbox": [
+                148.79686960000004,
+                807.5733936,
+                191.03905520000006,
+                815.5733936
+              ],
+              "start": 736,
+              "end": 747
+            },
+            {
+              "text": "|",
+              "bbox": [
+                193.26171120000006,
+                807.5733936,
+                195.33983600000008,
+                815.5733936
+              ],
+              "start": 748,
+              "end": 749
+            },
+            {
+              "text": "źródło",
+              "bbox": [
+                197.56249200000008,
+                807.5733936,
+                219.3515536000001,
+                815.5733936
+              ],
+              "start": 750,
+              "end": 756
+            },
+            {
+              "text": "demonstracyjne",
+              "bbox": [
+                221.5742096000001,
+                807.5733936,
+                278.04686320000013,
+                815.5733936
+              ],
+              "start": 757,
+              "end": 771
+            },
+            {
+              "text": "1",
+              "bbox": [
+                546.8264,
+                807.5733936,
+                551.2756184,
+                815.5733936
+              ],
+              "start": 772,
+              "end": 773
+            }
+          ],
+          "issues": []
+        }
+      ],
+      "parserVersion": "pdfplumber-pdfium-tesseract-v1",
+      "fileUrl": "/demo-documents/A-offer.pdf"
+    },
+    {
+      "id": "A-annex",
+      "offerId": "A",
+      "name": "A-annex.pdf",
+      "mime": "application/pdf",
+      "sha256": "2675ceeb6442ce45396b4ff1027a1e8dc606573fdbc4dca14e3b0d1207cfb880",
+      "bytes": 42754,
+      "author": "Fikcyjny wykonawca",
+      "addedBy": "demo",
+      "documentDate": "2026-10-03",
+      "addedAt": "2026-10-03T12:00:00Z",
+      "version": 1,
+      "relation": "annex",
+      "relationConfirmed": true,
+      "active": true,
+      "status": "analyzed",
+      "pages": [
+        {
+          "number": 1,
+          "source_id": "A-annex",
+          "text": "ANEKS A-1 DO OFERTY A | Fala Audio\nDokument fikcyjny do demonstracji. Data: 03.10.2026.\nDotyczy wyłącznie oferty A na konferencję 120 osób 10.10.2026.\nPozycja cennika: technik przez 09:00-17:00: 1200 PLN brutto.\nNie wskazano jednoznacznie, czy pozycja jest zawarta w kwocie 4800 PLN brutto.\nDwa opisane warianty interpretacji: technik w cenie (dopłata 0 PLN brutto) albo technik dodatkowo\n(dopłata 1200 PLN brutto).\nOba warianty zapewniają obecność technika przez pełne 09:00-17:00.\nTo zakres dwóch interpretacji dokumentu, nie zamknięta lista przyszłych odpowiedzi wykonawcy.\nPowiązanie aneksu i wybór interpretacji musi potwierdzić organizator.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "width": 595.2756,
+          "height": 841.8898,
+          "method": "pdf_text",
+          "status": "read",
+          "blocks": [
+            {
+              "text": "ANEKS",
+              "bbox": [
+                50.0,
+                55.41943319999996,
+                121.19287279999999,
+                76.41943319999996
+              ],
+              "start": 0,
+              "end": 5
+            },
+            {
+              "text": "A-1",
+              "bbox": [
+                127.02734480000001,
+                55.41943319999996,
+                159.7065431,
+                76.41943319999996
+              ],
+              "start": 6,
+              "end": 9
+            },
+            {
+              "text": "DO",
+              "bbox": [
+                165.5410151,
+                55.41943319999996,
+                197.0410151,
+                76.41943319999996
+              ],
+              "start": 10,
+              "end": 12
+            },
+            {
+              "text": "OFERTY",
+              "bbox": [
+                202.87548710000002,
+                55.41943319999996,
+                288.04443110000005,
+                76.41943319999996
+              ],
+              "start": 13,
+              "end": 19
+            },
+            {
+              "text": "A",
+              "bbox": [
+                293.8789031,
+                55.41943319999996,
+                307.8857393,
+                76.41943319999996
+              ],
+              "start": 20,
+              "end": 21
+            },
+            {
+              "text": "|",
+              "bbox": [
+                313.7202113,
+                55.41943319999996,
+                319.1752889,
+                76.41943319999996
+              ],
+              "start": 22,
+              "end": 23
+            },
+            {
+              "text": "Fala",
+              "bbox": [
+                325.0097609,
+                55.41943319999996,
+                365.8613213,
+                76.41943319999996
+              ],
+              "start": 24,
+              "end": 28
+            },
+            {
+              "text": "Audio",
+              "bbox": [
+                371.6957933,
+                55.41943319999996,
+                425.4057524,
+                76.41943319999996
+              ],
+              "start": 29,
+              "end": 34
+            },
+            {
+              "text": "Dokument",
+              "bbox": [
+                50.0,
+                106.31494120000002,
+                100.133787,
+                117.31494120000002
+              ],
+              "start": 35,
+              "end": 43
+            },
+            {
+              "text": "fikcyjny",
+              "bbox": [
+                103.189939,
+                106.31494120000002,
+                139.25146230000001,
+                117.31494120000002
+              ],
+              "start": 44,
+              "end": 52
+            },
+            {
+              "text": "do",
+              "bbox": [
+                142.3076143,
+                106.31494120000002,
+                154.5429649,
+                117.31494120000002
+              ],
+              "start": 53,
+              "end": 55
+            },
+            {
+              "text": "demonstracji.",
+              "bbox": [
+                157.5991169,
+                106.31494120000002,
+                223.013665,
+                117.31494120000002
+              ],
+              "start": 56,
+              "end": 69
+            },
+            {
+              "text": "Data:",
+              "bbox": [
+                226.069817,
+                106.31494120000002,
+                252.3613196,
+                117.31494120000002
+              ],
+              "start": 70,
+              "end": 75
+            },
+            {
+              "text": "03.10.2026.",
+              "bbox": [
+                255.4174716,
+                106.31494120000002,
+                313.52733,
+                117.31494120000002
+              ],
+              "start": 76,
+              "end": 87
+            },
+            {
+              "text": "Dotyczy",
+              "bbox": [
+                50.0,
+                134.31494120000002,
+                89.1176753,
+                145.31494120000002
+              ],
+              "start": 88,
+              "end": 95
+            },
+            {
+              "text": "wyłącznie",
+              "bbox": [
+                92.1738273,
+                134.31494120000002,
+                139.8583972,
+                145.31494120000002
+              ],
+              "start": 96,
+              "end": 105
+            },
+            {
+              "text": "oferty",
+              "bbox": [
+                142.9145492,
+                134.31494120000002,
+                170.4252896,
+                145.31494120000002
+              ],
+              "start": 106,
+              "end": 112
+            },
+            {
+              "text": "A",
+              "bbox": [
+                173.4814416,
+                134.31494120000002,
+                180.8183558,
+                145.31494120000002
+              ],
+              "start": 113,
+              "end": 114
+            },
+            {
+              "text": "na",
+              "bbox": [
+                183.8745078,
+                134.31494120000002,
+                196.1098584,
+                145.31494120000002
+              ],
+              "start": 115,
+              "end": 117
+            },
+            {
+              "text": "konferencję",
+              "bbox": [
+                199.1660104,
+                134.31494120000002,
+                256.035148,
+                145.31494120000002
+              ],
+              "start": 118,
+              "end": 129
+            },
+            {
+              "text": "120",
+              "bbox": [
+                259.09130000000005,
+                134.31494120000002,
+                277.44432589999997,
+                145.31494120000002
+              ],
+              "start": 130,
+              "end": 133
+            },
+            {
+              "text": "osób",
+              "bbox": [
+                280.5004779,
+                134.31494120000002,
+                304.3535038,
+                145.31494120000002
+              ],
+              "start": 134,
+              "end": 138
+            },
+            {
+              "text": "10.10.2026.",
+              "bbox": [
+                307.40965580000005,
+                134.31494120000002,
+                365.51951419999983,
+                145.31494120000002
+              ],
+              "start": 139,
+              "end": 150
+            },
+            {
+              "text": "Pozycja",
+              "bbox": [
+                50.0,
+                162.31494120000002,
+                88.5161128,
+                173.31494120000002
+              ],
+              "start": 151,
+              "end": 158
+            },
+            {
+              "text": "cennika:",
+              "bbox": [
+                91.5722648,
+                162.31494120000002,
+                132.542966,
+                173.31494120000002
+              ],
+              "start": 159,
+              "end": 167
+            },
+            {
+              "text": "technik",
+              "bbox": [
+                135.599118,
+                162.31494120000002,
+                170.4521439,
+                173.31494120000002
+              ],
+              "start": 168,
+              "end": 175
+            },
+            {
+              "text": "przez",
+              "bbox": [
+                173.5082959,
+                162.31494120000002,
+                200.40673230000002,
+                173.31494120000002
+              ],
+              "start": 176,
+              "end": 181
+            },
+            {
+              "text": "09:00-17:00:",
+              "bbox": [
+                203.4628843,
+                162.31494120000002,
+                265.2358285,
+                173.31494120000002
+              ],
+              "start": 182,
+              "end": 194
+            },
+            {
+              "text": "1200",
+              "bbox": [
+                268.2919805,
+                162.31494120000002,
+                292.76268170000003,
+                173.31494120000002
+              ],
+              "start": 195,
+              "end": 199
+            },
+            {
+              "text": "PLN",
+              "bbox": [
+                295.8188337,
+                162.31494120000002,
+                317.2172712,
+                173.31494120000002
+              ],
+              "start": 200,
+              "end": 203
+            },
+            {
+              "text": "brutto.",
+              "bbox": [
+                320.2734232,
+                162.31494120000002,
+                351.4579908999999,
+                173.31494120000002
+              ],
+              "start": 204,
+              "end": 211
+            },
+            {
+              "text": "Nie",
+              "bbox": [
+                50.0,
+                190.31494120000002,
+                66.5053713,
+                201.31494120000002
+              ],
+              "start": 212,
+              "end": 215
+            },
+            {
+              "text": "wskazano",
+              "bbox": [
+                69.5615233,
+                190.31494120000002,
+                118.47607250000001,
+                201.31494120000002
+              ],
+              "start": 216,
+              "end": 224
+            },
+            {
+              "text": "jednoznacznie,",
+              "bbox": [
+                121.5322245,
+                190.31494120000002,
+                194.9174749,
+                201.31494120000002
+              ],
+              "start": 225,
+              "end": 239
+            },
+            {
+              "text": "czy",
+              "bbox": [
+                197.9736269,
+                190.31494120000002,
+                214.4736269,
+                201.31494120000002
+              ],
+              "start": 240,
+              "end": 243
+            },
+            {
+              "text": "pozycja",
+              "bbox": [
+                217.5297789,
+                190.31494120000002,
+                254.8266528,
+                201.31494120000002
+              ],
+              "start": 244,
+              "end": 251
+            },
+            {
+              "text": "jest",
+              "bbox": [
+                257.88280480000003,
+                190.31494120000002,
+                275.0004801,
+                201.31494120000002
+              ],
+              "start": 252,
+              "end": 256
+            },
+            {
+              "text": "zawarta",
+              "bbox": [
+                278.0566321,
+                190.31494120000002,
+                316.57274379999996,
+                201.31494120000002
+              ],
+              "start": 257,
+              "end": 264
+            },
+            {
+              "text": "w",
+              "bbox": [
+                319.62889579999995,
+                190.31494120000002,
+                327.57274379999996,
+                201.31494120000002
+              ],
+              "start": 265,
+              "end": 266
+            },
+            {
+              "text": "kwocie",
+              "bbox": [
+                330.62889579999995,
+                190.31494120000002,
+                364.2519423999999,
+                201.31494120000002
+              ],
+              "start": 267,
+              "end": 273
+            },
+            {
+              "text": "4800",
+              "bbox": [
+                367.3080943999999,
+                190.31494120000002,
+                391.7787955999998,
+                201.31494120000002
+              ],
+              "start": 274,
+              "end": 278
+            },
+            {
+              "text": "PLN",
+              "bbox": [
+                394.8349475999998,
+                190.31494120000002,
+                416.2333850999998,
+                201.31494120000002
+              ],
+              "start": 279,
+              "end": 282
+            },
+            {
+              "text": "brutto.",
+              "bbox": [
+                419.2895370999998,
+                190.31494120000002,
+                450.4741047999997,
+                201.31494120000002
+              ],
+              "start": 283,
+              "end": 290
+            },
+            {
+              "text": "Dwa",
+              "bbox": [
+                50.0,
+                218.31494120000002,
+                72.00537130000001,
+                229.31494120000002
+              ],
+              "start": 291,
+              "end": 294
+            },
+            {
+              "text": "opisane",
+              "bbox": [
+                75.0615233,
+                218.31494120000002,
+                113.59374780000002,
+                229.31494120000002
+              ],
+              "start": 295,
+              "end": 302
+            },
+            {
+              "text": "warianty",
+              "bbox": [
+                116.64989980000001,
+                218.31494120000002,
+                157.60985950000003,
+                229.31494120000002
+              ],
+              "start": 303,
+              "end": 311
+            },
+            {
+              "text": "interpretacji:",
+              "bbox": [
+                160.66601150000002,
+                218.31494120000002,
+                220.58055960000004,
+                229.31494120000002
+              ],
+              "start": 312,
+              "end": 326
+            },
+            {
+              "text": "technik",
+              "bbox": [
+                223.63671160000004,
+                218.31494120000002,
+                258.48973750000005,
+                229.31494120000002
+              ],
+              "start": 327,
+              "end": 334
+            },
+            {
+              "text": "w",
+              "bbox": [
+                261.54588950000004,
+                218.31494120000002,
+                269.48973750000005,
+                229.31494120000002
+              ],
+              "start": 335,
+              "end": 336
+            },
+            {
+              "text": "cenie",
+              "bbox": [
+                272.54588950000004,
+                218.31494120000002,
+                298.8427634,
+                229.31494120000002
+              ],
+              "start": 337,
+              "end": 342
+            },
+            {
+              "text": "(dopłata",
+              "bbox": [
+                301.8989154000001,
+                218.31494120000002,
+                341.6503776999999,
+                229.31494120000002
+              ],
+              "start": 343,
+              "end": 351
+            },
+            {
+              "text": "0",
+              "bbox": [
+                344.7065296999999,
+                218.31494120000002,
+                350.8242049999999,
+                229.31494120000002
+              ],
+              "start": 352,
+              "end": 353
+            },
+            {
+              "text": "PLN",
+              "bbox": [
+                353.8803569999999,
+                218.31494120000002,
+                375.2787944999999,
+                229.31494120000002
+              ],
+              "start": 354,
+              "end": 357
+            },
+            {
+              "text": "brutto)",
+              "bbox": [
+                378.3349464999999,
+                218.31494120000002,
+                410.12644799999975,
+                229.31494120000002
+              ],
+              "start": 358,
+              "end": 365
+            },
+            {
+              "text": "albo",
+              "bbox": [
+                413.18259999999975,
+                218.31494120000002,
+                433.9794738999997,
+                229.31494120000002
+              ],
+              "start": 366,
+              "end": 370
+            },
+            {
+              "text": "technik",
+              "bbox": [
+                437.0356258999997,
+                218.31494120000002,
+                471.8886517999996,
+                229.31494120000002
+              ],
+              "start": 371,
+              "end": 378
+            },
+            {
+              "text": "dodatkowo",
+              "bbox": [
+                474.9448037999996,
+                218.31494120000002,
+                528.1508555999994,
+                229.31494120000002
+              ],
+              "start": 379,
+              "end": 388
+            },
+            {
+              "text": "(dopłata",
+              "bbox": [
+                50.0,
+                235.31494120000002,
+                89.75146229999999,
+                246.31494120000002
+              ],
+              "start": 389,
+              "end": 397
+            },
+            {
+              "text": "1200",
+              "bbox": [
+                92.80761429999998,
+                235.31494120000002,
+                117.27831549999999,
+                246.31494120000002
+              ],
+              "start": 398,
+              "end": 402
+            },
+            {
+              "text": "PLN",
+              "bbox": [
+                120.33446749999999,
+                235.31494120000002,
+                141.732905,
+                246.31494120000002
+              ],
+              "start": 403,
+              "end": 406
+            },
+            {
+              "text": "brutto).",
+              "bbox": [
+                144.78905699999999,
+                235.31494120000002,
+                179.6367105,
+                246.31494120000002
+              ],
+              "start": 407,
+              "end": 415
+            },
+            {
+              "text": "Oba",
+              "bbox": [
+                50.0,
+                263.3149412,
+                70.7915026,
+                274.3149412
+              ],
+              "start": 416,
+              "end": 419
+            },
+            {
+              "text": "warianty",
+              "bbox": [
+                73.8476546,
+                263.3149412,
+                114.8076143,
+                274.3149412
+              ],
+              "start": 420,
+              "end": 428
+            },
+            {
+              "text": "zapewniają",
+              "bbox": [
+                117.8637663,
+                263.3149412,
+                172.9013621,
+                274.3149412
+              ],
+              "start": 429,
+              "end": 439
+            },
+            {
+              "text": "obecność",
+              "bbox": [
+                175.95751410000003,
+                263.3149412,
+                223.0458906,
+                274.3149412
+              ],
+              "start": 440,
+              "end": 448
+            },
+            {
+              "text": "technika",
+              "bbox": [
+                226.1020426,
+                263.3149412,
+                267.0727438,
+                274.3149412
+              ],
+              "start": 449,
+              "end": 457
+            },
+            {
+              "text": "przez",
+              "bbox": [
+                270.1288958,
+                263.3149412,
+                297.02733220000005,
+                274.3149412
+              ],
+              "start": 458,
+              "end": 463
+            },
+            {
+              "text": "pełne",
+              "bbox": [
+                300.08348420000004,
+                263.3149412,
+                326.99803339999994,
+                274.3149412
+              ],
+              "start": 464,
+              "end": 469
+            },
+            {
+              "text": "09:00-17:00.",
+              "bbox": [
+                330.05418539999994,
+                263.3149412,
+                391.8271295999997,
+                274.3149412
+              ],
+              "start": 470,
+              "end": 482
+            },
+            {
+              "text": "To",
+              "bbox": [
+                50.0,
+                291.3149412,
+                62.836913100000004,
+                302.3149412
+              ],
+              "start": 483,
+              "end": 485
+            },
+            {
+              "text": "zakres",
+              "bbox": [
+                65.8930651,
+                291.3149412,
+                98.29150150000001,
+                302.3149412
+              ],
+              "start": 486,
+              "end": 492
+            },
+            {
+              "text": "dwóch",
+              "bbox": [
+                101.3476535,
+                291.3149412,
+                133.1445274,
+                302.3149412
+              ],
+              "start": 493,
+              "end": 498
+            },
+            {
+              "text": "interpretacji",
+              "bbox": [
+                136.2006794,
+                291.3149412,
+                193.0590755,
+                302.3149412
+              ],
+              "start": 499,
+              "end": 512
+            },
+            {
+              "text": "dokumentu,",
+              "bbox": [
+                196.1152275,
+                291.3149412,
+                253.5966691,
+                302.3149412
+              ],
+              "start": 513,
+              "end": 523
+            },
+            {
+              "text": "nie",
+              "bbox": [
+                256.6528211,
+                291.3149412,
+                271.3320197,
+                302.3149412
+              ],
+              "start": 524,
+              "end": 527
+            },
+            {
+              "text": "zamknięta",
+              "bbox": [
+                274.38817170000004,
+                291.3149412,
+                324.52195869999997,
+                302.3149412
+              ],
+              "start": 528,
+              "end": 537
+            },
+            {
+              "text": "lista",
+              "bbox": [
+                327.57811069999997,
+                291.3149412,
+                347.13963399999994,
+                302.3149412
+              ],
+              "start": 538,
+              "end": 543
+            },
+            {
+              "text": "przyszłych",
+              "bbox": [
+                350.19578599999994,
+                291.3149412,
+                401.53807039999987,
+                302.3149412
+              ],
+              "start": 544,
+              "end": 554
+            },
+            {
+              "text": "odpowiedzi",
+              "bbox": [
+                404.59422239999986,
+                291.3149412,
+                459.6318181999997,
+                302.3149412
+              ],
+              "start": 555,
+              "end": 565
+            },
+            {
+              "text": "wykonawcy.",
+              "bbox": [
+                462.6879701999997,
+                291.3149412,
+                521.9848440999996,
+                302.3149412
+              ],
+              "start": 566,
+              "end": 576
+            },
+            {
+              "text": "Powiązanie",
+              "bbox": [
+                50.0,
+                319.31494120000013,
+                106.25683470000001,
+                330.31494120000013
+              ],
+              "start": 577,
+              "end": 587
+            },
+            {
+              "text": "aneksu",
+              "bbox": [
+                109.31298670000001,
+                319.31494120000013,
+                144.7836879,
+                330.31494120000013
+              ],
+              "start": 588,
+              "end": 594
+            },
+            {
+              "text": "i",
+              "bbox": [
+                147.83983990000002,
+                319.31494120000013,
+                150.28368790000002,
+                330.31494120000013
+              ],
+              "start": 595,
+              "end": 596
+            },
+            {
+              "text": "wybór",
+              "bbox": [
+                153.33983990000002,
+                319.31494120000013,
+                182.6821243,
+                330.31494120000013
+              ],
+              "start": 597,
+              "end": 602
+            },
+            {
+              "text": "interpretacji",
+              "bbox": [
+                185.7382763,
+                319.31494120000013,
+                242.59667240000002,
+                330.31494120000013
+              ],
+              "start": 603,
+              "end": 616
+            },
+            {
+              "text": "musi",
+              "bbox": [
+                245.65282440000001,
+                319.31494120000013,
+                268.87743350000005,
+                330.31494120000013
+              ],
+              "start": 617,
+              "end": 621
+            },
+            {
+              "text": "potwierdzić",
+              "bbox": [
+                271.93358550000005,
+                319.31494120000013,
+                326.9550685,
+                330.31494120000013
+              ],
+              "start": 622,
+              "end": 633
+            },
+            {
+              "text": "organizator.",
+              "bbox": [
+                330.0112205,
+                319.31494120000013,
+                388.09959589999977,
+                330.31494120000013
+              ],
+              "start": 634,
+              "end": 646
+            },
+            {
+              "text": "KontrOferta",
+              "bbox": [
+                44.0,
+                807.5733936,
+                85.35156,
+                815.5733936
+              ],
+              "start": 647,
+              "end": 658
+            },
+            {
+              "text": "|",
+              "bbox": [
+                87.574216,
+                807.5733936,
+                89.6523408,
+                815.5733936
+              ],
+              "start": 659,
+              "end": 660
+            },
+            {
+              "text": "wyłącznie",
+              "bbox": [
+                91.87499679999999,
+                807.5733936,
+                126.55468400000001,
+                815.5733936
+              ],
+              "start": 661,
+              "end": 670
+            },
+            {
+              "text": "dane",
+              "bbox": [
+                128.77734,
+                807.5733936,
+                146.57421360000004,
+                815.5733936
+              ],
+              "start": 671,
+              "end": 675
+            },
+            {
+              "text": "syntetyczne",
+              "bbox": [
+                148.79686960000004,
+                807.5733936,
+                191.03905520000006,
+                815.5733936
+              ],
+              "start": 676,
+              "end": 687
+            },
+            {
+              "text": "|",
+              "bbox": [
+                193.26171120000006,
+                807.5733936,
+                195.33983600000008,
+                815.5733936
+              ],
+              "start": 688,
+              "end": 689
+            },
+            {
+              "text": "źródło",
+              "bbox": [
+                197.56249200000008,
+                807.5733936,
+                219.3515536000001,
+                815.5733936
+              ],
+              "start": 690,
+              "end": 696
+            },
+            {
+              "text": "demonstracyjne",
+              "bbox": [
+                221.5742096000001,
+                807.5733936,
+                278.04686320000013,
+                815.5733936
+              ],
+              "start": 697,
+              "end": 711
+            },
+            {
+              "text": "1",
+              "bbox": [
+                546.8264,
+                807.5733936,
+                551.2756184,
+                815.5733936
+              ],
+              "start": 712,
+              "end": 713
+            }
+          ],
+          "issues": []
+        }
+      ],
+      "parserVersion": "pdfplumber-pdfium-tesseract-v1",
+      "fileUrl": "/demo-documents/A-annex.pdf"
+    },
+    {
+      "id": "B-offer",
+      "offerId": "B",
+      "name": "B-offer.pdf",
+      "mime": "application/pdf",
+      "sha256": "b4e988ed7ac9a1b74894d15eccbcd5cfea93b939fda410467229294fdcb442ee",
+      "bytes": 42719,
+      "author": "Fikcyjny wykonawca",
+      "addedBy": "demo",
+      "documentDate": "2026-10-03",
+      "addedAt": "2026-10-03T12:00:00Z",
+      "version": 1,
+      "relation": "offer",
+      "relationConfirmed": true,
+      "active": true,
+      "status": "analyzed",
+      "pages": [
+        {
+          "number": 1,
+          "source_id": "B-offer",
+          "text": "OFERTA B | Pracownia Dźwięku\nDokument fikcyjny do demonstracji. Autor: Pracownia Dźwięku. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nPełna cena usługi: 5500 PLN brutto.\nCena obejmuje nagłośnienie, 4 mikrofony, transport i technika przez 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "width": 595.2756,
+          "height": 841.8898,
+          "method": "pdf_text",
+          "status": "read",
+          "blocks": [
+            {
+              "text": "OFERTA",
+              "bbox": [
+                50.0,
+                55.41943319999996,
+                135.168944,
+                76.41943319999996
+              ],
+              "start": 0,
+              "end": 6
+            },
+            {
+              "text": "B",
+              "bbox": [
+                141.00341600000002,
+                55.41943319999996,
+                155.01025220000002,
+                76.41943319999996
+              ],
+              "start": 7,
+              "end": 8
+            },
+            {
+              "text": "|",
+              "bbox": [
+                160.8447242,
+                55.41943319999996,
+                166.2998018,
+                76.41943319999996
+              ],
+              "start": 9,
+              "end": 10
+            },
+            {
+              "text": "Pracownia",
+              "bbox": [
+                172.13427380000002,
+                55.41943319999996,
+                270.182123,
+                76.41943319999996
+              ],
+              "start": 11,
+              "end": 20
+            },
+            {
+              "text": "Dźwięku",
+              "bbox": [
+                276.01659499999994,
+                55.41943319999996,
+                355.37157559999997,
+                76.41943319999996
+              ],
+              "start": 21,
+              "end": 28
+            },
+            {
+              "text": "Dokument",
+              "bbox": [
+                50.0,
+                106.31494120000002,
+                100.133787,
+                117.31494120000002
+              ],
+              "start": 29,
+              "end": 37
+            },
+            {
+              "text": "fikcyjny",
+              "bbox": [
+                103.189939,
+                106.31494120000002,
+                139.25146230000001,
+                117.31494120000002
+              ],
+              "start": 38,
+              "end": 46
+            },
+            {
+              "text": "do",
+              "bbox": [
+                142.3076143,
+                106.31494120000002,
+                154.5429649,
+                117.31494120000002
+              ],
+              "start": 47,
+              "end": 49
+            },
+            {
+              "text": "demonstracji.",
+              "bbox": [
+                157.5991169,
+                106.31494120000002,
+                223.013665,
+                117.31494120000002
+              ],
+              "start": 50,
+              "end": 63
+            },
+            {
+              "text": "Autor:",
+              "bbox": [
+                226.069817,
+                106.31494120000002,
+                255.4174716,
+                117.31494120000002
+              ],
+              "start": 64,
+              "end": 70
+            },
+            {
+              "text": "Pracownia",
+              "bbox": [
+                258.4736236,
+                106.31494120000002,
+                309.8320208,
+                117.31494120000002
+              ],
+              "start": 71,
+              "end": 80
+            },
+            {
+              "text": "Dźwięku.",
+              "bbox": [
+                312.8881728,
+                106.31494120000002,
+                357.51121939999996,
+                117.31494120000002
+              ],
+              "start": 81,
+              "end": 89
+            },
+            {
+              "text": "Data:",
+              "bbox": [
+                360.56737139999996,
+                106.31494120000002,
+                386.8588739999999,
+                117.31494120000002
+              ],
+              "start": 90,
+              "end": 95
+            },
+            {
+              "text": "03.10.2026.",
+              "bbox": [
+                389.9150259999999,
+                106.31494120000002,
+                448.0248843999997,
+                117.31494120000002
+              ],
+              "start": 96,
+              "end": 107
+            },
+            {
+              "text": "Termin",
+              "bbox": [
+                50.0,
+                134.31494120000002,
+                84.224608,
+                145.31494120000002
+              ],
+              "start": 108,
+              "end": 114
+            },
+            {
+              "text": "wydarzenia:",
+              "bbox": [
+                87.28075999999999,
+                134.31494120000002,
+                145.9760703,
+                145.31494120000002
+              ],
+              "start": 115,
+              "end": 126
+            },
+            {
+              "text": "10.10.2026.",
+              "bbox": [
+                149.0322223,
+                134.31494120000002,
+                207.1420807,
+                145.31494120000002
+              ],
+              "start": 127,
+              "end": 138
+            },
+            {
+              "text": "Strefa:",
+              "bbox": [
+                210.1982327,
+                134.31494120000002,
+                242.6020393,
+                145.31494120000002
+              ],
+              "start": 139,
+              "end": 146
+            },
+            {
+              "text": "Europe/Warsaw",
+              "bbox": [
+                245.6581913,
+                134.31494120000002,
+                323.90965359999996,
+                145.31494120000002
+              ],
+              "start": 147,
+              "end": 160
+            },
+            {
+              "text": "(UTC+02:00).",
+              "bbox": [
+                326.96580559999995,
+                134.31494120000002,
+                393.90574459999976,
+                145.31494120000002
+              ],
+              "start": 161,
+              "end": 173
+            },
+            {
+              "text": "Potwierdzamy",
+              "bbox": [
+                50.0,
+                162.31494120000002,
+                119.077635,
+                173.31494120000002
+              ],
+              "start": 174,
+              "end": 186
+            },
+            {
+              "text": "odpowiedniość",
+              "bbox": [
+                122.133787,
+                162.31494120000002,
+                194.9067334,
+                173.31494120000002
+              ],
+              "start": 187,
+              "end": 200
+            },
+            {
+              "text": "oferowanego",
+              "bbox": [
+                197.9628854,
+                162.31494120000002,
+                261.5673736,
+                173.31494120000002
+              ],
+              "start": 201,
+              "end": 212
+            },
+            {
+              "text": "nagłośnienia",
+              "bbox": [
+                264.6235256,
+                162.31494120000002,
+                326.39647199999996,
+                173.31494120000002
+              ],
+              "start": 213,
+              "end": 225
+            },
+            {
+              "text": "dla",
+              "bbox": [
+                329.45262399999996,
+                162.31494120000002,
+                344.1318225999999,
+                173.31494120000002
+              ],
+              "start": 226,
+              "end": 229
+            },
+            {
+              "text": "konferencji",
+              "bbox": [
+                347.1879745999999,
+                162.31494120000002,
+                400.38328489999975,
+                173.31494120000002
+              ],
+              "start": 230,
+              "end": 241
+            },
+            {
+              "text": "120",
+              "bbox": [
+                403.43943689999975,
+                162.31494120000002,
+                421.79246279999967,
+                173.31494120000002
+              ],
+              "start": 242,
+              "end": 245
+            },
+            {
+              "text": "osób.",
+              "bbox": [
+                424.84861479999967,
+                162.31494120000002,
+                451.7577926999996,
+                173.31494120000002
+              ],
+              "start": 246,
+              "end": 251
+            },
+            {
+              "text": "W",
+              "bbox": [
+                50.0,
+                190.31494120000002,
+                60.3823247,
+                201.31494120000002
+              ],
+              "start": 252,
+              "end": 253
+            },
+            {
+              "text": "zestawie",
+              "bbox": [
+                63.4384767,
+                190.31494120000002,
+                106.2353506,
+                201.31494120000002
+              ],
+              "start": 254,
+              "end": 262
+            },
+            {
+              "text": "są",
+              "bbox": [
+                109.2915026,
+                190.31494120000002,
+                120.9091779,
+                201.31494120000002
+              ],
+              "start": 263,
+              "end": 265
+            },
+            {
+              "text": "4",
+              "bbox": [
+                123.9653299,
+                190.31494120000002,
+                130.0830052,
+                201.31494120000002
+              ],
+              "start": 266,
+              "end": 267
+            },
+            {
+              "text": "mikrofony",
+              "bbox": [
+                133.1391572,
+                190.31494120000002,
+                180.81835470000001,
+                201.31494120000002
+              ],
+              "start": 268,
+              "end": 277
+            },
+            {
+              "text": "bezprzewodowe.",
+              "bbox": [
+                183.8745067,
+                190.31494120000002,
+                266.42284290000003,
+                201.31494120000002
+              ],
+              "start": 278,
+              "end": 292
+            },
+            {
+              "text": "Technik",
+              "bbox": [
+                50.0,
+                218.31494120000002,
+                88.5161117,
+                229.31494120000002
+              ],
+              "start": 293,
+              "end": 300
+            },
+            {
+              "text": "jest",
+              "bbox": [
+                91.5722637,
+                218.31494120000002,
+                108.689939,
+                229.31494120000002
+              ],
+              "start": 301,
+              "end": 305
+            },
+            {
+              "text": "dostępny",
+              "bbox": [
+                111.74609099999999,
+                218.31494120000002,
+                156.3906195,
+                229.31494120000002
+              ],
+              "start": 306,
+              "end": 314
+            },
+            {
+              "text": "i",
+              "bbox": [
+                159.4467715,
+                218.31494120000002,
+                161.8906195,
+                229.31494120000002
+              ],
+              "start": 315,
+              "end": 316
+            },
+            {
+              "text": "obecny",
+              "bbox": [
+                164.9467715,
+                218.31494120000002,
+                200.4174727,
+                229.31494120000002
+              ],
+              "start": 317,
+              "end": 323
+            },
+            {
+              "text": "przez",
+              "bbox": [
+                203.4736247,
+                218.31494120000002,
+                230.3720611,
+                229.31494120000002
+              ],
+              "start": 324,
+              "end": 329
+            },
+            {
+              "text": "cały",
+              "bbox": [
+                233.4282131,
+                218.31494120000002,
+                252.9897364,
+                229.31494120000002
+              ],
+              "start": 330,
+              "end": 334
+            },
+            {
+              "text": "okres",
+              "bbox": [
+                256.04588839999997,
+                218.31494120000002,
+                282.9443248,
+                229.31494120000002
+              ],
+              "start": 335,
+              "end": 340
+            },
+            {
+              "text": "09:00-17:00.",
+              "bbox": [
+                286.0004768,
+                218.31494120000002,
+                347.7734209999998,
+                229.31494120000002
+              ],
+              "start": 341,
+              "end": 353
+            },
+            {
+              "text": "Gotowość",
+              "bbox": [
+                50.0,
+                246.31494120000002,
+                98.9091779,
+                257.3149412
+              ],
+              "start": 354,
+              "end": 362
+            },
+            {
+              "text": "sprzętu:",
+              "bbox": [
+                101.9653299,
+                246.31494120000002,
+                141.09374559999998,
+                257.3149412
+              ],
+              "start": 363,
+              "end": 371
+            },
+            {
+              "text": "10.10.2026",
+              "bbox": [
+                144.14989759999997,
+                246.31494120000002,
+                199.20360399999998,
+                257.3149412
+              ],
+              "start": 372,
+              "end": 382
+            },
+            {
+              "text": "o",
+              "bbox": [
+                202.25975599999998,
+                246.31494120000002,
+                208.37743129999998,
+                257.3149412
+              ],
+              "start": 383,
+              "end": 384
+            },
+            {
+              "text": "08:30.",
+              "bbox": [
+                211.43358329999998,
+                246.31494120000002,
+                242.01658849999998,
+                257.3149412
+              ],
+              "start": 385,
+              "end": 391
+            },
+            {
+              "text": "Pełna",
+              "bbox": [
+                50.0,
+                274.3149412,
+                78.1337881,
+                285.3149412
+              ],
+              "start": 392,
+              "end": 397
+            },
+            {
+              "text": "cena",
+              "bbox": [
+                81.1899401,
+                274.3149412,
+                105.042966,
+                285.3149412
+              ],
+              "start": 398,
+              "end": 402
+            },
+            {
+              "text": "usługi:",
+              "bbox": [
+                108.099118,
+                274.3149412,
+                139.8959919,
+                285.3149412
+              ],
+              "start": 403,
+              "end": 410
+            },
+            {
+              "text": "5500",
+              "bbox": [
+                142.9521439,
+                274.3149412,
+                167.42284510000002,
+                285.3149412
+              ],
+              "start": 411,
+              "end": 415
+            },
+            {
+              "text": "PLN",
+              "bbox": [
+                170.47899710000002,
+                274.3149412,
+                191.87743460000002,
+                285.3149412
+              ],
+              "start": 416,
+              "end": 419
+            },
+            {
+              "text": "brutto.",
+              "bbox": [
+                194.9335866,
+                274.3149412,
+                226.11815430000001,
+                285.3149412
+              ],
+              "start": 420,
+              "end": 427
+            },
+            {
+              "text": "Cena",
+              "bbox": [
+                50.0,
+                302.3149412,
+                76.29687390000001,
+                313.3149412
+              ],
+              "start": 428,
+              "end": 432
+            },
+            {
+              "text": "obejmuje",
+              "bbox": [
+                79.3530259,
+                302.3149412,
+                123.99218420000001,
+                313.3149412
+              ],
+              "start": 433,
+              "end": 441
+            },
+            {
+              "text": "nagłośnienie,",
+              "bbox": [
+                127.04833620000001,
+                302.3149412,
+                191.87743460000002,
+                313.3149412
+              ],
+              "start": 442,
+              "end": 455
+            },
+            {
+              "text": "4",
+              "bbox": [
+                194.9335866,
+                302.3149412,
+                201.05126190000001,
+                313.3149412
+              ],
+              "start": 456,
+              "end": 457
+            },
+            {
+              "text": "mikrofony,",
+              "bbox": [
+                204.1074139,
+                302.3149412,
+                254.84276340000002,
+                313.3149412
+              ],
+              "start": 458,
+              "end": 468
+            },
+            {
+              "text": "transport",
+              "bbox": [
+                257.8989154,
+                302.3149412,
+                301.30809220000003,
+                313.3149412
+              ],
+              "start": 469,
+              "end": 478
+            },
+            {
+              "text": "i",
+              "bbox": [
+                304.36424420000003,
+                302.3149412,
+                306.80809220000003,
+                313.3149412
+              ],
+              "start": 479,
+              "end": 480
+            },
+            {
+              "text": "technika",
+              "bbox": [
+                309.86424420000003,
+                302.3149412,
+                350.8349453999999,
+                313.3149412
+              ],
+              "start": 481,
+              "end": 489
+            },
+            {
+              "text": "przez",
+              "bbox": [
+                353.8910973999999,
+                302.3149412,
+                380.78953379999984,
+                313.3149412
+              ],
+              "start": 490,
+              "end": 495
+            },
+            {
+              "text": "09:00-17:00.",
+              "bbox": [
+                383.84568579999984,
+                302.3149412,
+                445.6186299999996,
+                313.3149412
+              ],
+              "start": 496,
+              "end": 508
+            },
+            {
+              "text": "Brak",
+              "bbox": [
+                50.0,
+                330.3149412000001,
+                72.6176753,
+                341.3149412000001
+              ],
+              "start": 509,
+              "end": 513
+            },
+            {
+              "text": "dodatkowych",
+              "bbox": [
+                75.6738273,
+                330.3149412000001,
+                139.8798791,
+                341.3149412000001
+              ],
+              "start": 514,
+              "end": 525
+            },
+            {
+              "text": "opłat",
+              "bbox": [
+                142.93603109999998,
+                330.3149412000001,
+                166.789057,
+                341.3149412000001
+              ],
+              "start": 526,
+              "end": 531
+            },
+            {
+              "text": "za",
+              "bbox": [
+                169.845209,
+                330.3149412000001,
+                181.4628843,
+                341.3149412000001
+              ],
+              "start": 532,
+              "end": 534
+            },
+            {
+              "text": "ten",
+              "bbox": [
+                184.51903629999998,
+                330.3149412000001,
+                199.81053889999998,
+                341.3149412000001
+              ],
+              "start": 535,
+              "end": 538
+            },
+            {
+              "text": "zakres.",
+              "bbox": [
+                202.86669089999998,
+                330.3149412000001,
+                238.3212793,
+                341.3149412000001
+              ],
+              "start": 539,
+              "end": 546
+            },
+            {
+              "text": "KontrOferta",
+              "bbox": [
+                44.0,
+                807.5733936,
+                85.35156,
+                815.5733936
+              ],
+              "start": 547,
+              "end": 558
+            },
+            {
+              "text": "|",
+              "bbox": [
+                87.574216,
+                807.5733936,
+                89.6523408,
+                815.5733936
+              ],
+              "start": 559,
+              "end": 560
+            },
+            {
+              "text": "wyłącznie",
+              "bbox": [
+                91.87499679999999,
+                807.5733936,
+                126.55468400000001,
+                815.5733936
+              ],
+              "start": 561,
+              "end": 570
+            },
+            {
+              "text": "dane",
+              "bbox": [
+                128.77734,
+                807.5733936,
+                146.57421360000004,
+                815.5733936
+              ],
+              "start": 571,
+              "end": 575
+            },
+            {
+              "text": "syntetyczne",
+              "bbox": [
+                148.79686960000004,
+                807.5733936,
+                191.03905520000006,
+                815.5733936
+              ],
+              "start": 576,
+              "end": 587
+            },
+            {
+              "text": "|",
+              "bbox": [
+                193.26171120000006,
+                807.5733936,
+                195.33983600000008,
+                815.5733936
+              ],
+              "start": 588,
+              "end": 589
+            },
+            {
+              "text": "źródło",
+              "bbox": [
+                197.56249200000008,
+                807.5733936,
+                219.3515536000001,
+                815.5733936
+              ],
+              "start": 590,
+              "end": 596
+            },
+            {
+              "text": "demonstracyjne",
+              "bbox": [
+                221.5742096000001,
+                807.5733936,
+                278.04686320000013,
+                815.5733936
+              ],
+              "start": 597,
+              "end": 611
+            },
+            {
+              "text": "1",
+              "bbox": [
+                546.8264,
+                807.5733936,
+                551.2756184,
+                815.5733936
+              ],
+              "start": 612,
+              "end": 613
+            }
+          ],
+          "issues": []
+        }
+      ],
+      "parserVersion": "pdfplumber-pdfium-tesseract-v1",
+      "fileUrl": "/demo-documents/B-offer.pdf"
+    },
+    {
+      "id": "C-offer",
+      "offerId": "C",
+      "name": "C-offer.pdf",
+      "mime": "application/pdf",
+      "sha256": "084cbdb3f1b54d3eef4794a2f790af576b3520621ab394a72587e178b7ed91db",
+      "bytes": 42835,
+      "author": "Fikcyjny wykonawca",
+      "addedBy": "demo",
+      "documentDate": "2026-10-03",
+      "addedAt": "2026-10-03T12:00:00Z",
+      "version": 1,
+      "relation": "offer",
+      "relationConfirmed": true,
+      "active": true,
+      "status": "analyzed",
+      "pages": [
+        {
+          "number": 1,
+          "source_id": "C-offer",
+          "text": "OFERTA C | Sygnał Studio\nDokument fikcyjny do demonstracji. Autor: Sygnał Studio. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 09:30. Nie możemy zapewnić gotowości przed 09:00.\nPełna cena usługi: 5100 PLN brutto.\nCena obejmuje transport i technika przez pełne 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "width": 595.2756,
+          "height": 841.8898,
+          "method": "pdf_text",
+          "status": "read",
+          "blocks": [
+            {
+              "text": "OFERTA",
+              "bbox": [
+                50.0,
+                55.41943319999996,
+                135.168944,
+                76.41943319999996
+              ],
+              "start": 0,
+              "end": 6
+            },
+            {
+              "text": "C",
+              "bbox": [
+                141.00341600000002,
+                55.41943319999996,
+                156.168944,
+                76.41943319999996
+              ],
+              "start": 7,
+              "end": 8
+            },
+            {
+              "text": "|",
+              "bbox": [
+                162.00341600000002,
+                55.41943319999996,
+                167.45849360000003,
+                76.41943319999996
+              ],
+              "start": 9,
+              "end": 10
+            },
+            {
+              "text": "Sygnał",
+              "bbox": [
+                173.2929656,
+                55.41943319999996,
+                237.5029247,
+                76.41943319999996
+              ],
+              "start": 11,
+              "end": 17
+            },
+            {
+              "text": "Studio",
+              "bbox": [
+                243.3373967,
+                55.41943319999996,
+                302.8818278,
+                76.41943319999996
+              ],
+              "start": 18,
+              "end": 24
+            },
+            {
+              "text": "Dokument",
+              "bbox": [
+                50.0,
+                106.31494120000002,
+                100.133787,
+                117.31494120000002
+              ],
+              "start": 25,
+              "end": 33
+            },
+            {
+              "text": "fikcyjny",
+              "bbox": [
+                103.189939,
+                106.31494120000002,
+                139.25146230000001,
+                117.31494120000002
+              ],
+              "start": 34,
+              "end": 42
+            },
+            {
+              "text": "do",
+              "bbox": [
+                142.3076143,
+                106.31494120000002,
+                154.5429649,
+                117.31494120000002
+              ],
+              "start": 43,
+              "end": 45
+            },
+            {
+              "text": "demonstracji.",
+              "bbox": [
+                157.5991169,
+                106.31494120000002,
+                223.013665,
+                117.31494120000002
+              ],
+              "start": 46,
+              "end": 59
+            },
+            {
+              "text": "Autor:",
+              "bbox": [
+                226.069817,
+                106.31494120000002,
+                255.4174716,
+                117.31494120000002
+              ],
+              "start": 60,
+              "end": 66
+            },
+            {
+              "text": "Sygnał",
+              "bbox": [
+                258.4736236,
+                106.31494120000002,
+                292.1074117,
+                117.31494120000002
+              ],
+              "start": 67,
+              "end": 73
+            },
+            {
+              "text": "Studio.",
+              "bbox": [
+                295.1635637,
+                106.31494120000002,
+                329.40965579999994,
+                117.31494120000002
+              ],
+              "start": 74,
+              "end": 81
+            },
+            {
+              "text": "Data:",
+              "bbox": [
+                332.46580779999994,
+                106.31494120000002,
+                358.7573103999999,
+                117.31494120000002
+              ],
+              "start": 82,
+              "end": 87
+            },
+            {
+              "text": "03.10.2026.",
+              "bbox": [
+                361.8134623999999,
+                106.31494120000002,
+                419.92332079999966,
+                117.31494120000002
+              ],
+              "start": 88,
+              "end": 99
+            },
+            {
+              "text": "Termin",
+              "bbox": [
+                50.0,
+                134.31494120000002,
+                84.224608,
+                145.31494120000002
+              ],
+              "start": 100,
+              "end": 106
+            },
+            {
+              "text": "wydarzenia:",
+              "bbox": [
+                87.28075999999999,
+                134.31494120000002,
+                145.9760703,
+                145.31494120000002
+              ],
+              "start": 107,
+              "end": 118
+            },
+            {
+              "text": "10.10.2026.",
+              "bbox": [
+                149.0322223,
+                134.31494120000002,
+                207.1420807,
+                145.31494120000002
+              ],
+              "start": 119,
+              "end": 130
+            },
+            {
+              "text": "Strefa:",
+              "bbox": [
+                210.1982327,
+                134.31494120000002,
+                242.6020393,
+                145.31494120000002
+              ],
+              "start": 131,
+              "end": 138
+            },
+            {
+              "text": "Europe/Warsaw",
+              "bbox": [
+                245.6581913,
+                134.31494120000002,
+                323.90965359999996,
+                145.31494120000002
+              ],
+              "start": 139,
+              "end": 152
+            },
+            {
+              "text": "(UTC+02:00).",
+              "bbox": [
+                326.96580559999995,
+                134.31494120000002,
+                393.90574459999976,
+                145.31494120000002
+              ],
+              "start": 153,
+              "end": 165
+            },
+            {
+              "text": "Potwierdzamy",
+              "bbox": [
+                50.0,
+                162.31494120000002,
+                119.077635,
+                173.31494120000002
+              ],
+              "start": 166,
+              "end": 178
+            },
+            {
+              "text": "odpowiedniość",
+              "bbox": [
+                122.133787,
+                162.31494120000002,
+                194.9067334,
+                173.31494120000002
+              ],
+              "start": 179,
+              "end": 192
+            },
+            {
+              "text": "oferowanego",
+              "bbox": [
+                197.9628854,
+                162.31494120000002,
+                261.5673736,
+                173.31494120000002
+              ],
+              "start": 193,
+              "end": 204
+            },
+            {
+              "text": "nagłośnienia",
+              "bbox": [
+                264.6235256,
+                162.31494120000002,
+                326.39647199999996,
+                173.31494120000002
+              ],
+              "start": 205,
+              "end": 217
+            },
+            {
+              "text": "dla",
+              "bbox": [
+                329.45262399999996,
+                162.31494120000002,
+                344.1318225999999,
+                173.31494120000002
+              ],
+              "start": 218,
+              "end": 221
+            },
+            {
+              "text": "konferencji",
+              "bbox": [
+                347.1879745999999,
+                162.31494120000002,
+                400.38328489999975,
+                173.31494120000002
+              ],
+              "start": 222,
+              "end": 233
+            },
+            {
+              "text": "120",
+              "bbox": [
+                403.43943689999975,
+                162.31494120000002,
+                421.79246279999967,
+                173.31494120000002
+              ],
+              "start": 234,
+              "end": 237
+            },
+            {
+              "text": "osób.",
+              "bbox": [
+                424.84861479999967,
+                162.31494120000002,
+                451.7577926999996,
+                173.31494120000002
+              ],
+              "start": 238,
+              "end": 243
+            },
+            {
+              "text": "W",
+              "bbox": [
+                50.0,
+                190.31494120000002,
+                60.3823247,
+                201.31494120000002
+              ],
+              "start": 244,
+              "end": 245
+            },
+            {
+              "text": "zestawie",
+              "bbox": [
+                63.4384767,
+                190.31494120000002,
+                106.2353506,
+                201.31494120000002
+              ],
+              "start": 246,
+              "end": 254
+            },
+            {
+              "text": "są",
+              "bbox": [
+                109.2915026,
+                190.31494120000002,
+                120.9091779,
+                201.31494120000002
+              ],
+              "start": 255,
+              "end": 257
+            },
+            {
+              "text": "4",
+              "bbox": [
+                123.9653299,
+                190.31494120000002,
+                130.0830052,
+                201.31494120000002
+              ],
+              "start": 258,
+              "end": 259
+            },
+            {
+              "text": "mikrofony",
+              "bbox": [
+                133.1391572,
+                190.31494120000002,
+                180.81835470000001,
+                201.31494120000002
+              ],
+              "start": 260,
+              "end": 269
+            },
+            {
+              "text": "bezprzewodowe.",
+              "bbox": [
+                183.8745067,
+                190.31494120000002,
+                266.42284290000003,
+                201.31494120000002
+              ],
+              "start": 270,
+              "end": 284
+            },
+            {
+              "text": "Technik",
+              "bbox": [
+                50.0,
+                218.31494120000002,
+                88.5161117,
+                229.31494120000002
+              ],
+              "start": 285,
+              "end": 292
+            },
+            {
+              "text": "jest",
+              "bbox": [
+                91.5722637,
+                218.31494120000002,
+                108.689939,
+                229.31494120000002
+              ],
+              "start": 293,
+              "end": 297
+            },
+            {
+              "text": "dostępny",
+              "bbox": [
+                111.74609099999999,
+                218.31494120000002,
+                156.3906195,
+                229.31494120000002
+              ],
+              "start": 298,
+              "end": 306
+            },
+            {
+              "text": "i",
+              "bbox": [
+                159.4467715,
+                218.31494120000002,
+                161.8906195,
+                229.31494120000002
+              ],
+              "start": 307,
+              "end": 308
+            },
+            {
+              "text": "obecny",
+              "bbox": [
+                164.9467715,
+                218.31494120000002,
+                200.4174727,
+                229.31494120000002
+              ],
+              "start": 309,
+              "end": 315
+            },
+            {
+              "text": "przez",
+              "bbox": [
+                203.4736247,
+                218.31494120000002,
+                230.3720611,
+                229.31494120000002
+              ],
+              "start": 316,
+              "end": 321
+            },
+            {
+              "text": "cały",
+              "bbox": [
+                233.4282131,
+                218.31494120000002,
+                252.9897364,
+                229.31494120000002
+              ],
+              "start": 322,
+              "end": 326
+            },
+            {
+              "text": "okres",
+              "bbox": [
+                256.04588839999997,
+                218.31494120000002,
+                282.9443248,
+                229.31494120000002
+              ],
+              "start": 327,
+              "end": 332
+            },
+            {
+              "text": "09:00-17:00.",
+              "bbox": [
+                286.0004768,
+                218.31494120000002,
+                347.7734209999998,
+                229.31494120000002
+              ],
+              "start": 333,
+              "end": 345
+            },
+            {
+              "text": "Gotowość",
+              "bbox": [
+                50.0,
+                246.31494120000002,
+                98.9091779,
+                257.3149412
+              ],
+              "start": 346,
+              "end": 354
+            },
+            {
+              "text": "sprzętu:",
+              "bbox": [
+                101.9653299,
+                246.31494120000002,
+                141.09374559999998,
+                257.3149412
+              ],
+              "start": 355,
+              "end": 363
+            },
+            {
+              "text": "10.10.2026",
+              "bbox": [
+                144.14989759999997,
+                246.31494120000002,
+                199.20360399999998,
+                257.3149412
+              ],
+              "start": 364,
+              "end": 374
+            },
+            {
+              "text": "o",
+              "bbox": [
+                202.25975599999998,
+                246.31494120000002,
+                208.37743129999998,
+                257.3149412
+              ],
+              "start": 375,
+              "end": 376
+            },
+            {
+              "text": "09:30.",
+              "bbox": [
+                211.43358329999998,
+                246.31494120000002,
+                242.01658849999998,
+                257.3149412
+              ],
+              "start": 377,
+              "end": 383
+            },
+            {
+              "text": "Nie",
+              "bbox": [
+                245.07274049999998,
+                246.31494120000002,
+                261.5781118,
+                257.3149412
+              ],
+              "start": 384,
+              "end": 387
+            },
+            {
+              "text": "możemy",
+              "bbox": [
+                264.6342638,
+                246.31494120000002,
+                306.195786,
+                257.3149412
+              ],
+              "start": 388,
+              "end": 394
+            },
+            {
+              "text": "zapewnić",
+              "bbox": [
+                309.251938,
+                246.31494120000002,
+                355.1103351999999,
+                257.3149412
+              ],
+              "start": 395,
+              "end": 403
+            },
+            {
+              "text": "gotowości",
+              "bbox": [
+                358.1664871999999,
+                246.31494120000002,
+                407.0810363999998,
+                257.3149412
+              ],
+              "start": 404,
+              "end": 413
+            },
+            {
+              "text": "przed",
+              "bbox": [
+                410.1371883999998,
+                246.31494120000002,
+                437.6533000999997,
+                257.3149412
+              ],
+              "start": 414,
+              "end": 419
+            },
+            {
+              "text": "09:00.",
+              "bbox": [
+                440.7094520999997,
+                246.31494120000002,
+                471.29245729999957,
+                257.3149412
+              ],
+              "start": 420,
+              "end": 426
+            },
+            {
+              "text": "Pełna",
+              "bbox": [
+                50.0,
+                274.3149412,
+                78.1337881,
+                285.3149412
+              ],
+              "start": 427,
+              "end": 432
+            },
+            {
+              "text": "cena",
+              "bbox": [
+                81.1899401,
+                274.3149412,
+                105.042966,
+                285.3149412
+              ],
+              "start": 433,
+              "end": 437
+            },
+            {
+              "text": "usługi:",
+              "bbox": [
+                108.099118,
+                274.3149412,
+                139.8959919,
+                285.3149412
+              ],
+              "start": 438,
+              "end": 445
+            },
+            {
+              "text": "5100",
+              "bbox": [
+                142.9521439,
+                274.3149412,
+                167.42284510000002,
+                285.3149412
+              ],
+              "start": 446,
+              "end": 450
+            },
+            {
+              "text": "PLN",
+              "bbox": [
+                170.47899710000002,
+                274.3149412,
+                191.87743460000002,
+                285.3149412
+              ],
+              "start": 451,
+              "end": 454
+            },
+            {
+              "text": "brutto.",
+              "bbox": [
+                194.9335866,
+                274.3149412,
+                226.11815430000001,
+                285.3149412
+              ],
+              "start": 455,
+              "end": 462
+            },
+            {
+              "text": "Cena",
+              "bbox": [
+                50.0,
+                302.3149412,
+                76.29687390000001,
+                313.3149412
+              ],
+              "start": 463,
+              "end": 467
+            },
+            {
+              "text": "obejmuje",
+              "bbox": [
+                79.3530259,
+                302.3149412,
+                123.99218420000001,
+                313.3149412
+              ],
+              "start": 468,
+              "end": 476
+            },
+            {
+              "text": "transport",
+              "bbox": [
+                127.04833620000001,
+                302.3149412,
+                170.457513,
+                313.3149412
+              ],
+              "start": 477,
+              "end": 486
+            },
+            {
+              "text": "i",
+              "bbox": [
+                173.513665,
+                302.3149412,
+                175.957513,
+                313.3149412
+              ],
+              "start": 487,
+              "end": 488
+            },
+            {
+              "text": "technika",
+              "bbox": [
+                179.01366500000003,
+                302.3149412,
+                219.98436620000004,
+                313.3149412
+              ],
+              "start": 489,
+              "end": 497
+            },
+            {
+              "text": "przez",
+              "bbox": [
+                223.04051820000004,
+                302.3149412,
+                249.93895460000005,
+                313.3149412
+              ],
+              "start": 498,
+              "end": 503
+            },
+            {
+              "text": "pełne",
+              "bbox": [
+                252.99510660000004,
+                302.3149412,
+                279.9096558,
+                313.3149412
+              ],
+              "start": 504,
+              "end": 509
+            },
+            {
+              "text": "09:00-17:00.",
+              "bbox": [
+                282.96580780000005,
+                302.3149412,
+                344.7387519999999,
+                313.3149412
+              ],
+              "start": 510,
+              "end": 522
+            },
+            {
+              "text": "Brak",
+              "bbox": [
+                50.0,
+                330.3149412000001,
+                72.6176753,
+                341.3149412000001
+              ],
+              "start": 523,
+              "end": 527
+            },
+            {
+              "text": "dodatkowych",
+              "bbox": [
+                75.6738273,
+                330.3149412000001,
+                139.8798791,
+                341.3149412000001
+              ],
+              "start": 528,
+              "end": 539
+            },
+            {
+              "text": "opłat",
+              "bbox": [
+                142.93603109999998,
+                330.3149412000001,
+                166.789057,
+                341.3149412000001
+              ],
+              "start": 540,
+              "end": 545
+            },
+            {
+              "text": "za",
+              "bbox": [
+                169.845209,
+                330.3149412000001,
+                181.4628843,
+                341.3149412000001
+              ],
+              "start": 546,
+              "end": 548
+            },
+            {
+              "text": "ten",
+              "bbox": [
+                184.51903629999998,
+                330.3149412000001,
+                199.81053889999998,
+                341.3149412000001
+              ],
+              "start": 549,
+              "end": 552
+            },
+            {
+              "text": "zakres.",
+              "bbox": [
+                202.86669089999998,
+                330.3149412000001,
+                238.3212793,
+                341.3149412000001
+              ],
+              "start": 553,
+              "end": 560
+            },
+            {
+              "text": "KontrOferta",
+              "bbox": [
+                44.0,
+                807.5733936,
+                85.35156,
+                815.5733936
+              ],
+              "start": 561,
+              "end": 572
+            },
+            {
+              "text": "|",
+              "bbox": [
+                87.574216,
+                807.5733936,
+                89.6523408,
+                815.5733936
+              ],
+              "start": 573,
+              "end": 574
+            },
+            {
+              "text": "wyłącznie",
+              "bbox": [
+                91.87499679999999,
+                807.5733936,
+                126.55468400000001,
+                815.5733936
+              ],
+              "start": 575,
+              "end": 584
+            },
+            {
+              "text": "dane",
+              "bbox": [
+                128.77734,
+                807.5733936,
+                146.57421360000004,
+                815.5733936
+              ],
+              "start": 585,
+              "end": 589
+            },
+            {
+              "text": "syntetyczne",
+              "bbox": [
+                148.79686960000004,
+                807.5733936,
+                191.03905520000006,
+                815.5733936
+              ],
+              "start": 590,
+              "end": 601
+            },
+            {
+              "text": "|",
+              "bbox": [
+                193.26171120000006,
+                807.5733936,
+                195.33983600000008,
+                815.5733936
+              ],
+              "start": 602,
+              "end": 603
+            },
+            {
+              "text": "źródło",
+              "bbox": [
+                197.56249200000008,
+                807.5733936,
+                219.3515536000001,
+                815.5733936
+              ],
+              "start": 604,
+              "end": 610
+            },
+            {
+              "text": "demonstracyjne",
+              "bbox": [
+                221.5742096000001,
+                807.5733936,
+                278.04686320000013,
+                815.5733936
+              ],
+              "start": 611,
+              "end": 625
+            },
+            {
+              "text": "1",
+              "bbox": [
+                546.8264,
+                807.5733936,
+                551.2756184,
+                815.5733936
+              ],
+              "start": 626,
+              "end": 627
+            }
+          ],
+          "issues": []
+        }
+      ],
+      "parserVersion": "pdfplumber-pdfium-tesseract-v1",
+      "fileUrl": "/demo-documents/C-offer.pdf"
+    }
+  ],
+  "facts": [
+    {
+      "id": "demo-a-currency",
+      "key": "currency",
+      "value": "PLN",
+      "offer_id": "A",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "OFERTA A | Fala Audio\nDokument fikcyjny do demonstracji. Autor: Fala Audio, dział ofert. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nZestaw nagłośnienia i obsługa wydarzenia: 4200 PLN brutto.\nTransport: 600 PLN brutto. Łącznie: 4800 PLN brutto.\nOkreślenie obsługa wydarzenia wymaga wyjaśnienia w świetle aneksu A-1.\nDostępność technika przez 09:00-17:00 jest gwarantowana w obu odczytaniach ceny.\nOferta nie zawiera innych opłat za wskazany zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 773,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-a-tax_basis",
+      "key": "tax_basis",
+      "value": "gross",
+      "offer_id": "A",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "OFERTA A | Fala Audio\nDokument fikcyjny do demonstracji. Autor: Fala Audio, dział ofert. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nZestaw nagłośnienia i obsługa wydarzenia: 4200 PLN brutto.\nTransport: 600 PLN brutto. Łącznie: 4800 PLN brutto.\nOkreślenie obsługa wydarzenia wymaga wyjaśnienia w świetle aneksu A-1.\nDostępność technika przez 09:00-17:00 jest gwarantowana w obu odczytaniach ceny.\nOferta nie zawiera innych opłat za wskazany zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 773,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-a-participants",
+      "key": "participants",
+      "value": 120,
+      "offer_id": "A",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "OFERTA A | Fala Audio\nDokument fikcyjny do demonstracji. Autor: Fala Audio, dział ofert. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nZestaw nagłośnienia i obsługa wydarzenia: 4200 PLN brutto.\nTransport: 600 PLN brutto. Łącznie: 4800 PLN brutto.\nOkreślenie obsługa wydarzenia wymaga wyjaśnienia w świetle aneksu A-1.\nDostępność technika przez 09:00-17:00 jest gwarantowana w obu odczytaniach ceny.\nOferta nie zawiera innych opłat za wskazany zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 773,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-a-microphones",
+      "key": "microphones",
+      "value": 4,
+      "offer_id": "A",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "OFERTA A | Fala Audio\nDokument fikcyjny do demonstracji. Autor: Fala Audio, dział ofert. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nZestaw nagłośnienia i obsługa wydarzenia: 4200 PLN brutto.\nTransport: 600 PLN brutto. Łącznie: 4800 PLN brutto.\nOkreślenie obsługa wydarzenia wymaga wyjaśnienia w świetle aneksu A-1.\nDostępność technika przez 09:00-17:00 jest gwarantowana w obu odczytaniach ceny.\nOferta nie zawiera innych opłat za wskazany zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 773,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-a-ready_at",
+      "key": "ready_at",
+      "value": "2026-10-10T08:30:00+02:00",
+      "offer_id": "A",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "OFERTA A | Fala Audio\nDokument fikcyjny do demonstracji. Autor: Fala Audio, dział ofert. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nZestaw nagłośnienia i obsługa wydarzenia: 4200 PLN brutto.\nTransport: 600 PLN brutto. Łącznie: 4800 PLN brutto.\nOkreślenie obsługa wydarzenia wymaga wyjaśnienia w świetle aneksu A-1.\nDostępność technika przez 09:00-17:00 jest gwarantowana w obu odczytaniach ceny.\nOferta nie zawiera innych opłat za wskazany zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 773,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-a-service_start",
+      "key": "service_start",
+      "value": "2026-10-10T09:00:00+02:00",
+      "offer_id": "A",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "OFERTA A | Fala Audio\nDokument fikcyjny do demonstracji. Autor: Fala Audio, dział ofert. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nZestaw nagłośnienia i obsługa wydarzenia: 4200 PLN brutto.\nTransport: 600 PLN brutto. Łącznie: 4800 PLN brutto.\nOkreślenie obsługa wydarzenia wymaga wyjaśnienia w świetle aneksu A-1.\nDostępność technika przez 09:00-17:00 jest gwarantowana w obu odczytaniach ceny.\nOferta nie zawiera innych opłat za wskazany zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 773,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-a-service_end",
+      "key": "service_end",
+      "value": "2026-10-10T17:00:00+02:00",
+      "offer_id": "A",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "OFERTA A | Fala Audio\nDokument fikcyjny do demonstracji. Autor: Fala Audio, dział ofert. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nZestaw nagłośnienia i obsługa wydarzenia: 4200 PLN brutto.\nTransport: 600 PLN brutto. Łącznie: 4800 PLN brutto.\nOkreślenie obsługa wydarzenia wymaga wyjaśnienia w świetle aneksu A-1.\nDostępność technika przez 09:00-17:00 jest gwarantowana w obu odczytaniach ceny.\nOferta nie zawiera innych opłat za wskazany zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 773,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-a-scope_confirmed",
+      "key": "scope_confirmed",
+      "value": true,
+      "offer_id": "A",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "OFERTA A | Fala Audio\nDokument fikcyjny do demonstracji. Autor: Fala Audio, dział ofert. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nZestaw nagłośnienia i obsługa wydarzenia: 4200 PLN brutto.\nTransport: 600 PLN brutto. Łącznie: 4800 PLN brutto.\nOkreślenie obsługa wydarzenia wymaga wyjaśnienia w świetle aneksu A-1.\nDostępność technika przez 09:00-17:00 jest gwarantowana w obu odczytaniach ceny.\nOferta nie zawiera innych opłat za wskazany zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 773,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-a-price",
+      "key": "cost:a-set",
+      "value": 420000,
+      "label": "Zestaw nagłośnienia",
+      "offer_id": "A",
+      "unit": "minor",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "OFERTA A | Fala Audio\nDokument fikcyjny do demonstracji. Autor: Fala Audio, dział ofert. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nZestaw nagłośnienia i obsługa wydarzenia: 4200 PLN brutto.\nTransport: 600 PLN brutto. Łącznie: 4800 PLN brutto.\nOkreślenie obsługa wydarzenia wymaga wyjaśnienia w świetle aneksu A-1.\nDostępność technika przez 09:00-17:00 jest gwarantowana w obu odczytaniach ceny.\nOferta nie zawiera innych opłat za wskazany zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 773,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-a-price-a-transport",
+      "key": "cost:a-transport",
+      "value": 60000,
+      "label": "Transport",
+      "offer_id": "A",
+      "unit": "minor",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "OFERTA A | Fala Audio\nDokument fikcyjny do demonstracji. Autor: Fala Audio, dział ofert. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nZestaw nagłośnienia i obsługa wydarzenia: 4200 PLN brutto.\nTransport: 600 PLN brutto. Łącznie: 4800 PLN brutto.\nOkreślenie obsługa wydarzenia wymaga wyjaśnienia w świetle aneksu A-1.\nDostępność technika przez 09:00-17:00 jest gwarantowana w obu odczytaniach ceny.\nOferta nie zawiera innych opłat za wskazany zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 773,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-a-annex",
+      "key": "cost:a-technician",
+      "value": [
+        0,
+        120000
+      ],
+      "label": "Technik 09:00–17:00",
+      "offer_id": "A",
+      "unit": "minor",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "A-annex",
+          "page": 1,
+          "quote": "ANEKS A-1 DO OFERTY A | Fala Audio\nDokument fikcyjny do demonstracji. Data: 03.10.2026.\nDotyczy wyłącznie oferty A na konferencję 120 osób 10.10.2026.\nPozycja cennika: technik przez 09:00-17:00: 1200 PLN brutto.\nNie wskazano jednoznacznie, czy pozycja jest zawarta w kwocie 4800 PLN brutto.\nDwa opisane warianty interpretacji: technik w cenie (dopłata 0 PLN brutto) albo technik dodatkowo\n(dopłata 1200 PLN brutto).\nOba warianty zapewniają obecność technika przez pełne 09:00-17:00.\nTo zakres dwóch interpretacji dokumentu, nie zamknięta lista przyszłych odpowiedzi wykonawcy.\nPowiązanie aneksu i wybór interpretacji musi potwierdzić organizator.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 713,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-b-currency",
+      "key": "currency",
+      "value": "PLN",
+      "offer_id": "B",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "OFERTA B | Pracownia Dźwięku\nDokument fikcyjny do demonstracji. Autor: Pracownia Dźwięku. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nPełna cena usługi: 5500 PLN brutto.\nCena obejmuje nagłośnienie, 4 mikrofony, transport i technika przez 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 613,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-b-tax_basis",
+      "key": "tax_basis",
+      "value": "gross",
+      "offer_id": "B",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "OFERTA B | Pracownia Dźwięku\nDokument fikcyjny do demonstracji. Autor: Pracownia Dźwięku. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nPełna cena usługi: 5500 PLN brutto.\nCena obejmuje nagłośnienie, 4 mikrofony, transport i technika przez 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 613,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-b-participants",
+      "key": "participants",
+      "value": 120,
+      "offer_id": "B",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "OFERTA B | Pracownia Dźwięku\nDokument fikcyjny do demonstracji. Autor: Pracownia Dźwięku. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nPełna cena usługi: 5500 PLN brutto.\nCena obejmuje nagłośnienie, 4 mikrofony, transport i technika przez 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 613,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-b-microphones",
+      "key": "microphones",
+      "value": 4,
+      "offer_id": "B",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "OFERTA B | Pracownia Dźwięku\nDokument fikcyjny do demonstracji. Autor: Pracownia Dźwięku. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nPełna cena usługi: 5500 PLN brutto.\nCena obejmuje nagłośnienie, 4 mikrofony, transport i technika przez 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 613,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-b-ready_at",
+      "key": "ready_at",
+      "value": "2026-10-10T08:30:00+02:00",
+      "offer_id": "B",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "OFERTA B | Pracownia Dźwięku\nDokument fikcyjny do demonstracji. Autor: Pracownia Dźwięku. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nPełna cena usługi: 5500 PLN brutto.\nCena obejmuje nagłośnienie, 4 mikrofony, transport i technika przez 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 613,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-b-service_start",
+      "key": "service_start",
+      "value": "2026-10-10T09:00:00+02:00",
+      "offer_id": "B",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "OFERTA B | Pracownia Dźwięku\nDokument fikcyjny do demonstracji. Autor: Pracownia Dźwięku. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nPełna cena usługi: 5500 PLN brutto.\nCena obejmuje nagłośnienie, 4 mikrofony, transport i technika przez 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 613,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-b-service_end",
+      "key": "service_end",
+      "value": "2026-10-10T17:00:00+02:00",
+      "offer_id": "B",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "OFERTA B | Pracownia Dźwięku\nDokument fikcyjny do demonstracji. Autor: Pracownia Dźwięku. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nPełna cena usługi: 5500 PLN brutto.\nCena obejmuje nagłośnienie, 4 mikrofony, transport i technika przez 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 613,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-b-scope_confirmed",
+      "key": "scope_confirmed",
+      "value": true,
+      "offer_id": "B",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "OFERTA B | Pracownia Dźwięku\nDokument fikcyjny do demonstracji. Autor: Pracownia Dźwięku. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nPełna cena usługi: 5500 PLN brutto.\nCena obejmuje nagłośnienie, 4 mikrofony, transport i technika przez 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 613,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-b-price",
+      "key": "cost:b-package",
+      "value": 550000,
+      "label": "Pełny zakres z transportem i technikiem",
+      "offer_id": "B",
+      "unit": "minor",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "OFERTA B | Pracownia Dźwięku\nDokument fikcyjny do demonstracji. Autor: Pracownia Dźwięku. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.\nPełna cena usługi: 5500 PLN brutto.\nCena obejmuje nagłośnienie, 4 mikrofony, transport i technika przez 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 613,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-c-currency",
+      "key": "currency",
+      "value": "PLN",
+      "offer_id": "C",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "OFERTA C | Sygnał Studio\nDokument fikcyjny do demonstracji. Autor: Sygnał Studio. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 09:30. Nie możemy zapewnić gotowości przed 09:00.\nPełna cena usługi: 5100 PLN brutto.\nCena obejmuje transport i technika przez pełne 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 627,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-c-tax_basis",
+      "key": "tax_basis",
+      "value": "gross",
+      "offer_id": "C",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "OFERTA C | Sygnał Studio\nDokument fikcyjny do demonstracji. Autor: Sygnał Studio. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 09:30. Nie możemy zapewnić gotowości przed 09:00.\nPełna cena usługi: 5100 PLN brutto.\nCena obejmuje transport i technika przez pełne 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 627,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-c-participants",
+      "key": "participants",
+      "value": 120,
+      "offer_id": "C",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "OFERTA C | Sygnał Studio\nDokument fikcyjny do demonstracji. Autor: Sygnał Studio. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 09:30. Nie możemy zapewnić gotowości przed 09:00.\nPełna cena usługi: 5100 PLN brutto.\nCena obejmuje transport i technika przez pełne 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 627,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-c-microphones",
+      "key": "microphones",
+      "value": 4,
+      "offer_id": "C",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "OFERTA C | Sygnał Studio\nDokument fikcyjny do demonstracji. Autor: Sygnał Studio. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 09:30. Nie możemy zapewnić gotowości przed 09:00.\nPełna cena usługi: 5100 PLN brutto.\nCena obejmuje transport i technika przez pełne 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 627,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-c-ready_at",
+      "key": "ready_at",
+      "value": "2026-10-10T09:30:00+02:00",
+      "offer_id": "C",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "OFERTA C | Sygnał Studio\nDokument fikcyjny do demonstracji. Autor: Sygnał Studio. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 09:30. Nie możemy zapewnić gotowości przed 09:00.\nPełna cena usługi: 5100 PLN brutto.\nCena obejmuje transport i technika przez pełne 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 627,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-c-service_start",
+      "key": "service_start",
+      "value": "2026-10-10T09:00:00+02:00",
+      "offer_id": "C",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "OFERTA C | Sygnał Studio\nDokument fikcyjny do demonstracji. Autor: Sygnał Studio. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 09:30. Nie możemy zapewnić gotowości przed 09:00.\nPełna cena usługi: 5100 PLN brutto.\nCena obejmuje transport i technika przez pełne 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 627,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-c-service_end",
+      "key": "service_end",
+      "value": "2026-10-10T17:00:00+02:00",
+      "offer_id": "C",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "OFERTA C | Sygnał Studio\nDokument fikcyjny do demonstracji. Autor: Sygnał Studio. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 09:30. Nie możemy zapewnić gotowości przed 09:00.\nPełna cena usługi: 5100 PLN brutto.\nCena obejmuje transport i technika przez pełne 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 627,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-c-scope_confirmed",
+      "key": "scope_confirmed",
+      "value": true,
+      "offer_id": "C",
+      "unit": null,
+      "scope": "Fikcyjne wydarzenie 2026-10-10",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "OFERTA C | Sygnał Studio\nDokument fikcyjny do demonstracji. Autor: Sygnał Studio. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 09:30. Nie możemy zapewnić gotowości przed 09:00.\nPełna cena usługi: 5100 PLN brutto.\nCena obejmuje transport i technika przez pełne 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 627,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    },
+    {
+      "id": "demo-c-price",
+      "key": "cost:c-package",
+      "value": 510000,
+      "label": "Pełny zakres",
+      "offer_id": "C",
+      "unit": "minor",
+      "condition": null,
+      "origin": "recorded_example",
+      "confirmation": "confirmed",
+      "confirmedBy": "demo-author",
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "OFERTA C | Sygnał Studio\nDokument fikcyjny do demonstracji. Autor: Sygnał Studio. Data: 03.10.2026.\nTermin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 09:30. Nie możemy zapewnić gotowości przed 09:00.\nPełna cena usługi: 5100 PLN brutto.\nCena obejmuje transport i technika przez pełne 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.\nKontrOferta | wyłącznie dane syntetyczne | źródło demonstracyjne 1",
+          "quote_validated": true,
+          "start": 0,
+          "end": 627,
+          "bbox": [
+            44.0,
+            55.41943319999996,
+            551.2756184,
+            815.5733936
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "critical": true,
+      "conflict": false
+    }
+  ],
+  "questions": [
+    {
+      "id": "technician_surcharge",
+      "variable_ids": [
+        "technician_surcharge"
+      ],
+      "text": "Czy łączna cena 4800 PLN brutto obejmuje obecność technika od 09:00 do 17:00? Jeśli nie, proszę podać ostateczną cenę całej usługi z technikiem.",
+      "score": 0,
+      "difficulty": 0,
+      "needed": true,
+      "branches": [
+        {
+          "answers": {
+            "technician_surcharge": 0
+          },
+          "scenario_count": 1,
+          "diversity": 0,
+          "common_winners": [
+            "A"
+          ],
+          "all_infeasible": false
+        },
+        {
+          "answers": {
+            "technician_surcharge": 120000
+          },
+          "scenario_count": 1,
+          "diversity": 0,
+          "common_winners": [
+            "B"
+          ],
+          "all_infeasible": false
+        }
+      ],
+      "witness": {
+        "kind": "winner_change",
+        "scenarios": [
+          {
+            "id": "s1",
+            "assignment": {
+              "technician_surcharge": 0
+            },
+            "costs": {
+              "A": 480000,
+              "B": 550000,
+              "C": 510000
+            },
+            "feasible": [
+              "A",
+              "B"
+            ],
+            "winners": [
+              "A"
+            ],
+            "exclusions": {
+              "A": [],
+              "B": [],
+              "C": [
+                {
+                  "code": "ready_at",
+                  "message": "2026-10-10T09:30:00+02:00 nie spełnia wymaganego terminu 2026-10-10T09:00:00+02:00"
+                }
+              ]
+            },
+            "breakdown": {
+              "A": [
+                {
+                  "id": "a-set",
+                  "label": "Zestaw nagłośnienia",
+                  "category": "service",
+                  "amount_minor": 420000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-a-price"
+                  ],
+                  "due_at": null
+                },
+                {
+                  "id": "a-transport",
+                  "label": "Transport",
+                  "category": "service",
+                  "amount_minor": 60000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-a-price-a-transport"
+                  ],
+                  "due_at": null
+                },
+                {
+                  "id": "a-technician",
+                  "label": "Technik 09:00–17:00",
+                  "category": "service",
+                  "amount_minor": 0,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-a-annex"
+                  ],
+                  "due_at": null
+                }
+              ],
+              "B": [
+                {
+                  "id": "b-package",
+                  "label": "Pełny zakres z transportem i technikiem",
+                  "category": "service",
+                  "amount_minor": 550000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-b-price"
+                  ],
+                  "due_at": null
+                }
+              ],
+              "C": [
+                {
+                  "id": "c-package",
+                  "label": "Pełny zakres",
+                  "category": "service",
+                  "amount_minor": 510000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-c-price"
+                  ],
+                  "due_at": null
+                }
+              ]
+            },
+            "ancillary": {
+              "A": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              },
+              "B": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              },
+              "C": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              }
+            },
+            "status": "winner"
+          },
+          {
+            "id": "s2",
+            "assignment": {
+              "technician_surcharge": 120000
+            },
+            "costs": {
+              "A": 600000,
+              "B": 550000,
+              "C": 510000
+            },
+            "feasible": [
+              "B"
+            ],
+            "winners": [
+              "B"
+            ],
+            "exclusions": {
+              "A": [
+                {
+                  "code": "budget",
+                  "message": "Przekroczony budżet",
+                  "excess_minor": 40000
+                }
+              ],
+              "B": [],
+              "C": [
+                {
+                  "code": "ready_at",
+                  "message": "2026-10-10T09:30:00+02:00 nie spełnia wymaganego terminu 2026-10-10T09:00:00+02:00"
+                }
+              ]
+            },
+            "breakdown": {
+              "A": [
+                {
+                  "id": "a-set",
+                  "label": "Zestaw nagłośnienia",
+                  "category": "service",
+                  "amount_minor": 420000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-a-price"
+                  ],
+                  "due_at": null
+                },
+                {
+                  "id": "a-transport",
+                  "label": "Transport",
+                  "category": "service",
+                  "amount_minor": 60000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-a-price-a-transport"
+                  ],
+                  "due_at": null
+                },
+                {
+                  "id": "a-technician",
+                  "label": "Technik 09:00–17:00",
+                  "category": "service",
+                  "amount_minor": 120000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-a-annex"
+                  ],
+                  "due_at": null
+                }
+              ],
+              "B": [
+                {
+                  "id": "b-package",
+                  "label": "Pełny zakres z transportem i technikiem",
+                  "category": "service",
+                  "amount_minor": 550000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-b-price"
+                  ],
+                  "due_at": null
+                }
+              ],
+              "C": [
+                {
+                  "id": "c-package",
+                  "label": "Pełny zakres",
+                  "category": "service",
+                  "amount_minor": 510000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-c-price"
+                  ],
+                  "due_at": null
+                }
+              ]
+            },
+            "ancillary": {
+              "A": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              },
+              "B": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              },
+              "C": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              }
+            },
+            "status": "winner"
+          }
+        ],
+        "changed_variables": [
+          "technician_surcharge"
+        ],
+        "other_changed_variables": [],
+        "minimality_proven": false
+      },
+      "unknown_answer_reduces_scenarios": false,
+      "heuristic": true,
+      "kind": "variable",
+      "status": "prepared",
+      "assignee": null,
+      "dueAt": null,
+      "answers": []
+    }
+  ],
+  "analysis": {
+    "schema_version": "1.0",
+    "status": "needs_clarification",
+    "complete": true,
+    "scope": {
+      "limited": false,
+      "excluded_offer_ids": [],
+      "excluded_variable_ids": []
+    },
+    "currency": "PLN",
+    "minor_unit": 2,
+    "rounding": "ROUND_HALF_UP, each cost item after explicit tax and currency conversion",
+    "scenario_count": 2,
+    "checked_count": 2,
+    "scenarios": [
+      {
+        "id": "s1",
+        "assignment": {
+          "technician_surcharge": 0
+        },
+        "costs": {
+          "A": 480000,
+          "B": 550000,
+          "C": 510000
+        },
+        "feasible": [
+          "A",
+          "B"
+        ],
+        "winners": [
+          "A"
+        ],
+        "exclusions": {
+          "A": [],
+          "B": [],
+          "C": [
+            {
+              "code": "ready_at",
+              "message": "2026-10-10T09:30:00+02:00 nie spełnia wymaganego terminu 2026-10-10T09:00:00+02:00"
+            }
+          ]
+        },
+        "breakdown": {
+          "A": [
+            {
+              "id": "a-set",
+              "label": "Zestaw nagłośnienia",
+              "category": "service",
+              "amount_minor": 420000,
+              "unit": "service",
+              "evidence_ids": [
+                "demo-a-price"
+              ],
+              "due_at": null
+            },
+            {
+              "id": "a-transport",
+              "label": "Transport",
+              "category": "service",
+              "amount_minor": 60000,
+              "unit": "service",
+              "evidence_ids": [
+                "demo-a-price-a-transport"
+              ],
+              "due_at": null
+            },
+            {
+              "id": "a-technician",
+              "label": "Technik 09:00–17:00",
+              "category": "service",
+              "amount_minor": 0,
+              "unit": "service",
+              "evidence_ids": [
+                "demo-a-annex"
+              ],
+              "due_at": null
+            }
+          ],
+          "B": [
+            {
+              "id": "b-package",
+              "label": "Pełny zakres z transportem i technikiem",
+              "category": "service",
+              "amount_minor": 550000,
+              "unit": "service",
+              "evidence_ids": [
+                "demo-b-price"
+              ],
+              "due_at": null
+            }
+          ],
+          "C": [
+            {
+              "id": "c-package",
+              "label": "Pełny zakres",
+              "category": "service",
+              "amount_minor": 510000,
+              "unit": "service",
+              "evidence_ids": [
+                "demo-c-price"
+              ],
+              "due_at": null
+            }
+          ]
+        },
+        "ancillary": {
+          "A": {
+            "deposit": 0,
+            "payment": 0,
+            "cancellation": 0
+          },
+          "B": {
+            "deposit": 0,
+            "payment": 0,
+            "cancellation": 0
+          },
+          "C": {
+            "deposit": 0,
+            "payment": 0,
+            "cancellation": 0
+          }
+        },
+        "status": "winner"
+      },
+      {
+        "id": "s2",
+        "assignment": {
+          "technician_surcharge": 120000
+        },
+        "costs": {
+          "A": 600000,
+          "B": 550000,
+          "C": 510000
+        },
+        "feasible": [
+          "B"
+        ],
+        "winners": [
+          "B"
+        ],
+        "exclusions": {
+          "A": [
+            {
+              "code": "budget",
+              "message": "Przekroczony budżet",
+              "excess_minor": 40000
+            }
+          ],
+          "B": [],
+          "C": [
+            {
+              "code": "ready_at",
+              "message": "2026-10-10T09:30:00+02:00 nie spełnia wymaganego terminu 2026-10-10T09:00:00+02:00"
+            }
+          ]
+        },
+        "breakdown": {
+          "A": [
+            {
+              "id": "a-set",
+              "label": "Zestaw nagłośnienia",
+              "category": "service",
+              "amount_minor": 420000,
+              "unit": "service",
+              "evidence_ids": [
+                "demo-a-price"
+              ],
+              "due_at": null
+            },
+            {
+              "id": "a-transport",
+              "label": "Transport",
+              "category": "service",
+              "amount_minor": 60000,
+              "unit": "service",
+              "evidence_ids": [
+                "demo-a-price-a-transport"
+              ],
+              "due_at": null
+            },
+            {
+              "id": "a-technician",
+              "label": "Technik 09:00–17:00",
+              "category": "service",
+              "amount_minor": 120000,
+              "unit": "service",
+              "evidence_ids": [
+                "demo-a-annex"
+              ],
+              "due_at": null
+            }
+          ],
+          "B": [
+            {
+              "id": "b-package",
+              "label": "Pełny zakres z transportem i technikiem",
+              "category": "service",
+              "amount_minor": 550000,
+              "unit": "service",
+              "evidence_ids": [
+                "demo-b-price"
+              ],
+              "due_at": null
+            }
+          ],
+          "C": [
+            {
+              "id": "c-package",
+              "label": "Pełny zakres",
+              "category": "service",
+              "amount_minor": 510000,
+              "unit": "service",
+              "evidence_ids": [
+                "demo-c-price"
+              ],
+              "due_at": null
+            }
+          ]
+        },
+        "ancillary": {
+          "A": {
+            "deposit": 0,
+            "payment": 0,
+            "cancellation": 0
+          },
+          "B": {
+            "deposit": 0,
+            "payment": 0,
+            "cancellation": 0
+          },
+          "C": {
+            "deposit": 0,
+            "payment": 0,
+            "cancellation": 0
+          }
+        },
+        "status": "winner"
+      }
+    ],
+    "scenarios_truncated_for_display": false,
+    "method": "exact_enumeration",
+    "regions": [],
+    "offers": [
+      {
+        "id": "A",
+        "name": "Oferta A · Fala Audio",
+        "min_cost_minor": 480000,
+        "max_cost_minor": 600000,
+        "always_feasible": false,
+        "sometimes_feasible": true,
+        "possible_winner": true,
+        "common_winner": false,
+        "exclusions": [
+          {
+            "code": "budget",
+            "message": "Przekroczony budżet",
+            "excess_minor": 40000
+          }
+        ],
+        "evidence_ids": [
+          "demo-a-currency",
+          "demo-a-tax_basis",
+          "demo-a-participants",
+          "demo-a-microphones",
+          "demo-a-ready_at",
+          "demo-a-service_start",
+          "demo-a-service_end",
+          "demo-a-scope_confirmed",
+          "demo-a-price",
+          "demo-a-price-a-transport",
+          "demo-a-annex"
+        ],
+        "scope_confirmed": true
+      },
+      {
+        "id": "B",
+        "name": "Pracownia Dźwięku",
+        "min_cost_minor": 550000,
+        "max_cost_minor": 550000,
+        "always_feasible": true,
+        "sometimes_feasible": true,
+        "possible_winner": true,
+        "common_winner": false,
+        "exclusions": [],
+        "evidence_ids": [
+          "demo-b-currency",
+          "demo-b-tax_basis",
+          "demo-b-participants",
+          "demo-b-microphones",
+          "demo-b-ready_at",
+          "demo-b-service_start",
+          "demo-b-service_end",
+          "demo-b-scope_confirmed",
+          "demo-b-price"
+        ],
+        "scope_confirmed": true
+      },
+      {
+        "id": "C",
+        "name": "Sygnał Studio",
+        "min_cost_minor": 510000,
+        "max_cost_minor": 510000,
+        "always_feasible": false,
+        "sometimes_feasible": false,
+        "possible_winner": false,
+        "common_winner": false,
+        "exclusions": [
+          {
+            "code": "ready_at",
+            "message": "2026-10-10T09:30:00+02:00 nie spełnia wymaganego terminu 2026-10-10T09:00:00+02:00"
+          }
+        ],
+        "evidence_ids": [
+          "demo-c-currency",
+          "demo-c-tax_basis",
+          "demo-c-participants",
+          "demo-c-microphones",
+          "demo-c-ready_at",
+          "demo-c-service_start",
+          "demo-c-service_end",
+          "demo-c-scope_confirmed",
+          "demo-c-price"
+        ],
+        "scope_confirmed": true
+      }
+    ],
+    "robust_feasible": [
+      "B"
+    ],
+    "common_winners": [],
+    "unique_winner": null,
+    "provisional_common_winners": [],
+    "diversity": 1,
+    "questions": [
+      {
+        "id": "technician_surcharge",
+        "variable_ids": [
+          "technician_surcharge"
+        ],
+        "text": "Czy łączna cena 4800 PLN brutto obejmuje obecność technika od 09:00 do 17:00? Jeśli nie, proszę podać ostateczną cenę całej usługi z technikiem.",
+        "score": 0,
+        "difficulty": 0,
+        "needed": true,
+        "branches": [
+          {
+            "answers": {
+              "technician_surcharge": 0
+            },
+            "scenario_count": 1,
+            "diversity": 0,
+            "common_winners": [
+              "A"
+            ],
+            "all_infeasible": false
+          },
+          {
+            "answers": {
+              "technician_surcharge": 120000
+            },
+            "scenario_count": 1,
+            "diversity": 0,
+            "common_winners": [
+              "B"
+            ],
+            "all_infeasible": false
+          }
+        ],
+        "witness": {
+          "kind": "winner_change",
+          "scenarios": [
+            {
+              "id": "s1",
+              "assignment": {
+                "technician_surcharge": 0
+              },
+              "costs": {
+                "A": 480000,
+                "B": 550000,
+                "C": 510000
+              },
+              "feasible": [
+                "A",
+                "B"
+              ],
+              "winners": [
+                "A"
+              ],
+              "exclusions": {
+                "A": [],
+                "B": [],
+                "C": [
+                  {
+                    "code": "ready_at",
+                    "message": "2026-10-10T09:30:00+02:00 nie spełnia wymaganego terminu 2026-10-10T09:00:00+02:00"
+                  }
+                ]
+              },
+              "breakdown": {
+                "A": [
+                  {
+                    "id": "a-set",
+                    "label": "Zestaw nagłośnienia",
+                    "category": "service",
+                    "amount_minor": 420000,
+                    "unit": "service",
+                    "evidence_ids": [
+                      "demo-a-price"
+                    ],
+                    "due_at": null
+                  },
+                  {
+                    "id": "a-transport",
+                    "label": "Transport",
+                    "category": "service",
+                    "amount_minor": 60000,
+                    "unit": "service",
+                    "evidence_ids": [
+                      "demo-a-price-a-transport"
+                    ],
+                    "due_at": null
+                  },
+                  {
+                    "id": "a-technician",
+                    "label": "Technik 09:00–17:00",
+                    "category": "service",
+                    "amount_minor": 0,
+                    "unit": "service",
+                    "evidence_ids": [
+                      "demo-a-annex"
+                    ],
+                    "due_at": null
+                  }
+                ],
+                "B": [
+                  {
+                    "id": "b-package",
+                    "label": "Pełny zakres z transportem i technikiem",
+                    "category": "service",
+                    "amount_minor": 550000,
+                    "unit": "service",
+                    "evidence_ids": [
+                      "demo-b-price"
+                    ],
+                    "due_at": null
+                  }
+                ],
+                "C": [
+                  {
+                    "id": "c-package",
+                    "label": "Pełny zakres",
+                    "category": "service",
+                    "amount_minor": 510000,
+                    "unit": "service",
+                    "evidence_ids": [
+                      "demo-c-price"
+                    ],
+                    "due_at": null
+                  }
+                ]
+              },
+              "ancillary": {
+                "A": {
+                  "deposit": 0,
+                  "payment": 0,
+                  "cancellation": 0
+                },
+                "B": {
+                  "deposit": 0,
+                  "payment": 0,
+                  "cancellation": 0
+                },
+                "C": {
+                  "deposit": 0,
+                  "payment": 0,
+                  "cancellation": 0
+                }
+              },
+              "status": "winner"
+            },
+            {
+              "id": "s2",
+              "assignment": {
+                "technician_surcharge": 120000
+              },
+              "costs": {
+                "A": 600000,
+                "B": 550000,
+                "C": 510000
+              },
+              "feasible": [
+                "B"
+              ],
+              "winners": [
+                "B"
+              ],
+              "exclusions": {
+                "A": [
+                  {
+                    "code": "budget",
+                    "message": "Przekroczony budżet",
+                    "excess_minor": 40000
+                  }
+                ],
+                "B": [],
+                "C": [
+                  {
+                    "code": "ready_at",
+                    "message": "2026-10-10T09:30:00+02:00 nie spełnia wymaganego terminu 2026-10-10T09:00:00+02:00"
+                  }
+                ]
+              },
+              "breakdown": {
+                "A": [
+                  {
+                    "id": "a-set",
+                    "label": "Zestaw nagłośnienia",
+                    "category": "service",
+                    "amount_minor": 420000,
+                    "unit": "service",
+                    "evidence_ids": [
+                      "demo-a-price"
+                    ],
+                    "due_at": null
+                  },
+                  {
+                    "id": "a-transport",
+                    "label": "Transport",
+                    "category": "service",
+                    "amount_minor": 60000,
+                    "unit": "service",
+                    "evidence_ids": [
+                      "demo-a-price-a-transport"
+                    ],
+                    "due_at": null
+                  },
+                  {
+                    "id": "a-technician",
+                    "label": "Technik 09:00–17:00",
+                    "category": "service",
+                    "amount_minor": 120000,
+                    "unit": "service",
+                    "evidence_ids": [
+                      "demo-a-annex"
+                    ],
+                    "due_at": null
+                  }
+                ],
+                "B": [
+                  {
+                    "id": "b-package",
+                    "label": "Pełny zakres z transportem i technikiem",
+                    "category": "service",
+                    "amount_minor": 550000,
+                    "unit": "service",
+                    "evidence_ids": [
+                      "demo-b-price"
+                    ],
+                    "due_at": null
+                  }
+                ],
+                "C": [
+                  {
+                    "id": "c-package",
+                    "label": "Pełny zakres",
+                    "category": "service",
+                    "amount_minor": 510000,
+                    "unit": "service",
+                    "evidence_ids": [
+                      "demo-c-price"
+                    ],
+                    "due_at": null
+                  }
+                ]
+              },
+              "ancillary": {
+                "A": {
+                  "deposit": 0,
+                  "payment": 0,
+                  "cancellation": 0
+                },
+                "B": {
+                  "deposit": 0,
+                  "payment": 0,
+                  "cancellation": 0
+                },
+                "C": {
+                  "deposit": 0,
+                  "payment": 0,
+                  "cancellation": 0
+                }
+              },
+              "status": "winner"
+            }
+          ],
+          "changed_variables": [
+            "technician_surcharge"
+          ],
+          "other_changed_variables": [],
+          "minimality_proven": false
+        },
+        "unknown_answer_reduces_scenarios": false,
+        "heuristic": true,
+        "kind": "variable"
+      }
+    ],
+    "witnesses": [
+      {
+        "kind": "winner_change",
+        "scenarios": [
+          {
+            "id": "s1",
+            "assignment": {
+              "technician_surcharge": 0
+            },
+            "costs": {
+              "A": 480000,
+              "B": 550000,
+              "C": 510000
+            },
+            "feasible": [
+              "A",
+              "B"
+            ],
+            "winners": [
+              "A"
+            ],
+            "exclusions": {
+              "A": [],
+              "B": [],
+              "C": [
+                {
+                  "code": "ready_at",
+                  "message": "2026-10-10T09:30:00+02:00 nie spełnia wymaganego terminu 2026-10-10T09:00:00+02:00"
+                }
+              ]
+            },
+            "breakdown": {
+              "A": [
+                {
+                  "id": "a-set",
+                  "label": "Zestaw nagłośnienia",
+                  "category": "service",
+                  "amount_minor": 420000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-a-price"
+                  ],
+                  "due_at": null
+                },
+                {
+                  "id": "a-transport",
+                  "label": "Transport",
+                  "category": "service",
+                  "amount_minor": 60000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-a-price-a-transport"
+                  ],
+                  "due_at": null
+                },
+                {
+                  "id": "a-technician",
+                  "label": "Technik 09:00–17:00",
+                  "category": "service",
+                  "amount_minor": 0,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-a-annex"
+                  ],
+                  "due_at": null
+                }
+              ],
+              "B": [
+                {
+                  "id": "b-package",
+                  "label": "Pełny zakres z transportem i technikiem",
+                  "category": "service",
+                  "amount_minor": 550000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-b-price"
+                  ],
+                  "due_at": null
+                }
+              ],
+              "C": [
+                {
+                  "id": "c-package",
+                  "label": "Pełny zakres",
+                  "category": "service",
+                  "amount_minor": 510000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-c-price"
+                  ],
+                  "due_at": null
+                }
+              ]
+            },
+            "ancillary": {
+              "A": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              },
+              "B": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              },
+              "C": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              }
+            },
+            "status": "winner"
+          },
+          {
+            "id": "s2",
+            "assignment": {
+              "technician_surcharge": 120000
+            },
+            "costs": {
+              "A": 600000,
+              "B": 550000,
+              "C": 510000
+            },
+            "feasible": [
+              "B"
+            ],
+            "winners": [
+              "B"
+            ],
+            "exclusions": {
+              "A": [
+                {
+                  "code": "budget",
+                  "message": "Przekroczony budżet",
+                  "excess_minor": 40000
+                }
+              ],
+              "B": [],
+              "C": [
+                {
+                  "code": "ready_at",
+                  "message": "2026-10-10T09:30:00+02:00 nie spełnia wymaganego terminu 2026-10-10T09:00:00+02:00"
+                }
+              ]
+            },
+            "breakdown": {
+              "A": [
+                {
+                  "id": "a-set",
+                  "label": "Zestaw nagłośnienia",
+                  "category": "service",
+                  "amount_minor": 420000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-a-price"
+                  ],
+                  "due_at": null
+                },
+                {
+                  "id": "a-transport",
+                  "label": "Transport",
+                  "category": "service",
+                  "amount_minor": 60000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-a-price-a-transport"
+                  ],
+                  "due_at": null
+                },
+                {
+                  "id": "a-technician",
+                  "label": "Technik 09:00–17:00",
+                  "category": "service",
+                  "amount_minor": 120000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-a-annex"
+                  ],
+                  "due_at": null
+                }
+              ],
+              "B": [
+                {
+                  "id": "b-package",
+                  "label": "Pełny zakres z transportem i technikiem",
+                  "category": "service",
+                  "amount_minor": 550000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-b-price"
+                  ],
+                  "due_at": null
+                }
+              ],
+              "C": [
+                {
+                  "id": "c-package",
+                  "label": "Pełny zakres",
+                  "category": "service",
+                  "amount_minor": 510000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "demo-c-price"
+                  ],
+                  "due_at": null
+                }
+              ]
+            },
+            "ancillary": {
+              "A": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              },
+              "B": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              },
+              "C": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              }
+            },
+            "status": "winner"
+          }
+        ],
+        "changed_variables": [
+          "technician_surcharge"
+        ],
+        "other_changed_variables": [
+          "technician_surcharge"
+        ],
+        "minimality_proven": false
+      }
+    ],
+    "thresholds": [],
+    "issues": [],
+    "duration_ms": 1.072
+  },
+  "decisions": [],
+  "approval": {
+    "current": true,
+    "author": "demo-author"
+  },
+  "impact": [],
+  "pendingAnalysis": false,
+  "recordedDemo": true,
+  "exploration_thresholds": {
+    "preview": true,
+    "assumption": "Hipotetyczna dopłata od 0 do 1200 PLN; eksploracja, nie dziedzina dokumentu.",
+    "thresholds": [
+      {
+        "variable_id": "technician_surcharge",
+        "value": 80000,
+        "kind": "budget",
+        "offer_ids": [
+          "A"
+        ]
+      },
+      {
+        "variable_id": "technician_surcharge",
+        "value": 70000,
+        "kind": "tie",
+        "offer_ids": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "variable_id": "technician_surcharge",
+        "value": 30000,
+        "kind": "tie",
+        "offer_ids": [
+          "A",
+          "C"
+        ]
+      }
+    ]
+  },
+  "id": "demo",
+  "revision": 1,
+  "role": "public",
+  "updatedAt": "2026-10-03T12:00:00Z",
+  "status": "needs_clarification",
+  "offers": [
+    {
+      "currency": "PLN",
+      "tax_basis": "gross",
+      "participants": 120,
+      "microphones": 4,
+      "service_start": "2026-10-10T09:00:00+02:00",
+      "service_end": "2026-10-10T17:00:00+02:00",
+      "scope_confirmed": true,
+      "id": "A",
+      "name": "Oferta A · Fala Audio",
+      "ready_at": "2026-10-10T08:30:00+02:00",
+      "evidence_ids": [
+        "demo-a-currency",
+        "demo-a-tax_basis",
+        "demo-a-participants",
+        "demo-a-microphones",
+        "demo-a-ready_at",
+        "demo-a-service_start",
+        "demo-a-service_end",
+        "demo-a-scope_confirmed",
+        "demo-a-price",
+        "demo-a-price-a-transport",
+        "demo-a-annex"
+      ],
+      "cost_items": [
+        {
+          "id": "a-set",
+          "label": "Zestaw nagłośnienia",
+          "amount": {
+            "op": "literal",
+            "value": 420000
+          },
+          "category": "service",
+          "evidence_ids": [
+            "demo-a-price"
+          ]
+        },
+        {
+          "id": "a-transport",
+          "label": "Transport",
+          "amount": {
+            "op": "literal",
+            "value": 60000
+          },
+          "category": "service",
+          "evidence_ids": [
+            "demo-a-price-a-transport"
+          ]
+        },
+        {
+          "id": "a-technician",
+          "label": "Technik 09:00–17:00",
+          "amount": {
+            "op": "var",
+            "name": "technician_surcharge"
+          },
+          "category": "service",
+          "evidence_ids": [
+            "demo-a-annex"
+          ]
+        }
+      ]
+    },
+    {
+      "currency": "PLN",
+      "tax_basis": "gross",
+      "participants": 120,
+      "microphones": 4,
+      "service_start": "2026-10-10T09:00:00+02:00",
+      "service_end": "2026-10-10T17:00:00+02:00",
+      "scope_confirmed": true,
+      "id": "B",
+      "name": "Pracownia Dźwięku",
+      "ready_at": "2026-10-10T08:30:00+02:00",
+      "evidence_ids": [
+        "demo-b-currency",
+        "demo-b-tax_basis",
+        "demo-b-participants",
+        "demo-b-microphones",
+        "demo-b-ready_at",
+        "demo-b-service_start",
+        "demo-b-service_end",
+        "demo-b-scope_confirmed",
+        "demo-b-price"
+      ],
+      "cost_items": [
+        {
+          "id": "b-package",
+          "label": "Pełny zakres z transportem i technikiem",
+          "amount": {
+            "op": "literal",
+            "value": 550000
+          },
+          "category": "service",
+          "evidence_ids": [
+            "demo-b-price"
+          ]
+        }
+      ]
+    },
+    {
+      "currency": "PLN",
+      "tax_basis": "gross",
+      "participants": 120,
+      "microphones": 4,
+      "service_start": "2026-10-10T09:00:00+02:00",
+      "service_end": "2026-10-10T17:00:00+02:00",
+      "scope_confirmed": true,
+      "id": "C",
+      "name": "Sygnał Studio",
+      "ready_at": "2026-10-10T09:30:00+02:00",
+      "evidence_ids": [
+        "demo-c-currency",
+        "demo-c-tax_basis",
+        "demo-c-participants",
+        "demo-c-microphones",
+        "demo-c-ready_at",
+        "demo-c-service_start",
+        "demo-c-service_end",
+        "demo-c-scope_confirmed",
+        "demo-c-price"
+      ],
+      "cost_items": [
+        {
+          "id": "c-package",
+          "label": "Pełny zakres",
+          "amount": {
+            "op": "literal",
+            "value": 510000
+          },
+          "category": "service",
+          "evidence_ids": [
+            "demo-c-price"
+          ]
+        }
+      ]
+    }
+  ],
+  "members": [],
+  "jobs": [],
+  "history": [],
+  "usage": {
+    "measuredUsd": 0,
+    "estimatedUsd": 0,
+    "note": "Zapisany przykład autorski, bez nowej inferencji."
+  },
+  "export": {
+    "at": "2026-10-03T14:48:39.906195+00:00",
+    "by": "DEFOZO SOFTWARE HOUSE / Michał Kiełtyka",
+    "version": 1,
+    "historical": false,
+    "snapshot": true,
+    "recordedExample": true,
+    "formatVersion": "1.0"
+  }
+}

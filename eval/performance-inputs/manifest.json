@@ -1,0 +1,41 @@
+[
+  {
+    "file": "A-5-pages.pdf",
+    "sha256": "b4f25eecea419c53e779f0a499f26275da9089a00c74d92c633b9e0939099446",
+    "pages": 5,
+    "characters_by_page": [
+      1197,
+      1368,
+      1136,
+      1059,
+      1235
+    ],
+    "synthetic": true
+  },
+  {
+    "file": "B-5-pages.pdf",
+    "sha256": "f5a70e1d461eade60506c1b8547c90ff4e0227a415c0ffc7663f23991a2c425f",
+    "pages": 5,
+    "characters_by_page": [
+      1197,
+      1368,
+      1136,
+      1059,
+      1235
+    ],
+    "synthetic": true
+  },
+  {
+    "file": "C-5-pages.pdf",
+    "sha256": "3cd600075e60efb80b416383fb8559e73696cdd8c89ba3ff081c8c1de8d9fab1",
+    "pages": 5,
+    "characters_by_page": [
+      1197,
+      1368,
+      1136,
+      1059,
+      1235
+    ],
+    "synthetic": true
+  }
+]

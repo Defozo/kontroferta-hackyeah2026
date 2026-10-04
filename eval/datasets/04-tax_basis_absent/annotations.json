@@ -1,0 +1,103 @@
+{
+  "id": "04-tax_basis_absent",
+  "family": "tax_basis_absent",
+  "split": "development",
+  "language": "pl",
+  "modality": "text",
+  "tags": [
+    "no_tax"
+  ],
+  "currency": "PLN",
+  "budget_minor": 700000,
+  "timezone": "Europe/Warsaw",
+  "requirements": {
+    "participants": 120,
+    "microphones": 4,
+    "ready_by": "2026-10-10T09:00:00+02:00",
+    "service_start": "2026-10-10T09:00:00+02:00",
+    "service_end": "2026-10-10T17:00:00+02:00",
+    "scope_required": true,
+    "confirmed": true
+  },
+  "offers": [
+    {
+      "id": "A",
+      "files": [
+        "A.txt"
+      ],
+      "expected": {
+        "fields": {
+          "currency": "PLN",
+          "tax_basis": "unknown",
+          "participants": 120,
+          "microphones": 4,
+          "ready_at": "2026-10-10T08:30:00+02:00",
+          "service_start": "2026-10-10T09:00:00+02:00",
+          "service_end": "2026-10-10T17:00:00+02:00",
+          "scope_confirmed": true
+        },
+        "service_total_minor": null,
+        "deposit_minor": 0,
+        "cancellation_minor": 0,
+        "payment_minor": 0,
+        "evidence_annotations": {
+          "participants": "Potwierdzamy: zestaw nagłośnienia jest odpowiedni dla konferencji 120 osób.",
+          "microphones": "W cenie są 4 mikrofony bezprzewodowe.",
+          "ready_at": "Gotowość sprzętu: 10.10.2026, godzina 08:30.",
+          "service_start": "Technik jest obecny 10.10.2026 od 09:00 do 17:00, cały ten czas w cenie.",
+          "service_end": "Technik jest obecny 10.10.2026 od 09:00 do 17:00, cały ten czas w cenie.",
+          "scope_confirmed": "Potwierdzamy: zestaw nagłośnienia jest odpowiedni dla konferencji 120 osób.",
+          "price": "Pełna cena usługi: 4900 PLN. Nie podano, czy cena jest netto czy brutto."
+        },
+        "dependencies": [
+          "source -> fact -> cost/constraint -> comparison -> decision"
+        ]
+      }
+    },
+    {
+      "id": "B",
+      "files": [
+        "B.txt"
+      ],
+      "expected": {
+        "fields": {
+          "currency": "PLN",
+          "tax_basis": "unknown",
+          "participants": 120,
+          "microphones": 4,
+          "ready_at": "2026-10-10T08:30:00+02:00",
+          "service_start": "2026-10-10T09:00:00+02:00",
+          "service_end": "2026-10-10T17:00:00+02:00",
+          "scope_confirmed": true
+        },
+        "service_total_minor": null,
+        "deposit_minor": 0,
+        "cancellation_minor": 0,
+        "payment_minor": 0,
+        "evidence_annotations": {
+          "participants": "Potwierdzamy: zestaw nagłośnienia jest odpowiedni dla konferencji 120 osób.",
+          "microphones": "W cenie są 4 mikrofony bezprzewodowe.",
+          "ready_at": "Gotowość sprzętu: 10.10.2026, godzina 08:30.",
+          "service_start": "Technik jest obecny 10.10.2026 od 09:00 do 17:00, cały ten czas w cenie.",
+          "service_end": "Technik jest obecny 10.10.2026 od 09:00 do 17:00, cały ten czas w cenie.",
+          "scope_confirmed": "Potwierdzamy: zestaw nagłośnienia jest odpowiedni dla konferencji 120 osób.",
+          "price": "Pełna cena usługi: 5400 PLN. Nie podano, czy cena jest netto czy brutto."
+        },
+        "dependencies": [
+          "source -> fact -> cost/constraint -> comparison -> decision"
+        ]
+      }
+    }
+  ],
+  "expected_result": {
+    "unresolved": true,
+    "common_winners": []
+  },
+  "annotation_provenance": "AI-assisted authored expectations; not independently human reviewed",
+  "second_human_review": {
+    "status": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  "annotation_correction": "Development v1.1: unknown currency/tax cannot establish comparable gross cost; ambiguity evidence quotes corrected to actual demo source. Original retained in annotation-history/v1."
+}

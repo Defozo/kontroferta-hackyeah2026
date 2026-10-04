@@ -1,0 +1,2229 @@
+{
+  "requirements": {
+    "participants": 120,
+    "microphones": 4,
+    "ready_by": "2026-10-10T09:00:00+02:00",
+    "service_start": "2026-10-10T09:00:00+02:00",
+    "service_end": "2026-10-10T17:00:00+02:00",
+    "scope_required": true,
+    "description": "Fikcyjne wydarzenie AV dla 120 osób",
+    "confirmed": false,
+    "currency": "PLN",
+    "timezone": "Europe/Warsaw",
+    "budget_minor": 560000
+  },
+  "model": {
+    "offers": [
+      {
+        "id": "A",
+        "name": "Oferta A · Fala Audio",
+        "currency": "PLN",
+        "tax_basis": "gross",
+        "tax_rate": null,
+        "cost_items": [
+          {
+            "id": "A:c1",
+            "label": "Zestaw nagłośnienia i obsługa wydarzenia",
+            "amount": {
+              "op": "literal",
+              "value": 420000
+            },
+            "category": "service",
+            "unit": "PLN",
+            "evidence_ids": [
+              "A:fact:6324f9f021d459127ec6"
+            ]
+          },
+          {
+            "id": "A:c2",
+            "label": "Transport",
+            "amount": {
+              "op": "literal",
+              "value": 60000
+            },
+            "category": "service",
+            "unit": "PLN",
+            "evidence_ids": [
+              "A:fact:05b633fb6206541e2b4a"
+            ]
+          },
+          {
+            "id": "A:c4",
+            "label": "Dopłata za technika wg Aneksu A-1",
+            "amount": {
+              "op": "var",
+              "name": "A:v1"
+            },
+            "category": "service",
+            "unit": "service",
+            "evidence_ids": [
+              "A:fact:9d75d1fdeea151dcdb7d",
+              "A:fact:660267a69bee66746c27"
+            ]
+          }
+        ],
+        "participants": 120,
+        "microphones": 4,
+        "ready_at": "2026-10-10T08:30:00+02:00",
+        "service_start": "2026-10-10T09:00:00+02:00",
+        "service_end": "2026-10-10T17:00:00+02:00",
+        "scope_confirmed": true,
+        "evidence_ids": [
+          "A:fact:f6dde77c64edd1e5b42a",
+          "A:fact:1768cd95fad97bf5d8b8",
+          "A:fact:867c5026d914a0a427f2",
+          "A:fact:fc41fbbf92756f612550",
+          "A:fact:da9d02baa1c33c5e828f",
+          "A:fact:088e73e67f4e7d024def",
+          "A:fact:0cc1466e971524c59240",
+          "A:fact:2641f1f981be161c2fab",
+          "A:fact:79784e9acd65c766b912",
+          "A:fact:5b90623dd113eff3f745",
+          "A:fact:6324f9f021d459127ec6",
+          "A:fact:05b633fb6206541e2b4a",
+          "A:fact:ed05406e24228c228157",
+          "A:fact:9d75d1fdeea151dcdb7d",
+          "A:fact:660267a69bee66746c27"
+        ],
+        "constraints": []
+      },
+      {
+        "id": "B",
+        "name": "Pracownia Dźwięku",
+        "currency": "PLN",
+        "tax_basis": "gross",
+        "tax_rate": null,
+        "cost_items": [
+          {
+            "id": "B:c1",
+            "label": "Pełna cena usługi (nagłośnienie, 4 mikrofony, transport, technik 09:00-17:00)",
+            "amount": {
+              "op": "literal",
+              "value": 550000
+            },
+            "category": "service",
+            "unit": "usługa",
+            "evidence_ids": [
+              "B:fact:df08dee9fab8166ed9be",
+              "B:fact:74a9fa7198d572f46bc6",
+              "B:fact:73a71287798c0c291cb1",
+              "B:fact:99129fb0108bf87a1770"
+            ]
+          }
+        ],
+        "participants": 120,
+        "microphones": 4,
+        "ready_at": "2026-10-10T08:30:00+02:00",
+        "service_start": "2026-10-10T09:00:00+02:00",
+        "service_end": "2026-10-10T17:00:00+02:00",
+        "scope_confirmed": true,
+        "evidence_ids": [
+          "B:fact:9d6f2eb9965e531bc9d4",
+          "B:fact:261f3eb7c5dd722686f5",
+          "B:fact:be3b8d0384e810412656",
+          "B:fact:7fbfeefb9889dbdbb9c0",
+          "B:fact:ecb97be0c1d192c3cc1b",
+          "B:fact:e0647fae08d698058f92",
+          "B:fact:87792bdd763c9fe9c69b",
+          "B:fact:d25ae8a2a950aef9cd38",
+          "B:fact:df08dee9fab8166ed9be",
+          "B:fact:74a9fa7198d572f46bc6",
+          "B:fact:73a71287798c0c291cb1",
+          "B:fact:99129fb0108bf87a1770"
+        ],
+        "constraints": []
+      },
+      {
+        "id": "C",
+        "name": "Sygnał Studio",
+        "currency": "PLN",
+        "tax_basis": "gross",
+        "tax_rate": null,
+        "cost_items": [
+          {
+            "id": "C:c1",
+            "label": "Pełna cena usługi (nagłośnienie, transport, technik)",
+            "amount": {
+              "op": "literal",
+              "value": 510000
+            },
+            "category": "service",
+            "unit": "PLN",
+            "evidence_ids": [
+              "C:fact:352a6e4daeed376ebb0f",
+              "C:fact:4dd0b738f1c6a50cf56e",
+              "C:fact:975c2ab23d1609d0ebe6",
+              "C:fact:fdc2b3d559a314317c17"
+            ]
+          }
+        ],
+        "participants": 120,
+        "microphones": 4,
+        "ready_at": "2026-10-10T09:30:00+02:00",
+        "service_start": "2026-10-10T09:00:00+02:00",
+        "service_end": "2026-10-10T17:00:00+02:00",
+        "scope_confirmed": true,
+        "evidence_ids": [
+          "C:fact:4e34bf6fd3d3bcdae778",
+          "C:fact:8112f51dde27df7b9d66",
+          "C:fact:4ceea406d8e2561440cb",
+          "C:fact:c05d551ad4133118a8f7",
+          "C:fact:74bf1e6a068a9eee4bf2",
+          "C:fact:e1f434894baf3c200994",
+          "C:fact:5accdb26ce9f3d4eaf9a",
+          "C:fact:5181c63caa0d993b7c15",
+          "C:fact:352a6e4daeed376ebb0f",
+          "C:fact:4dd0b738f1c6a50cf56e",
+          "C:fact:975c2ab23d1609d0ebe6",
+          "C:fact:fdc2b3d559a314317c17"
+        ],
+        "constraints": []
+      }
+    ],
+    "variables": [
+      {
+        "id": "A:v1",
+        "label": "Dopłata za obecność technika (Aneks A-1)",
+        "kind": "enum",
+        "values": [
+          0,
+          120000
+        ],
+        "complete": true,
+        "unit": "minor",
+        "question": "Czy usługa technika 09:00-17:00 jest wliczona w cenę bazową (dopłata 0 PLN), czy wymaga dodatkowej opłaty 1200 PLN brutto?",
+        "difficulty": 0,
+        "source": "document_interpretation",
+        "evidence_ids": [
+          "A:fact:9d75d1fdeea151dcdb7d",
+          "A:fact:660267a69bee66746c27"
+        ]
+      }
+    ],
+    "constraints": [],
+    "issues": [
+      {
+        "code": "extraction_gap",
+        "message": "conflict:money_unit:A:fact:6324f9f021d459127ec6",
+        "offer_id": "A",
+        "blocking": true
+      },
+      {
+        "code": "extraction_gap",
+        "message": "conflict:money_unit:A:fact:05b633fb6206541e2b4a",
+        "offer_id": "A",
+        "blocking": true
+      },
+      {
+        "code": "extraction_gap",
+        "message": "conflict:money_unit:A:fact:ed05406e24228c228157",
+        "offer_id": "A",
+        "blocking": true
+      },
+      {
+        "code": "extraction_gap",
+        "message": "conflict:money_unit:A:fact:660267a69bee66746c27",
+        "offer_id": "A",
+        "blocking": true
+      },
+      {
+        "code": "extraction_gap",
+        "message": "conflict:money_unit:B:fact:73a71287798c0c291cb1",
+        "offer_id": "B",
+        "blocking": true
+      },
+      {
+        "code": "extraction_gap",
+        "message": "conflict:money_unit:C:fact:352a6e4daeed376ebb0f",
+        "offer_id": "C",
+        "blocking": true
+      }
+    ],
+    "requirements": {
+      "participants": 120,
+      "microphones": 4,
+      "ready_by": "2026-10-10T09:00:00+02:00",
+      "service_start": "2026-10-10T09:00:00+02:00",
+      "service_end": "2026-10-10T17:00:00+02:00",
+      "scope_required": true,
+      "description": "Fikcyjne wydarzenie AV dla 120 osób",
+      "confirmed": false
+    },
+    "currency": "PLN",
+    "budget_minor": 560000,
+    "timezone": "Europe/Warsaw",
+    "max_scenarios": 100000
+  },
+  "facts": [
+    {
+      "id": "A:fact:f6dde77c64edd1e5b42a",
+      "key": "document_date",
+      "value": "2026-10-03",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "Data: 03.10.2026.",
+          "quote_validated": true,
+          "start": 89,
+          "end": 106,
+          "bbox": [
+            370.97654709999983,
+            106.31494120000002,
+            458.43406009999956,
+            117.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "A",
+      "targets": [],
+      "target": null
+    },
+    {
+      "id": "A:fact:1768cd95fad97bf5d8b8",
+      "key": "declared_author",
+      "value": "Fala Audio, dział ofert",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "Autor: Fala Audio, dział ofert.",
+          "quote_validated": true,
+          "start": 57,
+          "end": 88,
+          "bbox": [
+            226.069817,
+            106.31494120000002,
+            367.92039509999984,
+            117.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "A",
+      "targets": [],
+      "target": null
+    },
+    {
+      "id": "A:fact:867c5026d914a0a427f2",
+      "key": "scope_confirmed",
+      "value": true,
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "Potwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.",
+          "quote_validated": true,
+          "start": 173,
+          "end": 250,
+          "bbox": [
+            50.0,
+            162.31494120000002,
+            451.7577926999996,
+            173.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "A",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "A",
+          "field": "scope_confirmed"
+        }
+      ],
+      "target": "offers.A.scope_confirmed"
+    },
+    {
+      "id": "A:fact:fc41fbbf92756f612550",
+      "key": "participants",
+      "value": 120,
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "konferencji 120 osób",
+          "quote_validated": true,
+          "start": 229,
+          "end": 249,
+          "bbox": [
+            347.1879745999999,
+            162.31494120000002,
+            451.7577926999996,
+            173.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "A",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "A",
+          "field": "participants"
+        }
+      ],
+      "target": "offers.A.participants"
+    },
+    {
+      "id": "A:fact:da9d02baa1c33c5e828f",
+      "key": "microphones",
+      "value": 4,
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "W zestawie są 4 mikrofony bezprzewodowe.",
+          "quote_validated": true,
+          "start": 251,
+          "end": 291,
+          "bbox": [
+            50.0,
+            190.31494120000002,
+            266.42284290000003,
+            201.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "A",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "A",
+          "field": "microphones"
+        }
+      ],
+      "target": "offers.A.microphones"
+    },
+    {
+      "id": "A:fact:088e73e67f4e7d024def",
+      "key": "ready_at",
+      "value": "2026-10-10T08:30:00+02:00",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "Gotowość sprzętu: 10.10.2026 o 08:30.",
+          "quote_validated": true,
+          "start": 353,
+          "end": 390,
+          "bbox": [
+            50.0,
+            246.31494120000002,
+            242.01658849999998,
+            257.3149412
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "A",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "A",
+          "field": "ready_at"
+        }
+      ],
+      "target": "offers.A.ready_at"
+    },
+    {
+      "id": "A:fact:0cc1466e971524c59240",
+      "key": "service_start",
+      "value": "2026-10-10T09:00:00+02:00",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "Technik jest dostępny i obecny przez cały okres 09:00-17:00.",
+          "quote_validated": true,
+          "start": 292,
+          "end": 352,
+          "bbox": [
+            50.0,
+            218.31494120000002,
+            347.7734209999998,
+            229.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "A",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "A",
+          "field": "service_start"
+        }
+      ],
+      "target": "offers.A.service_start"
+    },
+    {
+      "id": "A:fact:2641f1f981be161c2fab",
+      "key": "service_end",
+      "value": "2026-10-10T17:00:00+02:00",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "Technik jest dostępny i obecny przez cały okres 09:00-17:00.",
+          "quote_validated": true,
+          "start": 292,
+          "end": 352,
+          "bbox": [
+            50.0,
+            218.31494120000002,
+            347.7734209999998,
+            229.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "A",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "A",
+          "field": "service_end"
+        }
+      ],
+      "target": "offers.A.service_end"
+    },
+    {
+      "id": "A:fact:79784e9acd65c766b912",
+      "key": "currency",
+      "value": "PLN",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "4200 PLN brutto.",
+          "quote_validated": true,
+          "start": 433,
+          "end": 449,
+          "bbox": [
+            262.1796776,
+            274.3149412,
+            345.3456879999999,
+            285.3149412
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "A",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "A",
+          "field": "currency"
+        }
+      ],
+      "target": "offers.A.currency"
+    },
+    {
+      "id": "A:fact:5b90623dd113eff3f745",
+      "key": "tax_basis",
+      "value": "gross",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "4200 PLN brutto.",
+          "quote_validated": true,
+          "start": 433,
+          "end": 449,
+          "bbox": [
+            262.1796776,
+            274.3149412,
+            345.3456879999999,
+            285.3149412
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "A",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "A",
+          "field": "tax_basis"
+        }
+      ],
+      "target": "offers.A.tax_basis"
+    },
+    {
+      "id": "A:fact:6324f9f021d459127ec6",
+      "key": "price",
+      "value": 420000,
+      "unit": "PLN",
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "Zestaw nagłośnienia i obsługa wydarzenia: 4200 PLN brutto.",
+          "quote_validated": true,
+          "start": 391,
+          "end": 449,
+          "bbox": [
+            50.0,
+            274.3149412,
+            345.3456879999999,
+            285.3149412
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": true,
+      "offer_id": "A",
+      "targets": [
+        {
+          "kind": "cost",
+          "offer_id": "A",
+          "cost_id": "A:c1",
+          "field": "amount"
+        }
+      ],
+      "target": null,
+      "review_reason": "Jednostka kwoty wymaga potwierdzenia na podstawie źródła."
+    },
+    {
+      "id": "A:fact:05b633fb6206541e2b4a",
+      "key": "price",
+      "value": 60000,
+      "unit": "PLN",
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "Transport: 600 PLN brutto.",
+          "quote_validated": true,
+          "start": 450,
+          "end": 476,
+          "bbox": [
+            50.0,
+            302.3149412,
+            180.23290169999999,
+            313.3149412
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": true,
+      "offer_id": "A",
+      "targets": [
+        {
+          "kind": "cost",
+          "offer_id": "A",
+          "cost_id": "A:c2",
+          "field": "amount"
+        }
+      ],
+      "target": null,
+      "review_reason": "Jednostka kwoty wymaga potwierdzenia na podstawie źródła."
+    },
+    {
+      "id": "A:fact:ed05406e24228c228157",
+      "key": "price",
+      "value": 480000,
+      "unit": "PLN",
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-offer",
+          "page": 1,
+          "quote": "Łącznie: 4800 PLN brutto.",
+          "quote_validated": true,
+          "start": 477,
+          "end": 502,
+          "bbox": [
+            183.28905369999998,
+            302.3149412,
+            310.48191729999996,
+            313.3149412
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": true,
+      "offer_id": "A",
+      "targets": [],
+      "target": null,
+      "review_reason": "Jednostka kwoty wymaga potwierdzenia na podstawie źródła."
+    },
+    {
+      "id": "A:fact:9d75d1fdeea151dcdb7d",
+      "key": "price",
+      "value": 0,
+      "unit": "PLN",
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-annex",
+          "page": 1,
+          "quote": "technik w cenie (dopłata 0 PLN brutto)",
+          "quote_validated": true,
+          "start": 327,
+          "end": 365,
+          "bbox": [
+            223.63671160000004,
+            218.31494120000002,
+            410.12644799999975,
+            229.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "A",
+      "targets": [
+        {
+          "kind": "variable",
+          "variable_id": "A:v1",
+          "field": "values"
+        },
+        {
+          "kind": "cost",
+          "offer_id": "A",
+          "cost_id": "A:c4",
+          "field": "amount"
+        }
+      ],
+      "target": null
+    },
+    {
+      "id": "A:fact:660267a69bee66746c27",
+      "key": "price",
+      "value": 120000,
+      "unit": "PLN",
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "A-annex",
+          "page": 1,
+          "quote": "technik dodatkowo\n(dopłata 1200 PLN brutto).",
+          "quote_validated": true,
+          "start": 371,
+          "end": 415,
+          "bbox": [
+            50.0,
+            218.31494120000002,
+            528.1508555999994,
+            246.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": true,
+      "offer_id": "A",
+      "targets": [
+        {
+          "kind": "variable",
+          "variable_id": "A:v1",
+          "field": "values"
+        },
+        {
+          "kind": "cost",
+          "offer_id": "A",
+          "cost_id": "A:c4",
+          "field": "amount"
+        }
+      ],
+      "target": null,
+      "review_reason": "Jednostka kwoty wymaga potwierdzenia na podstawie źródła."
+    },
+    {
+      "id": "B:fact:9d6f2eb9965e531bc9d4",
+      "key": "document_date",
+      "value": "2026-10-03",
+      "unit": null,
+      "scope": "meta",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": false,
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "Data: 03.10.2026.",
+          "quote_validated": true,
+          "start": 90,
+          "end": 107,
+          "bbox": [
+            360.56737139999996,
+            106.31494120000002,
+            448.0248843999997,
+            117.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "B",
+      "targets": [],
+      "target": null
+    },
+    {
+      "id": "B:fact:261f3eb7c5dd722686f5",
+      "key": "declared_author",
+      "value": "Pracownia Dźwięku",
+      "unit": null,
+      "scope": "meta",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": false,
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "Autor: Pracownia Dźwięku.",
+          "quote_validated": true,
+          "start": 64,
+          "end": 89,
+          "bbox": [
+            226.069817,
+            106.31494120000002,
+            357.51121939999996,
+            117.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "B",
+      "targets": [],
+      "target": null
+    },
+    {
+      "id": "B:fact:be3b8d0384e810412656",
+      "key": "scope_confirmed",
+      "value": true,
+      "unit": null,
+      "scope": "audio",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "Potwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.",
+          "quote_validated": true,
+          "start": 174,
+          "end": 251,
+          "bbox": [
+            50.0,
+            162.31494120000002,
+            451.7577926999996,
+            173.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "B",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "B",
+          "field": "scope_confirmed"
+        }
+      ],
+      "target": "offers.B.scope_confirmed"
+    },
+    {
+      "id": "B:fact:7fbfeefb9889dbdbb9c0",
+      "key": "participants",
+      "value": 120,
+      "unit": "people",
+      "scope": "audio",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": false,
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "konferencji 120 osób.",
+          "quote_validated": true,
+          "start": 230,
+          "end": 251,
+          "bbox": [
+            347.1879745999999,
+            162.31494120000002,
+            451.7577926999996,
+            173.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "B",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "B",
+          "field": "participants"
+        }
+      ],
+      "target": "offers.B.participants"
+    },
+    {
+      "id": "B:fact:ecb97be0c1d192c3cc1b",
+      "key": "microphones",
+      "value": 4,
+      "unit": "items",
+      "scope": "microphones",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "W zestawie są 4 mikrofony bezprzewodowe.",
+          "quote_validated": true,
+          "start": 252,
+          "end": 292,
+          "bbox": [
+            50.0,
+            190.31494120000002,
+            266.42284290000003,
+            201.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "B",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "B",
+          "field": "microphones"
+        }
+      ],
+      "target": "offers.B.microphones"
+    },
+    {
+      "id": "B:fact:e0647fae08d698058f92",
+      "key": "ready_at",
+      "value": "2026-10-10T08:30:00+02:00",
+      "unit": null,
+      "scope": "schedule",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "Termin wydarzenia: 10.10.2026. Strefa: Europe/Warsaw (UTC+02:00).\nPotwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.\nW zestawie są 4 mikrofony bezprzewodowe.\nTechnik jest dostępny i obecny przez cały okres 09:00-17:00.\nGotowość sprzętu: 10.10.2026 o 08:30.",
+          "quote_validated": true,
+          "start": 108,
+          "end": 391,
+          "bbox": [
+            50.0,
+            134.31494120000002,
+            451.7577926999996,
+            257.3149412
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "B",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "B",
+          "field": "ready_at"
+        }
+      ],
+      "target": "offers.B.ready_at"
+    },
+    {
+      "id": "B:fact:87792bdd763c9fe9c69b",
+      "key": "service_start",
+      "value": "2026-10-10T09:00:00+02:00",
+      "unit": null,
+      "scope": "technician",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "Technik jest dostępny i obecny przez cały okres 09:00-17:00.",
+          "quote_validated": true,
+          "start": 293,
+          "end": 353,
+          "bbox": [
+            50.0,
+            218.31494120000002,
+            347.7734209999998,
+            229.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "B",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "B",
+          "field": "service_start"
+        }
+      ],
+      "target": "offers.B.service_start"
+    },
+    {
+      "id": "B:fact:d25ae8a2a950aef9cd38",
+      "key": "service_end",
+      "value": "2026-10-10T17:00:00+02:00",
+      "unit": null,
+      "scope": "technician",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "Technik jest dostępny i obecny przez cały okres 09:00-17:00.",
+          "quote_validated": true,
+          "start": 293,
+          "end": 353,
+          "bbox": [
+            50.0,
+            218.31494120000002,
+            347.7734209999998,
+            229.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "B",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "B",
+          "field": "service_end"
+        }
+      ],
+      "target": "offers.B.service_end"
+    },
+    {
+      "id": "B:fact:df08dee9fab8166ed9be",
+      "key": "currency",
+      "value": "PLN",
+      "unit": null,
+      "scope": "pricing",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "Pełna cena usługi: 5500 PLN brutto.",
+          "quote_validated": true,
+          "start": 392,
+          "end": 427,
+          "bbox": [
+            50.0,
+            274.3149412,
+            226.11815430000001,
+            285.3149412
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "B",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "B",
+          "field": "currency"
+        },
+        {
+          "kind": "cost",
+          "offer_id": "B",
+          "cost_id": "B:c1",
+          "field": "amount"
+        }
+      ],
+      "target": "offers.B.currency"
+    },
+    {
+      "id": "B:fact:74a9fa7198d572f46bc6",
+      "key": "tax_basis",
+      "value": "gross",
+      "unit": null,
+      "scope": "pricing",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "Pełna cena usługi: 5500 PLN brutto.",
+          "quote_validated": true,
+          "start": 392,
+          "end": 427,
+          "bbox": [
+            50.0,
+            274.3149412,
+            226.11815430000001,
+            285.3149412
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "B",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "B",
+          "field": "tax_basis"
+        },
+        {
+          "kind": "cost",
+          "offer_id": "B",
+          "cost_id": "B:c1",
+          "field": "amount"
+        }
+      ],
+      "target": "offers.B.tax_basis"
+    },
+    {
+      "id": "B:fact:73a71287798c0c291cb1",
+      "key": "price",
+      "value": 550000,
+      "unit": "PLN",
+      "scope": "pricing",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "Pełna cena usługi: 5500 PLN brutto.",
+          "quote_validated": true,
+          "start": 392,
+          "end": 427,
+          "bbox": [
+            50.0,
+            274.3149412,
+            226.11815430000001,
+            285.3149412
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": true,
+      "offer_id": "B",
+      "targets": [
+        {
+          "kind": "cost",
+          "offer_id": "B",
+          "cost_id": "B:c1",
+          "field": "amount"
+        }
+      ],
+      "target": null,
+      "review_reason": "Jednostka kwoty wymaga potwierdzenia na podstawie źródła."
+    },
+    {
+      "id": "B:fact:99129fb0108bf87a1770",
+      "key": "included_items",
+      "value": "nagłośnienie, 4 mikrofony, transport i technika przez 09:00-17:00",
+      "unit": null,
+      "scope": "pricing",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": false,
+      "evidence": [
+        {
+          "source_id": "B-offer",
+          "page": 1,
+          "quote": "Cena obejmuje nagłośnienie, 4 mikrofony, transport i technika przez 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.",
+          "quote_validated": true,
+          "start": 428,
+          "end": 546,
+          "bbox": [
+            50.0,
+            302.3149412,
+            445.6186299999996,
+            341.3149412000001
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "B",
+      "targets": [
+        {
+          "kind": "cost",
+          "offer_id": "B",
+          "cost_id": "B:c1",
+          "field": "amount"
+        }
+      ],
+      "target": null
+    },
+    {
+      "id": "C:fact:4e34bf6fd3d3bcdae778",
+      "key": "document_date",
+      "value": "2026-10-03",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "Data: 03.10.2026.",
+          "quote_validated": true,
+          "start": 82,
+          "end": 99,
+          "bbox": [
+            332.46580779999994,
+            106.31494120000002,
+            419.92332079999966,
+            117.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "C",
+      "targets": [],
+      "target": null
+    },
+    {
+      "id": "C:fact:8112f51dde27df7b9d66",
+      "key": "declared_author",
+      "value": "Sygnał Studio",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "Autor: Sygnał Studio.",
+          "quote_validated": true,
+          "start": 60,
+          "end": 81,
+          "bbox": [
+            226.069817,
+            106.31494120000002,
+            329.40965579999994,
+            117.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "C",
+      "targets": [],
+      "target": null
+    },
+    {
+      "id": "C:fact:4ceea406d8e2561440cb",
+      "key": "scope_confirmed",
+      "value": true,
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "Potwierdzamy odpowiedniość oferowanego nagłośnienia dla konferencji 120 osób.",
+          "quote_validated": true,
+          "start": 166,
+          "end": 243,
+          "bbox": [
+            50.0,
+            162.31494120000002,
+            451.7577926999996,
+            173.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "C",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "C",
+          "field": "scope_confirmed"
+        }
+      ],
+      "target": "offers.C.scope_confirmed"
+    },
+    {
+      "id": "C:fact:c05d551ad4133118a8f7",
+      "key": "participants",
+      "value": 120,
+      "unit": "osób",
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "konferencji 120 osób",
+          "quote_validated": true,
+          "start": 222,
+          "end": 242,
+          "bbox": [
+            347.1879745999999,
+            162.31494120000002,
+            451.7577926999996,
+            173.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "C",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "C",
+          "field": "participants"
+        }
+      ],
+      "target": "offers.C.participants"
+    },
+    {
+      "id": "C:fact:74bf1e6a068a9eee4bf2",
+      "key": "microphones",
+      "value": 4,
+      "unit": "szt.",
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "W zestawie są 4 mikrofony bezprzewodowe.",
+          "quote_validated": true,
+          "start": 244,
+          "end": 284,
+          "bbox": [
+            50.0,
+            190.31494120000002,
+            266.42284290000003,
+            201.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "C",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "C",
+          "field": "microphones"
+        }
+      ],
+      "target": "offers.C.microphones"
+    },
+    {
+      "id": "C:fact:e1f434894baf3c200994",
+      "key": "service_start",
+      "value": "2026-10-10T09:00:00+02:00",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "Technik jest dostępny i obecny przez cały okres 09:00-17:00.",
+          "quote_validated": true,
+          "start": 285,
+          "end": 345,
+          "bbox": [
+            50.0,
+            218.31494120000002,
+            347.7734209999998,
+            229.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "C",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "C",
+          "field": "service_start"
+        }
+      ],
+      "target": "offers.C.service_start"
+    },
+    {
+      "id": "C:fact:5accdb26ce9f3d4eaf9a",
+      "key": "service_end",
+      "value": "2026-10-10T17:00:00+02:00",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "Technik jest dostępny i obecny przez cały okres 09:00-17:00.",
+          "quote_validated": true,
+          "start": 285,
+          "end": 345,
+          "bbox": [
+            50.0,
+            218.31494120000002,
+            347.7734209999998,
+            229.31494120000002
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "C",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "C",
+          "field": "service_end"
+        }
+      ],
+      "target": "offers.C.service_end"
+    },
+    {
+      "id": "C:fact:5181c63caa0d993b7c15",
+      "key": "ready_at",
+      "value": "2026-10-10T09:30:00+02:00",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "Gotowość sprzętu: 10.10.2026 o 09:30. Nie możemy zapewnić gotowości przed 09:00.",
+          "quote_validated": true,
+          "start": 346,
+          "end": 426,
+          "bbox": [
+            50.0,
+            246.31494120000002,
+            471.29245729999957,
+            257.3149412
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "C",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "C",
+          "field": "ready_at"
+        }
+      ],
+      "target": "offers.C.ready_at"
+    },
+    {
+      "id": "C:fact:352a6e4daeed376ebb0f",
+      "key": "price",
+      "value": 510000,
+      "unit": "PLN",
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "Pełna cena usługi: 5100 PLN brutto.",
+          "quote_validated": true,
+          "start": 427,
+          "end": 462,
+          "bbox": [
+            50.0,
+            274.3149412,
+            226.11815430000001,
+            285.3149412
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": true,
+      "offer_id": "C",
+      "targets": [
+        {
+          "kind": "cost",
+          "offer_id": "C",
+          "cost_id": "C:c1",
+          "field": "amount"
+        }
+      ],
+      "target": null,
+      "review_reason": "Jednostka kwoty wymaga potwierdzenia na podstawie źródła."
+    },
+    {
+      "id": "C:fact:4dd0b738f1c6a50cf56e",
+      "key": "currency",
+      "value": "PLN",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "5100 PLN brutto",
+          "quote_validated": true,
+          "start": 446,
+          "end": 461,
+          "bbox": [
+            142.9521439,
+            274.3149412,
+            226.11815430000001,
+            285.3149412
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "C",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "C",
+          "field": "currency"
+        },
+        {
+          "kind": "cost",
+          "offer_id": "C",
+          "cost_id": "C:c1",
+          "field": "amount"
+        }
+      ],
+      "target": "offers.C.currency"
+    },
+    {
+      "id": "C:fact:975c2ab23d1609d0ebe6",
+      "key": "tax_basis",
+      "value": "gross",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "5100 PLN brutto",
+          "quote_validated": true,
+          "start": 446,
+          "end": 461,
+          "bbox": [
+            142.9521439,
+            274.3149412,
+            226.11815430000001,
+            285.3149412
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "C",
+      "targets": [
+        {
+          "kind": "offer",
+          "offer_id": "C",
+          "field": "tax_basis"
+        },
+        {
+          "kind": "cost",
+          "offer_id": "C",
+          "cost_id": "C:c1",
+          "field": "amount"
+        }
+      ],
+      "target": "offers.C.tax_basis"
+    },
+    {
+      "id": "C:fact:fdc2b3d559a314317c17",
+      "key": "included_scope",
+      "value": "Cena obejmuje transport i technika przez pełne 09:00-17:00. Brak dodatkowych opłat za ten zakres.",
+      "unit": null,
+      "scope": "",
+      "condition": null,
+      "condition_unresolved": false,
+      "critical": true,
+      "evidence": [
+        {
+          "source_id": "C-offer",
+          "page": 1,
+          "quote": "Cena obejmuje transport i technika przez pełne 09:00-17:00.\nBrak dodatkowych opłat za ten zakres.",
+          "quote_validated": true,
+          "start": 463,
+          "end": 560,
+          "bbox": [
+            50.0,
+            302.3149412,
+            344.7387519999999,
+            341.3149412000001
+          ],
+          "method": "pdf_text"
+        }
+      ],
+      "origin": "document",
+      "confirmation": "proposed",
+      "conflict": false,
+      "offer_id": "C",
+      "targets": [
+        {
+          "kind": "cost",
+          "offer_id": "C",
+          "cost_id": "C:c1",
+          "field": "amount"
+        }
+      ],
+      "target": null
+    }
+  ],
+  "questions": [
+    {
+      "id": "gap-A-extraction_gap-0",
+      "variable_ids": [],
+      "text": "Proszę uzupełnić lub wyjaśnić: conflict:money_unit:A:fact:6324f9f021d459127ec6",
+      "score": null,
+      "difficulty": 0,
+      "needed": true,
+      "branches": [],
+      "witness": null,
+      "unknown_answer_reduces_scenarios": false,
+      "heuristic": false,
+      "kind": "model_gap",
+      "issue": {
+        "code": "extraction_gap",
+        "message": "conflict:money_unit:A:fact:6324f9f021d459127ec6",
+        "offer_id": "A",
+        "blocking": true
+      },
+      "status": "prepared",
+      "assignee": null,
+      "dueAt": null,
+      "answers": [],
+      "needsReview": null,
+      "reviewReason": null
+    },
+    {
+      "id": "gap-A-extraction_gap-1",
+      "variable_ids": [],
+      "text": "Proszę uzupełnić lub wyjaśnić: conflict:money_unit:A:fact:05b633fb6206541e2b4a",
+      "score": null,
+      "difficulty": 0,
+      "needed": true,
+      "branches": [],
+      "witness": null,
+      "unknown_answer_reduces_scenarios": false,
+      "heuristic": false,
+      "kind": "model_gap",
+      "issue": {
+        "code": "extraction_gap",
+        "message": "conflict:money_unit:A:fact:05b633fb6206541e2b4a",
+        "offer_id": "A",
+        "blocking": true
+      },
+      "status": "prepared",
+      "assignee": null,
+      "dueAt": null,
+      "answers": [],
+      "needsReview": null,
+      "reviewReason": null
+    },
+    {
+      "id": "gap-A-extraction_gap-2",
+      "variable_ids": [],
+      "text": "Proszę uzupełnić lub wyjaśnić: conflict:money_unit:A:fact:ed05406e24228c228157",
+      "score": null,
+      "difficulty": 0,
+      "needed": true,
+      "branches": [],
+      "witness": null,
+      "unknown_answer_reduces_scenarios": false,
+      "heuristic": false,
+      "kind": "model_gap",
+      "issue": {
+        "code": "extraction_gap",
+        "message": "conflict:money_unit:A:fact:ed05406e24228c228157",
+        "offer_id": "A",
+        "blocking": true
+      },
+      "status": "prepared",
+      "assignee": null,
+      "dueAt": null,
+      "answers": [],
+      "needsReview": null,
+      "reviewReason": null
+    },
+    {
+      "id": "gap-A-extraction_gap-3",
+      "variable_ids": [],
+      "text": "Proszę uzupełnić lub wyjaśnić: conflict:money_unit:A:fact:660267a69bee66746c27",
+      "score": null,
+      "difficulty": 0,
+      "needed": true,
+      "branches": [],
+      "witness": null,
+      "unknown_answer_reduces_scenarios": false,
+      "heuristic": false,
+      "kind": "model_gap",
+      "issue": {
+        "code": "extraction_gap",
+        "message": "conflict:money_unit:A:fact:660267a69bee66746c27",
+        "offer_id": "A",
+        "blocking": true
+      },
+      "status": "prepared",
+      "assignee": null,
+      "dueAt": null,
+      "answers": [],
+      "needsReview": null,
+      "reviewReason": null
+    },
+    {
+      "id": "gap-B-extraction_gap-4",
+      "variable_ids": [],
+      "text": "Proszę uzupełnić lub wyjaśnić: conflict:money_unit:B:fact:73a71287798c0c291cb1",
+      "score": null,
+      "difficulty": 0,
+      "needed": true,
+      "branches": [],
+      "witness": null,
+      "unknown_answer_reduces_scenarios": false,
+      "heuristic": false,
+      "kind": "model_gap",
+      "issue": {
+        "code": "extraction_gap",
+        "message": "conflict:money_unit:B:fact:73a71287798c0c291cb1",
+        "offer_id": "B",
+        "blocking": true
+      },
+      "status": "prepared",
+      "assignee": null,
+      "dueAt": null,
+      "answers": [],
+      "needsReview": null,
+      "reviewReason": null
+    },
+    {
+      "id": "gap-C-extraction_gap-5",
+      "variable_ids": [],
+      "text": "Proszę uzupełnić lub wyjaśnić: conflict:money_unit:C:fact:352a6e4daeed376ebb0f",
+      "score": null,
+      "difficulty": 0,
+      "needed": true,
+      "branches": [],
+      "witness": null,
+      "unknown_answer_reduces_scenarios": false,
+      "heuristic": false,
+      "kind": "model_gap",
+      "issue": {
+        "code": "extraction_gap",
+        "message": "conflict:money_unit:C:fact:352a6e4daeed376ebb0f",
+        "offer_id": "C",
+        "blocking": true
+      },
+      "status": "prepared",
+      "assignee": null,
+      "dueAt": null,
+      "answers": [],
+      "needsReview": null,
+      "reviewReason": null
+    },
+    {
+      "id": "A:v1",
+      "variable_ids": [
+        "A:v1"
+      ],
+      "text": "Czy usługa technika 09:00-17:00 jest wliczona w cenę bazową (dopłata 0 PLN), czy wymaga dodatkowej opłaty 1200 PLN brutto?",
+      "score": null,
+      "difficulty": 0,
+      "needed": true,
+      "branches": [
+        {
+          "answers": {
+            "A:v1": 0
+          },
+          "scenario_count": 1,
+          "diversity": 0,
+          "common_winners": [
+            "A"
+          ],
+          "all_infeasible": false
+        },
+        {
+          "answers": {
+            "A:v1": 120000
+          },
+          "scenario_count": 1,
+          "diversity": 0,
+          "common_winners": [
+            "B"
+          ],
+          "all_infeasible": false
+        }
+      ],
+      "witness": {
+        "kind": "winner_change",
+        "scenarios": [
+          {
+            "id": "s1",
+            "assignment": {
+              "A:v1": 0
+            },
+            "costs": {
+              "A": 480000,
+              "B": 550000,
+              "C": 510000
+            },
+            "feasible": [
+              "A",
+              "B"
+            ],
+            "winners": [
+              "A"
+            ],
+            "exclusions": {
+              "A": [],
+              "B": [],
+              "C": [
+                {
+                  "code": "ready_at",
+                  "message": "2026-10-10T09:30:00+02:00 nie spełnia wymaganego terminu 2026-10-10T09:00:00+02:00"
+                }
+              ]
+            },
+            "breakdown": {
+              "A": [
+                {
+                  "id": "A:c1",
+                  "label": "Zestaw nagłośnienia i obsługa wydarzenia",
+                  "category": "service",
+                  "amount_minor": 420000,
+                  "unit": "PLN",
+                  "evidence_ids": [
+                    "A:fact:6324f9f021d459127ec6"
+                  ],
+                  "due_at": null
+                },
+                {
+                  "id": "A:c2",
+                  "label": "Transport",
+                  "category": "service",
+                  "amount_minor": 60000,
+                  "unit": "PLN",
+                  "evidence_ids": [
+                    "A:fact:05b633fb6206541e2b4a"
+                  ],
+                  "due_at": null
+                },
+                {
+                  "id": "A:c4",
+                  "label": "Dopłata za technika wg Aneksu A-1",
+                  "category": "service",
+                  "amount_minor": 0,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "A:fact:9d75d1fdeea151dcdb7d",
+                    "A:fact:660267a69bee66746c27"
+                  ],
+                  "due_at": null
+                }
+              ],
+              "B": [
+                {
+                  "id": "B:c1",
+                  "label": "Pełna cena usługi (nagłośnienie, 4 mikrofony, transport, technik 09:00-17:00)",
+                  "category": "service",
+                  "amount_minor": 550000,
+                  "unit": "usługa",
+                  "evidence_ids": [
+                    "B:fact:df08dee9fab8166ed9be",
+                    "B:fact:74a9fa7198d572f46bc6",
+                    "B:fact:73a71287798c0c291cb1",
+                    "B:fact:99129fb0108bf87a1770"
+                  ],
+                  "due_at": null
+                }
+              ],
+              "C": [
+                {
+                  "id": "C:c1",
+                  "label": "Pełna cena usługi (nagłośnienie, transport, technik)",
+                  "category": "service",
+                  "amount_minor": 510000,
+                  "unit": "PLN",
+                  "evidence_ids": [
+                    "C:fact:352a6e4daeed376ebb0f",
+                    "C:fact:4dd0b738f1c6a50cf56e",
+                    "C:fact:975c2ab23d1609d0ebe6",
+                    "C:fact:fdc2b3d559a314317c17"
+                  ],
+                  "due_at": null
+                }
+              ]
+            },
+            "ancillary": {
+              "A": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              },
+              "B": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              },
+              "C": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              }
+            },
+            "status": "winner"
+          },
+          {
+            "id": "s2",
+            "assignment": {
+              "A:v1": 120000
+            },
+            "costs": {
+              "A": 600000,
+              "B": 550000,
+              "C": 510000
+            },
+            "feasible": [
+              "B"
+            ],
+            "winners": [
+              "B"
+            ],
+            "exclusions": {
+              "A": [
+                {
+                  "code": "budget",
+                  "message": "Przekroczony budżet",
+                  "excess_minor": 40000
+                }
+              ],
+              "B": [],
+              "C": [
+                {
+                  "code": "ready_at",
+                  "message": "2026-10-10T09:30:00+02:00 nie spełnia wymaganego terminu 2026-10-10T09:00:00+02:00"
+                }
+              ]
+            },
+            "breakdown": {
+              "A": [
+                {
+                  "id": "A:c1",
+                  "label": "Zestaw nagłośnienia i obsługa wydarzenia",
+                  "category": "service",
+                  "amount_minor": 420000,
+                  "unit": "PLN",
+                  "evidence_ids": [
+                    "A:fact:6324f9f021d459127ec6"
+                  ],
+                  "due_at": null
+                },
+                {
+                  "id": "A:c2",
+                  "label": "Transport",
+                  "category": "service",
+                  "amount_minor": 60000,
+                  "unit": "PLN",
+                  "evidence_ids": [
+                    "A:fact:05b633fb6206541e2b4a"
+                  ],
+                  "due_at": null
+                },
+                {
+                  "id": "A:c4",
+                  "label": "Dopłata za technika wg Aneksu A-1",
+                  "category": "service",
+                  "amount_minor": 120000,
+                  "unit": "service",
+                  "evidence_ids": [
+                    "A:fact:9d75d1fdeea151dcdb7d",
+                    "A:fact:660267a69bee66746c27"
+                  ],
+                  "due_at": null
+                }
+              ],
+              "B": [
+                {
+                  "id": "B:c1",
+                  "label": "Pełna cena usługi (nagłośnienie, 4 mikrofony, transport, technik 09:00-17:00)",
+                  "category": "service",
+                  "amount_minor": 550000,
+                  "unit": "usługa",
+                  "evidence_ids": [
+                    "B:fact:df08dee9fab8166ed9be",
+                    "B:fact:74a9fa7198d572f46bc6",
+                    "B:fact:73a71287798c0c291cb1",
+                    "B:fact:99129fb0108bf87a1770"
+                  ],
+                  "due_at": null
+                }
+              ],
+              "C": [
+                {
+                  "id": "C:c1",
+                  "label": "Pełna cena usługi (nagłośnienie, transport, technik)",
+                  "category": "service",
+                  "amount_minor": 510000,
+                  "unit": "PLN",
+                  "evidence_ids": [
+                    "C:fact:352a6e4daeed376ebb0f",
+                    "C:fact:4dd0b738f1c6a50cf56e",
+                    "C:fact:975c2ab23d1609d0ebe6",
+                    "C:fact:fdc2b3d559a314317c17"
+                  ],
+                  "due_at": null
+                }
+              ]
+            },
+            "ancillary": {
+              "A": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              },
+              "B": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              },
+              "C": {
+                "deposit": 0,
+                "payment": 0,
+                "cancellation": 0
+              }
+            },
+            "status": "winner"
+          }
+        ],
+        "changed_variables": [
+          "A:v1"
+        ],
+        "other_changed_variables": [],
+        "minimality_proven": false
+      },
+      "unknown_answer_reduces_scenarios": false,
+      "heuristic": true,
+      "kind": "variable",
+      "status": "prepared",
+      "assignee": null,
+      "dueAt": null,
+      "answers": [],
+      "needsReview": null,
+      "reviewReason": null
+    }
+  ],
+  "_provenance": "Synthetic public Gemini take04, 2026-10-03. Actual model output with incorrectly declared PLN on integer minor amounts. No cookies, user identity, private files or session tokens."
+}

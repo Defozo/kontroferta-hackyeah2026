@@ -1,0 +1,1 @@
+{"name":"kontroferta-local-identity","private":true,"type":"module","scripts":{"start":"node server.mjs"},"dependencies":{"oidc-provider":"^9.8.1"},"engines":{"node":">=22.0.0"}}

@@ -1,0 +1,39 @@
+[project]
+name = "kontroferta"
+version = "1.0.0"
+description = "Evidence-based offer comparison and versioned decisions"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn[standard]>=0.34,<1",
+  "pydantic>=2.10,<3",
+  "sqlalchemy>=2.0,<3",
+  "alembic>=1.15,<2",
+  "authlib>=1.7,<2",
+  "httpx>=0.28,<1",
+  "python-multipart>=0.0.20",
+  "itsdangerous>=2.2",
+  "google-genai>=2.3,<3",
+  "pdfplumber>=0.11",
+  "pypdfium2>=4.30",
+  "pytesseract>=0.3.13",
+  "pillow>=11",
+  "reportlab>=4.3",
+  "playwright>=1.51",
+  "jinja2>=3.1",
+  "tzdata>=2025.1",
+  "numpy>=2.3,<3",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.3", "hypothesis>=6.130", "pytest-asyncio>=0.26", "ruff>=0.11"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+

@@ -1,0 +1,87 @@
+name: kontroferta
+x-runtime: &runtime
+  image: kontroferta:local
+  init: true
+  restart: unless-stopped
+  volumes:
+    - data:/data
+  environment: &environment
+    APP_BASE_URL: ${APP_BASE_URL:-http://localhost:8080}
+    DATABASE_URL: sqlite:////data/kontroferta.db
+    FILE_STORAGE_PATH: /data/files
+    GOOGLE_AI_STUDIO_API_KEY: ${GOOGLE_AI_STUDIO_API_KEY:?Inject using psst}
+    KONTROFERTA_SESSION_SECRET: ${KONTROFERTA_SESSION_SECRET:?Inject using psst}
+    OIDC_ISSUER: ${OIDC_ISSUER:-}
+    OIDC_CLIENT_ID: ${OIDC_CLIENT_ID:-kontroferta}
+    OIDC_CLIENT_SECRET: ${OIDC_CLIENT_SECRET:-}
+    AI_MODEL: ${AI_MODEL:-gemini-3.8-flash}
+    AI_THINKING_LEVEL: ${AI_THINKING_LEVEL:-low}
+    AI_TIMEOUT_SECONDS: ${AI_TIMEOUT_SECONDS:-90}
+    AI_MAX_RETRIES: ${AI_MAX_RETRIES:-2}
+    AI_MAX_INPUT_TOKENS_PER_CASE: ${AI_MAX_INPUT_TOKENS_PER_CASE:-100000}
+    AI_MAX_OUTPUT_TOKENS: ${AI_MAX_OUTPUT_TOKENS:-16384}
+    AI_INPUT_USD_PER_MILLION: ${AI_INPUT_USD_PER_MILLION:-0.75}
+    AI_OUTPUT_USD_PER_MILLION: ${AI_OUTPUT_USD_PER_MILLION:-3.75}
+    AI_PRICE_DATE: ${AI_PRICE_DATE:-2026-10-03}
+    AI_PRICE_SOURCE: ${AI_PRICE_SOURCE:-https://ai.google.dev/gemini-api/docs/pricing}
+    AI_MAX_CONCURRENCY: ${AI_MAX_CONCURRENCY:-2}
+    OCR_LANGUAGES: ${OCR_LANGUAGES:-pol+eng}
+    MAX_UPLOAD_MB: ${MAX_UPLOAD_MB:-20}
+    MAX_DOCUMENT_PAGES: ${MAX_DOCUMENT_PAGES:-100}
+    MAX_SCENARIOS: ${MAX_SCENARIOS:-100000}
+    SESSION_HOURS: ${SESSION_HOURS:-12}
+    CASE_BUDGET_USD: ${CASE_BUDGET_USD:-1}
+    DAILY_BUDGET_USD: ${DAILY_BUDGET_USD:-20}
+    ACCOUNT_DAILY_BUDGET_USD: ${ACCOUNT_DAILY_BUDGET_USD:-5}
+    CASE_RETENTION_DAYS: ${CASE_RETENTION_DAYS:-90}
+    DEMO_RETENTION_HOURS: ${DEMO_RETENTION_HOURS:-24}
+    BACKUP_RETENTION_DAYS: ${BACKUP_RETENTION_DAYS:-7}
+  mem_limit: 2g
+  cpus: 2
+services:
+  api:
+    <<: *runtime
+    build: .
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/api/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  worker:
+    <<: *runtime
+    command: ["python", "-m", "apps.worker.main"]
+    depends_on:
+      api:
+        condition: service_healthy
+  maintenance:
+    <<: *runtime
+    command: ["python", "-m", "scripts.maintenance"]
+    environment:
+      DATABASE_URL: sqlite:////data/kontroferta.db
+      FILE_STORAGE_PATH: /data/files
+      BACKUP_PATH: /data/backups
+      CASE_RETENTION_DAYS: ${CASE_RETENTION_DAYS:-90}
+      DEMO_RETENTION_HOURS: ${DEMO_RETENTION_HOURS:-24}
+      BACKUP_RETENTION_DAYS: ${BACKUP_RETENTION_DAYS:-7}
+      MAINTENANCE_INTERVAL_SECONDS: ${MAINTENANCE_INTERVAL_SECONDS:-3600}
+    depends_on:
+      api:
+        condition: service_healthy
+  caddy:
+    image: caddy:2.10.2-alpine
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${APP_PORT:-8080}:80"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:-:80}
+    depends_on:
+      api:
+        condition: service_healthy
+volumes:
+  data:
+  caddy_data:
+  caddy_config:

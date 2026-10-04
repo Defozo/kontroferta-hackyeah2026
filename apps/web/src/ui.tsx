@@ -1,0 +1,66 @@
+import { createContext, useContext, useState, useRef, type ReactNode, type ButtonHTMLAttributes } from 'react';
+import * as Dialog from '@radix-ui/react-dialog';
+import { AlertCircle, ArrowRight, Check, ChevronRight, CircleHelp, LoaderCircle, X } from 'lucide-react';
+import type { Fact, Lang, Translate, Offer, Member } from './types';
+import { localParts } from './dates';
+
+export const LanguageContext = createContext<{lang: Lang; t: Translate}>({lang:'pl',t:pl=>pl});
+export const useLang = () => useContext(LanguageContext);
+export function money(value: number | null | undefined, currency = 'PLN', lang = 'pl', digits?: number) {
+  if (value === null || value === undefined || !Number.isFinite(value)) return '∅';
+  return new Intl.NumberFormat(lang === 'pl' ? 'pl-PL' : 'en-GB',{style:'currency',currency,minimumFractionDigits:digits ?? (value % 100 ? 2 : 0),maximumFractionDigits:2}).format(value/100);
+}
+export function Button({children,variant = 'primary',className = '',busy, ...props}: ButtonHTMLAttributes<HTMLButtonElement> & {variant?: 'primary'|'secondary'|'ghost'|'danger';busy?: boolean}) {
+  return <button {...props} disabled={props.disabled || busy} className={`button button-${variant} ${className}`}>{busy ? <LoaderCircle size={17} className="spin" aria-hidden/> : null}{children}</button>;
+}
+export function Badge({children,tone='neutral'}: {children:ReactNode;tone?:string}) { return <span className={`badge badge-${tone}`}><span aria-hidden>{tone==='good'?'✓':tone==='bad'?'×':tone==='warn'?'!':tone==='blue'?'•':'·'}</span>{children}</span>; }
+export function ErrorBox({error,retry}: {error:unknown;retry?:()=>void}) {
+  const {t}=useLang();
+  return <div className="error-box" role="alert"><AlertCircle size={21}/><div><strong>{t('Nie udało się wykonać operacji','The operation could not be completed')}</strong><p>{error instanceof Error ? error.message : String(error)}</p>{typeof error==='object'&&error!==null&&'status' in error&&error.status===401?<a className="button button-secondary" href={`/api/auth/login?next=${encodeURIComponent('/#'+(window.location.hash.slice(1)||'/cases'))}`}>{t('Zaloguj się ponownie. Zapisane dane pozostają zachowane.','Sign in again. Your saved data is preserved.')}</a>:retry ? <Button variant="secondary" onClick={retry}>{t('Spróbuj ponownie','Try again')}</Button>:null}</div></div>;
+}
+export function Empty({title,children,action}: {title:string;children?:ReactNode;action?:ReactNode}) { return <div className="empty"><CircleHelp size={30}/><h3>{title}</h3><p>{children}</p>{action}</div>; }
+export function Loading() { const {t}=useLang();return <div className="loading" role="status"><LoaderCircle className="spin"/>{t('Wczytuję zapisane dane…','Loading saved data…')}</div>; }
+export function Modal({open,onOpenChange,title,description,children,wide=false,side=false}: {open:boolean;onOpenChange:(open:boolean)=>void;title:string;description?:string;children:ReactNode;wide?:boolean;side?:boolean}) {
+  const {t}=useLang();const returnFocus=useRef<HTMLElement|null>(null);
+  return <Dialog.Root open={open} onOpenChange={onOpenChange}><Dialog.Portal><Dialog.Overlay className="dialog-overlay"/><Dialog.Content onOpenAutoFocus={()=>{returnFocus.current=document.activeElement instanceof HTMLElement?document.activeElement:null;}} onCloseAutoFocus={event=>{if(returnFocus.current?.isConnected){event.preventDefault();returnFocus.current.focus({preventScroll:true});}}} className={`dialog-content ${wide?'dialog-wide':''} ${side?'dialog-side':''}`} aria-describedby={description?'dialog-description':undefined}><div className="dialog-heading"><div><Dialog.Title>{title}</Dialog.Title>{description ? <Dialog.Description id="dialog-description">{description}</Dialog.Description>:null}</div><Dialog.Close asChild><button className="icon-button" aria-label={t('Zamknij','Close')}><X size={22}/></button></Dialog.Close></div>{children}</Dialog.Content></Dialog.Portal></Dialog.Root>;
+}
+export function Checkbox({checked,onChange,children,disabled=false}: {checked:boolean;onChange:(checked:boolean)=>void;children:ReactNode;disabled?:boolean}) { return <label className="check-row"><input type="checkbox" checked={checked} onChange={e=>onChange(e.target.checked)} disabled={disabled}/><span>{children}</span></label>; }
+export function CopyButton({text}: {text:string}) { const {t}=useLang();const [copied,setCopied]=useState(false);const [error,setError]=useState(false);return <><Button variant="secondary" onClick={async()=>{try{await navigator.clipboard.writeText(text);setCopied(true);setError(false);setTimeout(()=>setCopied(false),2500);}catch{setError(true);}}}>{copied?<Check size={16}/>:null}{copied?t('Skopiowano','Copied'):t('Kopiuj tekst','Copy text')}</Button>{error?<span role="alert">{t('Zaznacz tekst i skopiuj ręcznie.','Select the text and copy it manually.')}</span>:null}</>; }
+export function ArrowLink({children,onClick}: {children:ReactNode;onClick:()=>void}) { return <button className="text-link" onClick={onClick}>{children}<ArrowRight size={17}/></button>; }
+export function SectionHeading({eyebrow,title,children,action}: {eyebrow?:string;title:string;children?:ReactNode;action?:ReactNode}) { return <div className="section-heading"><div>{eyebrow?<p className="eyebrow">{eyebrow}</p>:null}<h2>{title}</h2>{children?<p>{children}</p>:null}</div>{action}</div>; }
+export function Fold({title,children,defaultOpen=false}: {title:ReactNode;children:ReactNode;defaultOpen?:boolean}) { return <details className="fold" open={defaultOpen || undefined}><summary>{title}<ChevronRight size={17}/></summary><div className="fold-content">{children}</div></details>; }
+export function statusLabel(status:string,t:Translate):string {
+  const labels:Record<string,[string,string]>={unique_winner:['Jeden najtańszy wybór','One lowest-cost choice'],common_winner:['Wspólny najtańszy wybór','A common lowest-cost choice'],needs_clarification:['Do wyjaśnienia','Needs clarification'],no_feasible_offer:['Brak wykonalnej oferty','No feasible offer'],inconsistent:['Sprzeczne dane','Inconsistent data'],incomplete:['Niepełna analiza','Incomplete analysis'],prepared:['Przygotowane','Prepared'],waiting:['Oczekuje na odpowiedź','Awaiting a reply'],answered:['Odpowiedź dodana','Answer added'],resolved:['Wyjaśnione','Resolved'],queued:['W kolejce','Queued'],running:['W trakcie','Running'],completed:['Ukończone','Completed'],failed:['Błąd','Failed'],cancelled:['Anulowane','Cancelled'],proposed:['Propozycja AI','AI proposal'],confirmed:['Potwierdzone przez człowieka','Confirmed by a person'],pending:['Oczekuje na analizę','Awaiting analysis'],draft:['Wersja robocza','Draft'],approved:['Zatwierdzone','Approved'],final:['Decyzja końcowa','Final decision'],conditional:['Wybór warunkowy','Conditional choice'],stale:['Do ponownego sprawdzenia','Needs review'],owner:['Właściciel','Owner'],editor:['Redaktor','Editor'],observer:['Obserwator','Observer'],review_required:['Do ponownego sprawdzenia','Needs review'],reading:['Odczyt stron','Reading pages'],extracting:['Interpretacja AI','AI interpretation'],validating:['Kontrola dowodów','Evidence validation'],analyzing:['Obliczanie scenariuszy','Computing scenarios']};
+  Object.assign(labels,{document:['Odczyt dokumentu','Document extraction'],synthetic_sources_imported:['Zaimportowano dokumenty demonstracyjne','Demonstration documents imported'],analyzed:['Odczytane i przeanalizowane','Read and analyzed'],read:['Odczytane','Read'],pending_analysis:['Oczekuje na analizę zmian','Awaiting change analysis'],answer_added:['Odpowiedź dodana','Answer added'],superseded:['Zastąpione nowszą wersją','Superseded'],recorded_example:['Zapisany przykład','Recorded example'],human:['Ustalenie człowieka','Human finding'],case_created:['Utworzono sprawę','Case created'],synthetic_demo_copied:['Utworzono kopię przykładu','Example copied'],requirements_updated:['Zmieniono wymagania','Requirements updated'],offer_created:['Dodano ofertę','Offer added'],document_imported:['Dodano dokument','Document imported'],document_deleted:['Usunięto dokument','Document deleted'],analysis_requested:['Uruchomiono analizę','Analysis requested'],analysis_completed:['Zapisano wynik analizy','Analysis completed'],fact_reviewed:['Sprawdzono ustalenie','Finding reviewed'],critical_fields_approved:['Zatwierdzono krytyczne pola','Critical fields approved'],question_updated:['Zaktualizowano pytanie','Question updated'],decision_approved:['Zatwierdzono decyzję','Decision approved'],decision_recorded:['Zapisano decyzję','Decision recorded'],invitation_created:['Utworzono zaproszenie','Invitation created'],invitation_accepted:['Przyjęto zaproszenie','Invitation accepted'],member_removed:['Usunięto dostęp','Access removed'],manual_model_updated:['Poprawiono model obliczeń','Calculation model corrected'],offer_exclusion_changed:['Zmieniono zakres porównania','Comparison scope changed']});
+  if(status.startsWith('restored_revision:'))return `${t('Przywrócono jako nową wersję dane z rewizji','Restored as a new version from revision')} ${status.split(':')[1]}`;
+  const pair=labels[status];return pair?t(...pair):status;
+}
+
+export function factLabel(fact:Fact,t:Translate){const key=String(fact.key||fact.field||'');const labels:Record<string,[string,string]>={price:['Kwota w dokumencie','Amount stated in the document'],deposit:['Kaucja','Deposit'],payment:['Płatność','Payment'],cancellation:['Koszt anulowania','Cancellation cost'],document_date:['Data dokumentu','Document date'],declared_author:['Autor deklarowany','Declared author'],transport_technician_included:['Transport i technik w cenie','Transport and technician included'],currency:['Waluta','Currency'],tax_basis:['Podstawa opodatkowania','Tax basis'],tax_rate:['Stawka podatku','Tax rate'],participants:['Liczba uczestników','Participants'],microphones:['Mikrofony bezprzewodowe','Wireless microphones'],ready_at:['Gotowość sprzętu','Equipment readiness'],service_start:['Początek obecności technika','Technician service starts'],service_end:['Koniec obecności technika','Technician service ends'],scope_confirmed:['Wystarczalność pełnego zakresu','Suitability of full scope'],manual_model:['Własne ustalenie dotyczące modelu','Personal finding about the model']};return labels[key]?t(...labels[key]):key.startsWith('price_')?(fact.label||t('Kwota w dokumencie','Amount stated in the document')):fact.label||fact.field||String(fact.key||fact.id);}
+export function factDisplay(fact:Fact,t:Translate,lang:Lang,currency='PLN',timezone='Europe/Warsaw'){
+  const rawUnit=fact.unit?.trim().toLowerCase();
+  const unit=rawUnit==='zl'||rawUnit==='zł'?'pln':rawUnit;
+  if(unit==='minor'||unit==='major'||unit==='pln'||unit==='eur'){
+    const values=Array.isArray(fact.value)?fact.value:[fact.value];
+    const numeric=values.map(value=>typeof value==='number'?value:typeof value==='string'&&/^-?\d+(?:[.,]\d+)?$/.test(value.trim())?Number(value.replace(',','.')):NaN);
+    if(numeric.length&&numeric.every(Number.isFinite))return numeric.map(value=>money(unit==='minor'?value:Math.round(value*100),unit==='pln'||unit==='eur'?unit.toUpperCase():currency,lang)).join(t(' albo ',' or '));
+  }
+  if(typeof fact.value==='boolean')return fact.value?t('Tak','Yes'):t('Nie','No');
+  if(String(fact.key||fact.field)==='tax_basis')return fact.value==='gross'?t('Brutto','Gross'):fact.value==='net'?t('Netto','Net'):t('Nie ustalono','Unknown');
+  if(String(fact.key||fact.field)==='manual_model')return t('Jawny model człowieka. Rozwiń podgląd modelu, aby sprawdzić całość.','Explicit human model. Expand the model view to review it in full.');
+  if(typeof fact.value==='string'&&/^\d{4}-\d{2}-\d{2}T/.test(fact.value)){try{const p=localParts(fact.value,timezone);return `${p.date} ${p.time} (${timezone})`;}catch{return fact.value;}}
+  return fact.value===null?t('Brak wartości','No value'):typeof fact.value==='object'?JSON.stringify(fact.value):String(fact.value)+(fact.unit?` ${fact.unit}`:'');
+}
+
+export function issueText(message:string,facts:Fact[],offers:Offer[],t:Translate){
+  const unitConflict=message.match(/conflict:money_unit:(.+)$/);
+  if(!unitConflict)return message;
+  const fact=facts.find(item=>item.id===unitConflict[1]);
+  const source= fact?`${offerName(offers,fact.offer_id||fact.offerId)}: `:'';
+  return source+t('sprawdź kwotę i jej jednostkę w oryginale. Otwórz przegląd, popraw interpretację i wybierz właściwą jednostkę.','check the amount and its unit in the original. Open review, correct the interpretation and select the appropriate unit.');
+}
+
+export function offerCode(offers:Offer[],id?:string) { if(!id)return '?';if(id.length<=3)return id;const index=offers.findIndex(o=>o.id===id);return index<0?'?':String.fromCharCode(65+index); }
+export function offerName(offers:Offer[],id?:string) { return offers.find(o=>o.id===id)?.name||offerCode(offers,id); }
+
+export function personName(members:Member[],identity:unknown,t:Translate) { const value=String(identity||'');const member=members.find(m=>m.userId===value||m.id===value);if(member)return member.name||member.email||t('Uczestnik sprawy','Case participant');if(/^[0-9a-f]{8}-[0-9a-f-]{27}$/i.test(value))return t('Zarejestrowany użytkownik','Registered user');return value||t('Zapis systemowy','System record'); }
