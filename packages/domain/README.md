@@ -1,5 +1,11 @@
 # Silnik KontrOferty
 
+Silnik odpowiada na trzy pytania organizatora: które oferty spełniają wymagania,
+czy wybór utrzymuje się przy różnych odpowiedziach wykonawców i gdzie przebiega
+próg zmiany wyniku. Do każdej zmiany może pokazać konkretny dopuszczalny scenariusz.
+Kwoty, wspólne niewiadome, remisy i kompletność analizy są obliczane niezależnie
+od modelu AI odczytującego dokumenty.
+
 Publiczne wejście: `evaluate(dict | ComparisonModel) -> dict`. `demo_model()`
 zwraca fikcyjny model ofert A/B/C używany w demonstratorze. Kod nie korzysta z sieci,
 AI, bazy danych ani uprawnień. `models.py` stanowi ścisły kontrakt Pydantic.

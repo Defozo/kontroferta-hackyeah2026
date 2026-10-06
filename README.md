@@ -1,10 +1,27 @@
 # KontrOferta
 
-KontrOferta pomaga organizatorowi wydarzenia porównać pełny zakres ofert i ustalić, o co zapytać wykonawcę przed wyborem. Google Gemini odczytuje warunki wraz z cytatami. Silnik deterministyczny oblicza koszty, wykonalność, remisy i progi zmiany wyniku. Organizator sprawdza źródła i zatwierdza konkretną wersję decyzji.
+KontrOferta pokazuje organizatorowi wydarzenia, która oferta spełnia wymagania i jaka odpowiedź wykonawcy może zmienić wybór. Zestawia cenę z zakresem, terminem gotowości i warunkami dopłat. Przy ustaleniach pokazuje cytaty ze źródeł, a koszty, remisy i progi zmiany wyniku oblicza osobny silnik deterministyczny.
+
+Organizator otrzymuje porównanie, pytania do wyjaśnienia oraz raport zatwierdzonej decyzji. Może sprawdzić, czy wybór pozostaje ten sam w dopuszczalnych scenariuszach, zamiast opierać go na jednej założonej cenie.
 
 **DEFOZO SOFTWARE HOUSE · Michał Kiełtyka**
 
 [Otwórz demo](https://kontroferta.34.116.152.48.sslip.io/#/cases) · [Film, prezentacja i instrukcja](https://kontroferta.34.116.152.48.sslip.io/materials/) · [Pobierz kod](https://kontroferta.34.116.152.48.sslip.io/materials/KontrOferta-source.zip)
+
+## Co sprawdzisz przed zamówieniem
+
+| Pytanie organizatora | Co pokazuje KontrOferta |
+| --- | --- |
+| Czy niższa cena obejmuje to samo? | Koszty razem z wymaganym zakresem, obsadą i terminem; kaucje, płatności i anulowanie są opisane oddzielnie |
+| Przy jakiej dopłacie warto wybrać inną ofertę? | Obliczone progi, remisy i konkretne scenariusze zmiany wyniku, z rachunkiem kwot w groszach |
+| O co zapytać wykonawcę najpierw? | Pytania uporządkowane według wpływu odpowiedzi na rozstrzygnięcie; luki modelu są wskazane osobno |
+| Skąd pochodzi warunek? | Cytat i źródło, możliwość korekty interpretacji oraz potwierdzenie kluczowych ustaleń przez użytkownika |
+| Czy nowy aneks zmienia wcześniejszą decyzję? | Ponowna analiza zależnych ustaleń, historia rewizji i zatwierdzenie powiązane z konkretną wersją sprawy |
+
+Google Gemini odczytuje dokumenty, a silnik obliczeń sprawdza model
+kosztów i warunków. Analiza wskazuje warunki wymagające doprecyzowania oraz
+pytania, które pomagają domknąć porównanie. [Opis silnika](packages/domain/README.md)
+wyjaśnia obsługiwane scenariusze, zaokrąglenia i granice kompletności.
 
 ## Jak działa porównanie
 
